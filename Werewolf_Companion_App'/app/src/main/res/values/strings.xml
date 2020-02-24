@@ -13,15 +13,23 @@
     <string name="RulesTextTitle">Werewolf\'s Rules</string>
     <string name="RulesTextRules">
         This game takes place in a village infested by werewolves.\n\n
-        When they go on their quest to whipe-out the population, one member per night, the village decides to eliminate the threat by voting each morning a death sentence for one of its member.\n\n
+        When they go on their quest to wipe-out the population, one member per night, the village decides to eliminate the threat by voting each morning a death sentence for one of its member.\n\n
         Watch out, for some people within the community have unnatural powers, following goals that may be diverging from yours…\n\n
     </string>
+
+    <!-- Activity : Create Party -->
+    <string name="PartyNewNavBarPlayers">Players</string>
+    <string name="PartyNewNavBarRoles">Roles</string>
+    <string name="PartyNewNavBarLaunch">Launch</string>
 
     <!-- Panel : Test Zone -->
     <string name="TextToDeleteLater">Default text !</string>
     <string name="ButtonToDeleteLater">Click Me !</string>
     <string name="ButtonToChangeLanguage">Change Tongue</string>
     <string name="imageWithNoUse">Do I do something ?</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
     <!-- Roles content -->
 </resources>

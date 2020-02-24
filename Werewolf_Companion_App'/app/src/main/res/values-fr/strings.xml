@@ -7,7 +7,7 @@
     <string name="HomeImageView">Logo de l\'application !</string>
     <string name="HomeButtonCreateParty">Créer une Partie</string>
     <string name="HomeButtonSeeRules">Voir les Règles</string>
-    <string name="HomeButtonChangeLanguage">Changer Langue</string>
+    <string name="HomeButtonChangeLanguage">Changer de Langue</string>
 
     <!-- Activity : Rules -->
     <string name="RulesTextTitle">Règles du Loup-Garou</string>
@@ -16,6 +16,11 @@
         Lorsque ceux-ci se décident à exterminer la population, à raison d’un membre par soir, le village décide d’éradiquer la menace en votant chaque matin la mise à mort de l’un de ses membres.\n\n
         Notons que se cache dans la communauté un certain nombre d’individus aux pouvoirs atypiques, disposant parfois d’un but qui leur est propre…\n\n
     </string>
+
+    <!-- Activity : Create Party -->
+    <string name="PartyNewNavBarPlayers">Joueurs</string>
+    <string name="PartyNewNavBarRoles">Rôles</string>
+    <string name="PartyNewNavBarLaunch">Lancer</string>
 
     <!-- Panel : Test Zone -->
     <string name="TextToDeleteLater">Texte par défaut !</string>

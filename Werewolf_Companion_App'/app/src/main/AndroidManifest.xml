@@ -13,7 +13,6 @@
         android:theme="@style/AppTheme">
 
         <!-- Declaring the Activities -->
-        <activity android:name=".MainActivity" />
 
         <activity android:name=".ActivityHome">
             <intent-filter>
@@ -23,7 +22,13 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".ActivityRules" android:parentActivityName=".ActivityHome"/>
+        <activity
+            android:name=".ActivityPartyNew"
+            android:parentActivityName=".ActivityHome" />
+
+        <activity
+            android:name=".ActivityRules"
+            android:parentActivityName=".ActivityHome" />
     </application>
 
 </manifest>

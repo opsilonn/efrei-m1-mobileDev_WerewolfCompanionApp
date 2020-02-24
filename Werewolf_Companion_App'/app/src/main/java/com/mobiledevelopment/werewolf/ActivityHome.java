@@ -41,13 +41,13 @@ public class ActivityHome extends AppCompatActivity
         // We get the button
         Button button = findViewById(R.id.HomeButtonParty);
 
-        // We give a Listener to the button
+        // When clicked : launches the Activity creating a Party
         button.setOnClickListener(new View.OnClickListener()
         {
             @Override
             public void onClick (View v)
             {
-                // Do something
+                startActivity(new Intent(getApplicationContext(), ActivityPartyNew.class));
             }
         });
     }
@@ -63,17 +63,13 @@ public class ActivityHome extends AppCompatActivity
         Button button = findViewById(R.id.HomeButtonSeeRules);
         final String s = (String) button.getText();
 
-        // We give a Listener to the button
+        // When clicked : launches the Activity displaying the rules
         button.setOnClickListener(new View.OnClickListener()
         {
             @Override
             public void onClick (View v)
             {
-                // Creates an intent
-                Intent intent = new Intent(getApplicationContext(), ActivityRules.class);
-
-                // Starts an intent
-                startActivity(intent);
+                startActivity(new Intent(getApplicationContext(), ActivityRules.class));
             }
         });
     }
@@ -82,7 +78,7 @@ public class ActivityHome extends AppCompatActivity
     /**
      * Associates methods to the Button changing the language
      */
-    public void doStuff_ButtonLanguages()
+    private void doStuff_ButtonLanguages()
     {
         // We get the button
         Button button = findViewById(R.id.HomeButtonLanguage);
@@ -164,7 +160,7 @@ public class ActivityHome extends AppCompatActivity
     /**
      * Loads the language of the App' from the Locale
      */
-    public void loadLocale() {
+    private void loadLocale() {
         SharedPreferences prefs = getSharedPreferences("Settings", MODE_PRIVATE);
         String language = prefs.getString("My_Language", "");
         setLocale(language);
