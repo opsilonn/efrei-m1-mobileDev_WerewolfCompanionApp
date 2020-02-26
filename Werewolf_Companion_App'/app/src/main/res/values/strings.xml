@@ -16,20 +16,87 @@
         When they go on their quest to wipe-out the population, one member per night, the village decides to eliminate the threat by voting each morning a death sentence for one of its member.\n\n
         Watch out, for some people within the community have unnatural powers, following goals that may be diverging from yours…\n\n
     </string>
+    <string name="RulesTextRoles">The Different Roles</string>
+
+    <!-- Activity : Role -->
+    <string name="RoleImage">I\'m an image !</string>
+    <string name="RoleTextName">Role Name</string>
+    <string name="RoleTextPlayer">plays…</string>
+    <string name="RoleTextDescription">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n\n
+        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </string>
 
     <!-- Activity : Create Party -->
     <string name="PartyNewNavBarPlayers">Players</string>
     <string name="PartyNewNavBarRoles">Roles</string>
     <string name="PartyNewNavBarLaunch">Launch</string>
 
-    <!-- Panel : Test Zone -->
-    <string name="TextToDeleteLater">Default text !</string>
-    <string name="ButtonToDeleteLater">Click Me !</string>
-    <string name="ButtonToChangeLanguage">Change Tongue</string>
-    <string name="imageWithNoUse">Do I do something ?</string>
+
+    <!-- RecyclerViews - Row -->
+    <string name="RowRoleDefaultTitle">Lorem Ipsum</string>
+    <string name="RowRoleDefaultDescription">Dolor Amet</string>
+    <string name="RowRoleImageDescription">I\'m an image !</string>
+    <string name="RowRoleNumberOfRoles">123</string>
+    <string name="RowRoleButtonRemove">-</string>
+    <string name="RowRoleButtonAdd">+</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
+
     <!-- Roles content -->
+
+    <!-- WEREWOLVES -->
+    <string name="role_werewolf">Werewolf</string>
+    <string name="role_werewolf_description">
+        When the night comes, the werewolves agree to kill a member of the village.\n\n
+        If a draw occurs (or no victim is designated), no villager shall be killed that night.
+    </string>
+    <string name="role_whitewolf">Loup Blanc</string>
+    <string name="role_whitewolf_description">
+        Very rare creature, it hides amongst ‘‘regular’’ werewolves to exterminate the village, but also aims to be the last survivor.\n\n
+        Its blood-thirst allows him to kill another player every 2 turns.
+    </string>
+    <string name="role_big_bad_wolf">Big Bad Wolf</string>
+    <string name="role_big_bad_wolf_description">
+        Alpha male of the Werewolves, he is the one to settle any voting dispute amongst the pack.\n\n
+        Every 2 turns, it can kill another player (as long as he\'s not a Werewolf).\n\n
+        Contrarily to the White Wolf, it entirely belongs to the Werewolf side.\n\n
+        If it dies during a vote, the pack is so distraught that it doesn\'t anyone the next night.\n\n
+    </string>
+
+    <!-- VILLAGERS -->
+    <string name="role_villager">Villager</string>
+    <string name="role_villager_description">
+        It is the default character.\n\n
+        Without any power, it can only debate and vote during pyre.
+    </string>
+    <string name="role_cupid">Cupid</string>
+    <string name="role_cupid_description">
+        During the very first night, he will designate 2 players which will instantly fall in love.\n\n
+        If one of them happens to die, his significant other dies of grief. The lovers cannot vote against one another.\n\n
+        If the lovers belongs to the same side (2 Villagers, 2 Werewolves), they keep their objective. Ohterwise (ex : 1 Villager + 1 Werewolf), they now aim to be the last 2 players.
+    </string>
+    <string name="role_hunter">Hunter</string>
+    <string name="role_Hunter_description">
+        Whenever he dies (whatever the reason is), it can designate a player that immediately dies.
+    </string>
+    <string name="role_weasel">Weasel</string>
+    <string name="role_weasel_description">
+        Each night, she can designate a player and know whether it woke up during the night. If yes, the MJ also tells her if the player that sits the right of the previous player woke up or not.\n\n
+        For instance, roles like the SoothSayer, Werewolves or the Flute Player wake up every night.\n
+        On the other hand, the witch won\'t wake up when she runs out of potion; Cupid only wakes up the first night; etc…\n
+        At last, roles like the Hunter never wake up, since they have nothing to do the night.\n
+    </string>
+    <string name="role_crow">Crow</string>
+    <string name="role_crow_description">
+        Each night, it can designate a player which will receive a supplementary vote on the next poll.
+    </string>
+    <string name="role_barber">Barber</string>
+    <string name="role_barber_description">
+        Each night, it can decide to \"shave\" a player.\n\n
+        If he is a Werewolf, he dies ;\n
+        Otherwise, the barber dies.
+    </string>
 </resources>

@@ -1,26 +1,28 @@
 package com.mobiledevelopment.werewolf.model;
 
 
+import androidx.annotation.StringRes;
 import com.mobiledevelopment.werewolf.R;
-import com.mobiledevelopment.werewolf.util.Util;
+import java.io.Serializable;
 
-public enum Role
+
+public enum Role implements Serializable
 {
     Villager(
-            "@string/ButtonToDelete",
-            "hello there !",
-            "@drawable/im_villager",
+            R.string.role_villager,
+            R.string.role_villager_description,
+            R.drawable.im_villager,
             Team.Villager,
             R.drawable.ic_villager,
             false,
-            true,
+            false,
             PowerActivationTime.None,
             PowerActivationOrder.Villager),
 
     Werewolf(
-            "Werewolf",
-            "ahoooouuu !",
-            "@drawable/im_werewolf",
+            R.string.role_werewolf,
+            R.string.role_werewolf_description,
+            R.drawable.im_werewolf,
             Team.Werewolf,
             R.drawable.ic_werewolf,
             false,
@@ -28,22 +30,65 @@ public enum Role
             PowerActivationTime.Night,
             PowerActivationOrder.Werewolf),
 
+    WhiteWolf(
+            R.string.role_whitewolf,
+            R.string.role_whitewolf_description,
+            R.drawable.im_white_wolf,
+            Team.Werewolf,
+            R.drawable.ic_werewolf,
+            true,
+            true,
+            PowerActivationTime.Night,
+            PowerActivationOrder.WhiteWolf),
+
+    BigBadWolf(
+            R.string.role_big_bad_wolf,
+            R.string.role_big_bad_wolf_description,
+            R.drawable.im_big_bad_wolf,
+            Team.Werewolf,
+            R.drawable.ic_werewolf,
+            true,
+            true,
+            PowerActivationTime.Night,
+            PowerActivationOrder.BigBadWolf),
+
     Cupid(
-            "Cupid",
-            "aim... loose !",
-            "@drawable/im_cupid",
+            R.string.role_cupid,
+            R.string.role_cupid_description,
+            R.drawable.im_cupid,
             Team.Villager,
-            R.drawable.ic_villager,
+            R.drawable.ic_cupid,
             true,
             false,
             PowerActivationTime.Night,
-            PowerActivationOrder.Cupid);
+            PowerActivationOrder.Cupid),
 
+    Weasel(
+            R.string.role_weasel,
+            R.string.role_weasel_description,
+            R.drawable.im_weasel,
+            Team.Villager,
+            R.drawable.ic_weasel,
+            true,
+            true,
+            PowerActivationTime.Night,
+            PowerActivationOrder.Weasel),
+
+    Crow(
+            R.string.role_crow,
+            R.string.role_crow_description,
+            R.drawable.im_crow,
+            Team.Villager,
+            R.drawable.ic_crow,
+            true,
+            true,
+            PowerActivationTime.Night,
+            PowerActivationOrder.Crow);
 
     // Describing the fields
-    String name;
-    String description;
-    String imagePath;
+    @StringRes int nameRes;
+    @StringRes int descriptionRes;
+    @StringRes int imageRes;
     Team team;
     int icon;
     boolean isUnique;
@@ -60,30 +105,30 @@ public enum Role
      * If the Image and/or icon or not set, we give them default values, since a little effort is required to imported/search for the image/icon online.
      * For the other fields, I suppose they don't need such treatment.
      *
-     * @param name Name of the instance
-     * @param description Description of the instance
-     * @param imagePath Path leading to the image of the instance
+     * @param nameRes Name Resource of the instance
+     * @param descriptionRes Description of the instance
+     * @param imageRes Path leading to the image of the instance
      * @param team Team of the instance
      * @param icon Path leading to the icon of the instance
-     * @param isPowerReusable Whether the power of the instance is reusable or not
      * @param isUnique Whether the power of the instance is unique (only one instance)
+     * @param isPowerReusable Whether the power of the instance is reusable or not
      * @param powerActivationTime At which day-time the power of the instance activates
      * @param powerActivationOrder Specific order index when the power of the instance activates
      */
     Role(
-            String name,
-            String description,
-            String imagePath,
+            int nameRes,
+            int descriptionRes,
+            int imageRes,
             Team team,
             int icon,
-            boolean isPowerReusable,
             boolean isUnique,
+            boolean isPowerReusable,
             PowerActivationTime powerActivationTime,
             int powerActivationOrder)
     {
-        this.name = name;
-        this.description = description;
-        this.imagePath = (imagePath != null) ? imagePath : Util.IMAGE_DEFAULT;
+        this.nameRes = nameRes;
+        this.descriptionRes = descriptionRes;
+        this.imageRes =  imageRes;
         this.team = team;
         this.icon = (icon != 0) ? icon : R.drawable.ic_villager;
         this.isUnique = isUnique;
@@ -94,20 +139,20 @@ public enum Role
 
 
     // GETTER SETTER
-    public String getName() {
-        return name;
+    public int getName() {
+        return nameRes;
     }
-    public void setName(String name) {
-        this.name = name;
+    public void setName(int nameRes) {
+        this.nameRes = nameRes;
     }
-    public String getDescription() {
-        return description;
+    public int getDescription() {
+        return descriptionRes;
     }
-    public void setDescription(String description) {
-        this.description = description;
+    public void setDescription(int descriptionRes) {
+        this.descriptionRes = descriptionRes;
     }
-    public String getImagePath() { return imagePath; }
-    public void setImagePath(String imagePath) { this.imagePath = imagePath; }
+    public int getImageRes() { return imageRes; }
+    public void setImageRes(int imageRes) { this.imageRes = imageRes; }
     public Team getTeam() {
         return team;
     }

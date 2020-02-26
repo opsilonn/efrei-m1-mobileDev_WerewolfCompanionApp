@@ -9,4 +9,8 @@ public class PowerActivationOrder
 
     static final int Cupid  = 1;
     static final int Werewolf  = 2;
+    static final int WhiteWolf  = 3;
+    static final int BigBadWolf  = 3;
+    static final int Crow  = 5;
+    static final int Weasel  = 6;
 }

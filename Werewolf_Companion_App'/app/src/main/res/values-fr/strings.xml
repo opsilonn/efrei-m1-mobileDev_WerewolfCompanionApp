@@ -16,18 +16,90 @@
         Lorsque ceux-ci se décident à exterminer la population, à raison d’un membre par soir, le village décide d’éradiquer la menace en votant chaque matin la mise à mort de l’un de ses membres.\n\n
         Notons que se cache dans la communauté un certain nombre d’individus aux pouvoirs atypiques, disposant parfois d’un but qui leur est propre…\n\n
     </string>
+    <string name="RulesTextRoles">Les Différents Rôles</string>
+
+
+    <!-- Activity : Role -->
+    <string name="RoleImage">Je suis une image !</string>
+    <string name="RoleTextName">Nom du Rôle</string>
+    <string name="RoleTextPlayer">joue…</string>
+    <string name="RoleTextDescription">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n\n
+        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </string>
 
     <!-- Activity : Create Party -->
     <string name="PartyNewNavBarPlayers">Joueurs</string>
     <string name="PartyNewNavBarRoles">Rôles</string>
     <string name="PartyNewNavBarLaunch">Lancer</string>
 
-    <!-- Panel : Test Zone -->
-    <string name="TextToDeleteLater">Texte par défaut !</string>
-    <string name="ButtonToDeleteLater">Clique-moi !</string>
-    <string name="ButtonToChangeLanguage">Changer Langue</string>
-    <string name="imageWithNoUse">Je sers à quelque chose ?</string>
 
+
+    <!-- RecyclerViews - Row -->
+    <string name="RowRoleDefaultTitle">Lorem Ipsum</string>
+    <string name="RowRoleDefaultDescription">Dolor Amet</string>
+    <string name="RowRoleImageDescription">Je suis une image !</string>
+    <string name="RowRoleNumberOfRoles">123</string>
+    <string name="RowRoleButtonRemove">-</string>
+    <string name="RowRoleButtonAdd">+</string>
+
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Salut Salut !</string>
 
     <!-- Roles content -->
+
+    <!-- WEREWOLVES -->
+    <string name="role_werewolf">Loup-Garou</string>
+    <string name="role_werewolf_description">
+        La nuit venue, les Loups-Garous se mettent d’accord pour mettre à mort un membre du village.\n\n
+        En cas d’égalité des votes (ou d’incapacité à choisir une victime), aucun villageois ne sera assassiné cette nuit.
+    </string>
+    <string name="role_whitewolf">Loup Blanc</string>
+    <string name="role_whitewolf_description">
+        Créature particulièrement rare, elle se mêle aux Loups-Garous ‘‘normaux’’ pour exterminer le village, mais a pour but ultime d’être le dernier survivant.\n\n
+        Sa soif de sang lui permet d’assassiner un joueur supplémentaire tous les 2 tours.
+    </string>
+    <string name="role_big_bad_wolf">Grand Méchant Loup</string>
+    <string name="role_big_bad_wolf_description">
+        Mâle Alpha des Loups-Garous, c’est lui qui départage les votes des Loups en cas d’égalité.\n\n
+        Tous les 2 tours, il peut tuer un joueur supplémentaire (tant que ce n\'est pas un Loup-Garou).\n\n
+        Contrairement au Loup-Garou Blanc, il fait entièrement partie du camp des Loups-Garous, et non pas bande à part.\n\n
+        S’il se fait tuer lors d’un vote, sa meute est tellement désemparée qu’elle ne tue personne la nuit suivante.\n\n
+    </string>
+
+    <!-- VILLAGERS -->
+    <string name="role_villager">Villageois</string>
+    <string name="role_villager_description">
+        Il s\'agit du personnage de base.\n\n
+        Sans pouvoir, il ne peut que débattre et voter au cours des bûchers.
+    </string>
+    <string name="role_cupid">Cupidon</string>
+    <string name="role_cupid_description">
+        Durant la toute première nuit de la partie, il va désigner 2 personnes qui seront secrètement amoureuses jusqu\'à la fin du jeu.\n\n
+        Si l\'une des deux personnes vient à mourir, l\'autre meurt immédiatement de désespoir. Les Amoureux ne peuvent en aucune façon voter l\'un contre l\'autre.\n\n
+        Si les 2 amoureux font partie de la même faction (2 Villageois, 2 Loups-Garous), ils conservent leur objectif. Sinon (ex : 1 Villageois + 1 Loup-Garou), ils ont pour but d’être les 2 derniers survivants.
+    </string>
+    <string name="role_hunter">Chasseur</string>
+    <string name="role_Hunter_description">
+        Dès qu\'il meurt, et ce quelle que soit la méthode, il peut désigner un joueur qui mourra également sur-le-champ.
+    </string>
+    <string name="role_weasel">Fouine</string>
+    <string name="role_weasel_description">
+        Elle peut savoir chaque nuit si la personne qu’elle désigne s\'est réveillée ou non. Si oui, le MJ lui dit aussi si le joueur assis à droite de cette dernière s\’est réveillée ou non.\n\n
+        Par exemple, des rôles comme la Voyante, les Loups-Garous ou encore le Joueur de Flûte se réveillent chaque nuit.\n
+        En revanche, la Sorcière ne se réveillera plus quand elle n\'aura plus de potion; Cupidon ne se réveille que la 1ère nuit; etc…\n
+        Enfin, des rôles comme le Chasseur ne se réveille jamais, car il n\'a rien à faire de nuit.\n
+    </string>
+    <string name="role_crow">Corbeau</string>
+    <string name="role_crow_description">
+        Il peut désigner un joueur chaque nuit, qui recevra de facto un vote le lendemain.
+    </string>
+    <string name="role_barber">Barbier</string>
+    <string name="role_barber_description">
+        La nuit, il peut décider de ‘‘raser’’ un joueur.\n\n
+        S’il s\’agit d’un Loup-Garou, celui-ci meurt ;\n
+        Dans le cas contraire, c’est le barbier qui décède.
+    </string>
 </resources>
