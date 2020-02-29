@@ -57,10 +57,8 @@ public class ActivityHome extends AppCompatActivity
      */
     public void doStuff_ButtonRules()
     {
-        System.out.println("Setting the button..");
         // We get the button
         Button button = findViewById(R.id.HomeButtonSeeRules);
-        final String s = (String) button.getText();
 
         // When clicked : launches the Activity displaying the rules
         button.setOnClickListener(new View.OnClickListener()

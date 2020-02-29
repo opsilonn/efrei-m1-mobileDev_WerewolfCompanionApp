@@ -6,6 +6,10 @@ import com.mobiledevelopment.werewolf.R;
 import java.io.Serializable;
 
 
+/**
+ * A enumeration describing the different Roles a {@link Player} can incarnate.
+ * Implements the {@link Serializable} to allow the serialization of data.
+ */
 public enum Role implements Serializable
 {
     Villager(
@@ -34,7 +38,7 @@ public enum Role implements Serializable
             R.string.role_whitewolf,
             R.string.role_whitewolf_description,
             R.drawable.im_white_wolf,
-            Team.Werewolf,
+            Team.Other,
             R.drawable.ic_werewolf,
             true,
             true,
@@ -63,16 +67,16 @@ public enum Role implements Serializable
             PowerActivationTime.Night,
             PowerActivationOrder.Cupid),
 
-    Weasel(
-            R.string.role_weasel,
-            R.string.role_weasel_description,
-            R.drawable.im_weasel,
+    VillageIdiot(
+            R.string.role_village_idiot,
+            R.string.role_village_idiot_description,
+            R.drawable.im_village_idiot,
             Team.Villager,
-            R.drawable.ic_weasel,
+            R.drawable.ic_village_idiot,
             true,
-            true,
-            PowerActivationTime.Night,
-            PowerActivationOrder.Weasel),
+            false,
+            PowerActivationTime.Death,
+            PowerActivationOrder.VillageIdiot),
 
     Crow(
             R.string.role_crow,
@@ -83,7 +87,32 @@ public enum Role implements Serializable
             true,
             true,
             PowerActivationTime.Night,
-            PowerActivationOrder.Crow);
+            PowerActivationOrder.Crow),
+
+    Barber(
+            R.string.role_barber,
+            R.string.role_barber_description,
+            R.drawable.im_barber,
+            Team.Villager,
+            R.drawable.ic_barber,
+            true,
+            false,
+            PowerActivationTime.Night,
+            PowerActivationOrder.Barber),
+
+    Weasel(
+            R.string.role_weasel,
+            R.string.role_weasel_description,
+            R.drawable.im_weasel,
+            Team.Villager,
+            R.drawable.ic_weasel,
+            true,
+            true,
+            PowerActivationTime.Night,
+            PowerActivationOrder.Weasel);
+
+
+
 
     // Describing the fields
     @StringRes int nameRes;
@@ -94,11 +123,10 @@ public enum Role implements Serializable
     boolean isUnique;
     boolean isPowerReusable;
     PowerActivationTime powerActivationTime;
-    int powerActivationOrder;
+    PowerActivationOrder powerActivationOrder;
 
 
     // Constructor
-
     /**
      * Constructor of the class Role.
      *
@@ -124,7 +152,7 @@ public enum Role implements Serializable
             boolean isUnique,
             boolean isPowerReusable,
             PowerActivationTime powerActivationTime,
-            int powerActivationOrder)
+            PowerActivationOrder powerActivationOrder)
     {
         this.nameRes = nameRes;
         this.descriptionRes = descriptionRes;
@@ -171,7 +199,6 @@ public enum Role implements Serializable
     }
     public PowerActivationTime getPowerActivationTime() { return powerActivationTime; }
     public void setPowerActivationTime(PowerActivationTime powerActivationTime) { this.powerActivationTime = powerActivationTime; }
-    public void setPowerActivationTime(int powerActivationOrder) { this.powerActivationOrder = powerActivationOrder; }
-    public int getPowerActivationOrder() { return powerActivationOrder; }
-    public void setPowerActivationOrder(int powerActivationOrder) { this.powerActivationOrder = powerActivationOrder; }
+    public PowerActivationOrder getPowerActivationOrder() { return powerActivationOrder; }
+    public void setPowerActivationOrder(PowerActivationOrder powerActivationOrder) { this.powerActivationOrder = powerActivationOrder; }
 }

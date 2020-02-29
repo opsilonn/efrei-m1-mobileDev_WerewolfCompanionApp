@@ -4,22 +4,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activities.ActivityPartyNew">
+    tools:context=".activities.ActivityParty">
 
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/party_new_frame"
-        android:layout_above="@id/party_new_navbar"/>
+        android:id="@+id/party_frame"
+        android:layout_above="@id/party_navbar"/>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/party_new_navbar"
+        android:id="@+id/party_navbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         app:itemBackground="@color/colorPrimary"
         app:itemIconTint="@drawable/selector"
         app:itemTextColor="@drawable/selector"
-        app:menu="@menu/bottom_navigation_party_new" />
+        app:menu="@menu/bottom_navigation_party"/>
 
 </RelativeLayout>

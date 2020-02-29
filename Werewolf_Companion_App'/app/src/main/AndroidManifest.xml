@@ -13,7 +13,7 @@
         android:theme="@style/AppTheme">
 
         <!-- Declaring the Activities -->
-        <activity android:name=".ActivityHome">
+        <activity android:name=".activities.ActivityHome">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -21,12 +21,15 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ActivityPartyNew"
-            android:parentActivityName=".ActivityHome" />
+            android:name=".activities.ActivityPartyNew"
+            android:parentActivityName=".activities.ActivityHome" />
         <activity
-            android:name=".ActivityRules"
-            android:parentActivityName=".ActivityHome" />
-        <activity android:name="com.mobiledevelopment.werewolf.ActivityRole"></activity>
+            android:name=".activities.ActivityRules"
+            android:parentActivityName=".activities.ActivityHome" />
+        <activity
+            android:name=".activities.ActivityLoading"
+            android:parentActivityName=".activities.ActivityPartyNew" />
+        <activity android:name=".activities.ActivityParty"/>
     </application>
 
 </manifest>

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ActivityHome">
+    tools:context=".activities.ActivityHome">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -15,74 +15,55 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <View
-            android:id="@+id/divider"
-            android:layout_width="match_parent"
-            android:layout_height="50dp" />
-
         <ImageView
             android:id="@+id/HomeImage"
-            android:layout_width="247dp"
-            android:layout_height="241dp"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
             android:layout_gravity="center"
+            android:layout_margin="35dp"
             android:contentDescription="@string/HomeImageView"
             app:srcCompat="@drawable/logo" />
-
-        <View
-            android:id="@+id/divider2"
-            android:layout_width="match_parent"
-            android:layout_height="50dp" />
 
         <Button
             android:id="@+id/HomeButtonParty"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
+            android:layout_marginTop="25dp"
             android:background="@color/colorPrimary"
             android:gravity="center_horizontal|center_vertical"
+            android:padding="10dp"
             android:text="@string/HomeButtonCreateParty"
-            android:textAllCaps="false"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
             android:textColor="@color/colorAccent"
-            android:textIsSelectable="false"
             android:textStyle="bold|italic" />
-
-        <View
-            android:id="@+id/divider3"
-            android:layout_width="match_parent"
-            android:layout_height="35dp" />
 
         <Button
             android:id="@+id/HomeButtonSeeRules"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
+            android:layout_marginTop="25dp"
             android:background="@color/colorPrimary"
             android:gravity="center_horizontal|center_vertical"
+            android:padding="10dp"
             android:text="@string/HomeButtonSeeRules"
-            android:textAllCaps="false"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
             android:textColor="@color/colorAccent"
-            android:textIsSelectable="false"
             android:textStyle="bold|italic" />
-
-        <View
-            android:id="@+id/divider4"
-            android:layout_width="match_parent"
-            android:layout_height="35dp" />
 
         <Button
             android:id="@+id/HomeButtonLanguage"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
+            android:layout_marginTop="25dp"
             android:background="@color/colorPrimary"
             android:gravity="center_horizontal|center_vertical"
+            android:padding="10dp"
             android:text="@string/HomeButtonChangeLanguage"
-            android:textAllCaps="false"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
             android:textColor="@color/colorAccent"
-            android:textIsSelectable="false"
             android:textStyle="bold|italic" />
 
     </LinearLayout>

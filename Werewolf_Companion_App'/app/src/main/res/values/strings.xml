@@ -2,6 +2,9 @@
 <resources>
     <!-- Major Data -->
     <string name="app_name">Werewolf</string>
+    <string name="TextGoBack">X</string>
+    <string name="ButtonRemove">-</string>
+    <string name="ButtonAdd">+</string>
 
     <!-- Activity : Home -->
     <string name="HomeImageView">Logo of the app\' !</string>
@@ -31,6 +34,18 @@
     <string name="PartyNewNavBarPlayers">Players</string>
     <string name="PartyNewNavBarRoles">Roles</string>
     <string name="PartyNewNavBarLaunch">Launch</string>
+    <string name="PartyNewPlayersWarning">You need at least X players to launch a Party</string>
+    <string name="PartyNewPlayersInputHint">Player\'s Name</string>
+    <string name="PartyNewRolesTextIntroduction">Number of Roles / Number of Players</string>
+    <string name="PartyNewRolesTextNumber">0 / 0</string>
+    <string name="PartyNewPlayersButtonLaunch">Create the Party !</string>
+
+    <!-- Activity : Party -->
+    <string name="PartyNavBarPlayers">Players</string>
+    <string name="PartyNavBarRoles">Roles</string>
+    <string name="PartyNavBarLeave">Leave</string>
+    <string name="PartyPlayerTextHide">Hide the Data :</string>
+    <string name="PartyButtonLeave">Leave the Party</string>
 
 
     <!-- RecyclerViews - Row -->
@@ -38,11 +53,6 @@
     <string name="RowRoleDefaultDescription">Dolor Amet</string>
     <string name="RowRoleImageDescription">I\'m an image !</string>
     <string name="RowRoleNumberOfRoles">123</string>
-    <string name="RowRoleButtonRemove">-</string>
-    <string name="RowRoleButtonAdd">+</string>
-
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 
     <!-- Roles content -->
@@ -53,7 +63,7 @@
         When the night comes, the werewolves agree to kill a member of the village.\n\n
         If a draw occurs (or no victim is designated), no villager shall be killed that night.
     </string>
-    <string name="role_whitewolf">Loup Blanc</string>
+    <string name="role_whitewolf">White Wolf</string>
     <string name="role_whitewolf_description">
         Very rare creature, it hides amongst ‘‘regular’’ werewolves to exterminate the village, but also aims to be the last survivor.\n\n
         Its blood-thirst allows him to kill another player every 2 turns.
@@ -63,7 +73,7 @@
         Alpha male of the Werewolves, he is the one to settle any voting dispute amongst the pack.\n\n
         Every 2 turns, it can kill another player (as long as he\'s not a Werewolf).\n\n
         Contrarily to the White Wolf, it entirely belongs to the Werewolf side.\n\n
-        If it dies during a vote, the pack is so distraught that it doesn\'t anyone the next night.\n\n
+        If it dies during a vote, the pack is so distraught that it doesn\'t kill anyone the next night.\n\n
     </string>
 
     <!-- VILLAGERS -->
@@ -71,6 +81,12 @@
     <string name="role_villager_description">
         It is the default character.\n\n
         Without any power, it can only debate and vote during pyre.
+    </string>
+    <string name="role_village_idiot">Village Idiot</string>
+    <string name="role_village_idiot_description">
+        If the village votes for him, he can reveal his role and be immediately pardoned (he can also keep his role secret… and die).\n\n
+        Then, the Village Idiot will remain alive, but won\'t vote anymore, and cannot be elected Mayor.\n\n
+        If he dies by any other mean, the preceding rule obviously do not apply.
     </string>
     <string name="role_cupid">Cupid</string>
     <string name="role_cupid_description">
@@ -95,8 +111,11 @@
     </string>
     <string name="role_barber">Barber</string>
     <string name="role_barber_description">
-        Each night, it can decide to \"shave\" a player.\n\n
+        Each night (but only once throughout the game), it can decide to \"shave\" a player.\n\n
         If he is a Werewolf, he dies ;\n
         Otherwise, the barber dies.
     </string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

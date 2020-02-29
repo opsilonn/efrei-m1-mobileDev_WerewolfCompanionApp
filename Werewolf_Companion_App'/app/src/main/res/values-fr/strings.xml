@@ -2,6 +2,9 @@
 <resources>
     <!-- Major Data -->
     <string name="app_name">Loup-Garou</string>
+    <string name="TextGoBack">X</string>
+    <string name="ButtonRemove">-</string>
+    <string name="ButtonAdd">+</string>
 
     <!-- Activity : Home -->
     <string name="HomeImageView">Logo de l\'application !</string>
@@ -32,6 +35,18 @@
     <string name="PartyNewNavBarPlayers">Joueurs</string>
     <string name="PartyNewNavBarRoles">Rôles</string>
     <string name="PartyNewNavBarLaunch">Lancer</string>
+    <string name="PartyNewPlayersWarning">Vous avez besoin d\'au moins X Joueurs pour lancer une Partie</string>
+    <string name="PartyNewPlayersInputHint">Nom du Joueur</string>
+    <string name="PartyNewRolesTextIntroduction">Nombre de Rôles / Nombre de Joueurs</string>
+    <string name="PartyNewRolesTextNumber">0 / 0</string>
+    <string name="PartyNewPlayersButtonLaunch">Lancer la Partie !</string>
+
+    <!-- Activity : Party -->
+    <string name="PartyNavBarPlayers">Joueurs</string>
+    <string name="PartyNavBarRoles">Rôles</string>
+    <string name="PartyNavBarLeave">Quitter</string>
+    <string name="PartyPlayerTextHide">Cacher les infos :</string>
+    <string name="PartyButtonLeave">Quitter la Partie</string>
 
 
 
@@ -40,13 +55,7 @@
     <string name="RowRoleDefaultDescription">Dolor Amet</string>
     <string name="RowRoleImageDescription">Je suis une image !</string>
     <string name="RowRoleNumberOfRoles">123</string>
-    <string name="RowRoleButtonRemove">-</string>
-    <string name="RowRoleButtonAdd">+</string>
 
-
-
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Salut Salut !</string>
 
     <!-- Roles content -->
 
@@ -75,6 +84,12 @@
         Il s\'agit du personnage de base.\n\n
         Sans pouvoir, il ne peut que débattre et voter au cours des bûchers.
     </string>
+    <string name="role_village_idiot">L\'idiot du Village</string>
+    <string name="role_village_idiot_description">
+        S\’il est lynché au bûcher par les joueurs, il peut révéler son rôle et être gracié immédiatement (il peut aussi garder son rôle secret… et mourir).\n\n
+        Suite à cela, l\'Idiot du Village reste en vie, mais ne peut plus voter ni être élu maire du village.\n\n
+        Il n\'est évidemment pas gracié s\'il venait à mourir d\'une autre façon que par le bûcher.
+    </string>
     <string name="role_cupid">Cupidon</string>
     <string name="role_cupid_description">
         Durant la toute première nuit de la partie, il va désigner 2 personnes qui seront secrètement amoureuses jusqu\'à la fin du jeu.\n\n
@@ -98,8 +113,11 @@
     </string>
     <string name="role_barber">Barbier</string>
     <string name="role_barber_description">
-        La nuit, il peut décider de ‘‘raser’’ un joueur.\n\n
+        La nuit, il peut décider de ‘‘raser’’ un joueur (pouvoir à usage unique).\n\n
         S’il s\’agit d’un Loup-Garou, celui-ci meurt ;\n
         Dans le cas contraire, c’est le barbier qui décède.
     </string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

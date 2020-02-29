@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/party_nav_players"
+        android:icon="@drawable/ic_villager"
+        android:title="@string/PartyNavBarPlayers"/>
+
+    <item
+        android:id="@+id/party_nav_roles"
+        android:icon="@drawable/ic_werewolf"
+        android:title="@string/PartyNavBarRoles"/>
+
+    <item
+        android:id="@+id/party_nav_leave"
+        android:icon="@drawable/ic_exit"
+        android:title="@string/PartyNavBarLeave"/>
+
+</menu>

@@ -1,16 +1,21 @@
 package com.mobiledevelopment.werewolf.model;
 
-public class PowerActivationOrder
+
+/**
+ * An enumeration describing the order in which the {@link Role} activate their powers
+ */
+public enum PowerActivationOrder
 {
-    // We create a default value for those whose power do not activate (or activates once they die)
-    static final int NeverActivates = 0;
+    Villager,
+    VillageIdiot,
 
-    static final int Villager  = NeverActivates;
+    NEVER_ACTIVATES,
 
-    static final int Cupid  = 1;
-    static final int Werewolf  = 2;
-    static final int WhiteWolf  = 3;
-    static final int BigBadWolf  = 3;
-    static final int Crow  = 5;
-    static final int Weasel  = 6;
+    Cupid,
+    Werewolf,
+    WhiteWolf,
+    BigBadWolf,
+    Crow,
+    Barber,
+    Weasel
 }

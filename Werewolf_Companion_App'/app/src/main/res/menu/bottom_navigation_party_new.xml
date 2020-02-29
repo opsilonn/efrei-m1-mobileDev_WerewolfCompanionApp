@@ -2,17 +2,17 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/new_party_nav_players"
+        android:id="@+id/party_new_nav_players"
         android:icon="@drawable/ic_profile_add"
         android:title="@string/PartyNewNavBarPlayers"/>
 
     <item
-        android:id="@+id/new_party_nav_roles"
+        android:id="@+id/party_new_nav_roles"
         android:icon="@drawable/ic_werewolf"
         android:title="@string/PartyNewNavBarRoles"/>
 
     <item
-        android:id="@+id/new_party_nav_launch"
+        android:id="@+id/party_new_nav_launch"
         android:icon="@drawable/ic_launch"
         android:title="@string/PartyNewNavBarLaunch"/>
 

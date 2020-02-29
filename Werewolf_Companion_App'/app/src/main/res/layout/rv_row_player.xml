@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:id="@+id/rowRole">
+    android:id="@+id/rowPlayer">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -22,7 +22,7 @@
             android:layout_height="match_parent">
 
             <ImageView
-                android:id="@+id/RoleImageView"
+                android:id="@+id/PlayerImageView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:contentDescription="@string/RowRoleImageDescription"
@@ -30,13 +30,12 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/ic_werewolf" />
+                app:srcCompat="@drawable/ic_villager" />
 
             <TextView
-                android:id="@+id/RoleTextTitle"
+                android:id="@+id/PlayerTextName"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="00dp"
                 android:foregroundGravity="left"
                 android:gravity="start"
                 android:padding="5dp"
@@ -44,42 +43,10 @@
                 android:textSize="18sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/RoleImageView"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <Button
-                android:id="@+id/RoleButtonRemove"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_margin="10dp"
-                android:text="@string/ButtonRemove"
-                android:textSize="18sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/RoleTextNumberOfRoles"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/RoleTextNumberOfRoles"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:text="@string/RowRoleNumberOfRoles"
-                android:textSize="18sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/RoleButtonAdd"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <Button
-                android:id="@+id/RoleButtonAdd"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_margin="5dp"
-                android:text="@string/ButtonAdd"
-                android:textSize="18sp"
-                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.51" />
+                app:layout_constraintStart_toEndOf="@+id/PlayerImageView"
+                app:layout_constraintTop_toTopOf="parent" />
+
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
