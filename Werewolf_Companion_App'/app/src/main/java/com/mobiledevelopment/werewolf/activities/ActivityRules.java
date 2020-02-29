@@ -1,9 +1,11 @@
-package com.mobiledevelopment.werewolf;
+package com.mobiledevelopment.werewolf.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import android.os.Bundle;
+
+import com.mobiledevelopment.werewolf.R;
 import com.mobiledevelopment.werewolf.util.AdapterRole;
 
 
