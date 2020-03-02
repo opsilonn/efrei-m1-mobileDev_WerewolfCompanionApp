@@ -77,12 +77,22 @@
         Contrairement au Loup-Garou Blanc, il fait entièrement partie du camp des Loups-Garous, et non pas bande à part.\n\n
         S’il se fait tuer lors d’un vote, sa meute est tellement désemparée qu’elle ne tue personne la nuit suivante.\n\n
     </string>
+    <string name="role_infect_father_of_wolves">Infect Père des Loups</string>
+    <string name="role_infect_father_of_wolves_description">
+        Une fois dans la partie, il peut transformer la victime des loups en Loup-Garou (qui ne meurt donc pas).\n\n
+        L\'infecté garde ses pouvoirs d\'innocent !!\n\n
+    </string>
 
     <!-- VILLAGERS -->
     <string name="role_villager">Villageois</string>
     <string name="role_villager_description">
         Il s\'agit du personnage de base.\n\n
         Sans pouvoir, il ne peut que débattre et voter au cours des bûchers.
+    </string>
+    <string name="role_honest_man">Honnête Homme</string>
+    <string name="role_honest_man_description">
+        Au début d\’un jour de son choix, il peut révéler son véritable rôle :\n
+        celle d\’être un simple Villageois.
     </string>
     <string name="role_village_idiot">L\'idiot du Village</string>
     <string name="role_village_idiot_description">
@@ -97,7 +107,7 @@
         Si les 2 amoureux font partie de la même faction (2 Villageois, 2 Loups-Garous), ils conservent leur objectif. Sinon (ex : 1 Villageois + 1 Loup-Garou), ils ont pour but d’être les 2 derniers survivants.
     </string>
     <string name="role_hunter">Chasseur</string>
-    <string name="role_Hunter_description">
+    <string name="role_hunter_description">
         Dès qu\'il meurt, et ce quelle que soit la méthode, il peut désigner un joueur qui mourra également sur-le-champ.
     </string>
     <string name="role_weasel">Fouine</string>
@@ -116,6 +126,52 @@
         La nuit, il peut décider de ‘‘raser’’ un joueur (pouvoir à usage unique).\n\n
         S’il s\’agit d’un Loup-Garou, celui-ci meurt ;\n
         Dans le cas contraire, c’est le barbier qui décède.
+    </string>
+    <string name="role_inquisitor">Inquisiteur</string>
+    <string name="role_inquisitor_description">
+        S\’il décide d’utiliser son pouvoir, il doit se révéler auprès des autres joueurs en tant qu’Inquisiteur.\n\n
+        Avant les débats, il peut demander à un joueur de révéler son rôle. Bien qu\’il soit obligé de répondre explicitement par un rôle existant, il n\’est pas tenu de dire la vérité. Aussi, le joueur questionné NE DOIT PAS révéler s\’il a menti ou non.\n\n
+        Si la personne interrogée est tuée lors du vote mais qu\’elle se révèle être innocente, l\’inquisiteur perd son pouvoir.
+    </string>
+    <string name="role_stutterer_judge">Juge Bègue</string>
+    <string name="role_stutterer_judge_description">
+        1er personnage à se réveiller la nuit, il peut organiser un vote impromptu en pleine soirée.\n\n
+        Il ne peut utiliser son pouvoir qu\’une seule fois, et pas la première nuit.
+    </string>
+    <string name="role_small_girl">Petite Fille</string>
+    <string name="role_small_girl_description">
+        Elle peut regarder discrètement pendant le tour des Loups-Garous afin de les identifier.\n\n
+        Elle devra surtout redoubler de vigilance, puisque ces derniers la tueront dès que possible.
+    </string>
+    <string name="role_savior">Salvateur</string>
+    <string name="role_savior_description">
+        Le Salvateur peut désigner chaque nuit un joueur qui survivra si les Loups-Garous (Loup-Garou Blanc et Grand Méchant Loup compris) décident de le tuer.\n\n
+        En revanche, toute autre mise à mort (potion empoisonnée, mise sur le bûcher …) le tuera en dépit de la protection.\n\n
+        Le Salvateur peut se protéger lui-même, mais il ne peut pas protéger la même personne 2 tours de suite.
+    </string>
+    <string name="role_witch">Sorcière</string>
+    <string name="role_witch_description">
+        Elle possède deux potions :\n\n
+        Une de guérison, qui peut sauver une personne fraichement assassinée par les Loups-Garous (Sorcière comprise) ;\n
+        Une d’empoisonnement, qui peut tuer n’importe quel joueur.\n\n
+        Elles sont à usage unique, et elle ne peut en utiliser qu’une par tour maximum (si tenté qu’elle souhaite s’en servir : elle peut très bien ne pas les utiliser).
+    </string>
+    <string name="role_soothsayer">Voyante</string>
+    <string name="role_soothsayer_description">
+        Chaque nuit, elle peut désigner une personne dont elle découvrira secrètement l\'identité.
+    </string>
+    <string name="role_abominable_sectarian">Abominable Sectaire</string>
+    <string name="role_abominable_sectarian_description">
+        Au début de la partie, le MJ sépare les joueurs en 2 catégories distinctes selon un critère évident (couleurs portées, filles/garçons, port de lunettes…).\n\n
+        Le sectaire cherche à assurer la dominance de son groupe, et gagnera en exterminant tous les membres de l’autre groupe.\n\n
+        Ex : le critère choisi est \"le port de lunettes\".\n
+        Si le Sectaire n’en possède pas,il cherchera à tuer tous ceux qui en porte.
+    </string>
+    <string name="role_flute_player">Joueur de Flûte</string>
+    <string name="role_flute_player_description">
+        Chaque nuit, il a la possibilité de charmer 1 ou 2 joueurs (selon la règle appliquée dans la partie).\
+        Les joueurs charmés cette nuit se reconnaissent entre eux.\n\n
+        Si, à n\'importe quel moment, le Joueur de Flûte est en vie et que tous les autres joueurs vivants ont été charmés, il gagne immédiatement la partie.
     </string>
 
     <!-- TODO: Remove or change this placeholder text -->

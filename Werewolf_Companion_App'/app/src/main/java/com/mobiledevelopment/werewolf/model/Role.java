@@ -1,6 +1,5 @@
 package com.mobiledevelopment.werewolf.model;
 
-
 import androidx.annotation.StringRes;
 import com.mobiledevelopment.werewolf.R;
 import java.io.Serializable;
@@ -56,6 +55,17 @@ public enum Role implements Serializable
             PowerActivationTime.Night,
             PowerActivationOrder.BigBadWolf),
 
+    InfectFatherOfWolves(
+            R.string.role_infect_father_of_wolves,
+            R.string.role_infect_father_of_wolves_description,
+            R.drawable.im_infect_father_of_wolves,
+            Team.Werewolf,
+            R.drawable.ic_werewolf,
+            true,
+            false,
+            PowerActivationTime.Night,
+            PowerActivationOrder.InfectFatherOfWolves),
+
     Cupid(
             R.string.role_cupid,
             R.string.role_cupid_description,
@@ -66,6 +76,50 @@ public enum Role implements Serializable
             false,
             PowerActivationTime.Night,
             PowerActivationOrder.Cupid),
+
+    Witch(
+            R.string.role_witch,
+            R.string.role_witch_description,
+            R.drawable.im_witch,
+            Team.Villager,
+            R.drawable.ic_witch,
+            true,
+            true,
+            PowerActivationTime.Night,
+            PowerActivationOrder.Witch),
+
+    SoothSayer(
+            R.string.role_soothsayer,
+            R.string.role_soothsayer_description,
+            R.drawable.im_soothsayer,
+            Team.Villager,
+            R.drawable.ic_soothsayer,
+            true,
+            true,
+            PowerActivationTime.Night,
+            PowerActivationOrder.SoothSayer),
+
+    Hunter(
+            R.string.role_hunter,
+            R.string.role_hunter_description,
+            R.drawable.im_hunter,
+            Team.Villager,
+            R.drawable.ic_hunter,
+            true,
+            false,
+            PowerActivationTime.Death,
+            PowerActivationOrder.Hunter),
+
+    HonestMan(
+            R.string.role_honest_man,
+            R.string.role_honest_man_description,
+            R.drawable.im_honest_man,
+            Team.Villager,
+            R.drawable.ic_honest_man,
+            true,
+            false,
+            PowerActivationTime.Day,
+            PowerActivationOrder.HonestMan),
 
     VillageIdiot(
             R.string.role_village_idiot,
@@ -89,6 +143,61 @@ public enum Role implements Serializable
             PowerActivationTime.Night,
             PowerActivationOrder.Crow),
 
+    Weasel(
+            R.string.role_weasel,
+            R.string.role_weasel_description,
+            R.drawable.im_weasel,
+            Team.Villager,
+            R.drawable.ic_weasel,
+            true,
+            true,
+            PowerActivationTime.Night,
+            PowerActivationOrder.Weasel),
+
+    SmallGirl(
+            R.string.role_small_girl,
+            R.string.role_small_girl_description,
+            R.drawable.im_small_girl,
+            Team.Villager,
+            R.drawable.ic_small_girl,
+            true,
+            true,
+            PowerActivationTime.Night,
+            PowerActivationOrder.SmallGirl),
+
+    Savior(
+            R.string.role_savior,
+            R.string.role_savior_description,
+            R.drawable.im_savior,
+            Team.Villager,
+            R.drawable.ic_savior,
+            true,
+            true,
+            PowerActivationTime.Night,
+            PowerActivationOrder.Savior),
+
+    Inquisitor(
+            R.string.role_inquisitor,
+            R.string.role_inquisitor_description,
+            R.drawable.im_inquisitor,
+            Team.Villager,
+            R.drawable.ic_inquisitor,
+            true,
+            true,
+            PowerActivationTime.Day,
+            PowerActivationOrder.Inquisitor),
+
+    StuttererJudge(
+            R.string.role_stutterer_judge,
+            R.string.role_stutterer_judge_description,
+            R.drawable.im_stutterer_judge,
+            Team.Villager,
+            R.drawable.ic_stutterer_judge,
+            true,
+            false,
+            PowerActivationTime.Night,
+            PowerActivationOrder.StuttererJudge),
+
     Barber(
             R.string.role_barber,
             R.string.role_barber_description,
@@ -100,16 +209,27 @@ public enum Role implements Serializable
             PowerActivationTime.Night,
             PowerActivationOrder.Barber),
 
-    Weasel(
-            R.string.role_weasel,
-            R.string.role_weasel_description,
-            R.drawable.im_weasel,
-            Team.Villager,
-            R.drawable.ic_weasel,
+    AbominableSectarian(
+            R.string.role_abominable_sectarian,
+            R.string.role_abominable_sectarian_description,
+            R.drawable.im_abominable_sectarian,
+            Team.Other,
+            R.drawable.ic_abominable_sectarian,
+            true,
+            false,
+            PowerActivationTime.None,
+            PowerActivationOrder.AbominableSectarian),
+
+    FlutePlayer(
+            R.string.role_flute_player,
+            R.string.role_flute_player_description,
+            R.drawable.im_flute_player,
+            Team.Other,
+            R.drawable.ic_flute_player,
             true,
             true,
             PowerActivationTime.Night,
-            PowerActivationOrder.Weasel);
+            PowerActivationOrder.FlutePlayer);
 
 
 
@@ -165,6 +285,18 @@ public enum Role implements Serializable
         this.powerActivationOrder = powerActivationOrder;
     }
 
+
+    /**
+     * Returns whether a Role is activated at Night
+     * @return Whether a Role is activated at Night
+     */
+    public boolean isActivatedAtNight()
+    {
+        boolean condition1 = ( getPowerActivationOrder().compareTo(PowerActivationOrder.BEGIN_NIGHT) > 0);
+        boolean condition2 = ( getPowerActivationOrder().compareTo(PowerActivationOrder.END_NIGHT) < 0);
+
+        return ( condition1 && condition2 );
+    }
 
     // GETTER SETTER
     public int getName() {

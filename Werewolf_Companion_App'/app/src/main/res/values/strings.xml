@@ -75,12 +75,22 @@
         Contrarily to the White Wolf, it entirely belongs to the Werewolf side.\n\n
         If it dies during a vote, the pack is so distraught that it doesn\'t kill anyone the next night.\n\n
     </string>
+    <string name="role_infect_father_of_wolves">Infect Father of Wolves</string>
+    <string name="role_infect_father_of_wolves_description">
+        Once per party, it can change the wolves victim into a Werewolf (hence, it doesn\'t die).\n\n
+        The infected player keeps its previous powers !!\n\n
+    </string>
 
     <!-- VILLAGERS -->
     <string name="role_villager">Villager</string>
     <string name="role_villager_description">
         It is the default character.\n\n
         Without any power, it can only debate and vote during pyre.
+    </string>
+    <string name="role_honest_man">Honest Man</string>
+    <string name="role_honest_man_description">
+        At the beginning of a day of his choice, he can reveal his true role :\n
+        being a simple Villager.
     </string>
     <string name="role_village_idiot">Village Idiot</string>
     <string name="role_village_idiot_description">
@@ -95,7 +105,7 @@
         If the lovers belongs to the same side (2 Villagers, 2 Werewolves), they keep their objective. Ohterwise (ex : 1 Villager + 1 Werewolf), they now aim to be the last 2 players.
     </string>
     <string name="role_hunter">Hunter</string>
-    <string name="role_Hunter_description">
+    <string name="role_hunter_description">
         Whenever he dies (whatever the reason is), it can designate a player that immediately dies.
     </string>
     <string name="role_weasel">Weasel</string>
@@ -115,6 +125,53 @@
         If he is a Werewolf, he dies ;\n
         Otherwise, the barber dies.
     </string>
+    <string name="role_inquisitor">Inquisitor</string>
+    <string name="role_inquisitor_description">
+        If he decides to use his power, he must reveal himself as the Inquisitor.\n\n
+        Before the debates, he can ask a player to reveal his role. Even though the player has to answer with an existing role, he doesn\'t have to tell the truth. Also, the questioned player MUST NOT reveal if he lied or not.\n\n
+        If the questioned player is killed at the end of the debate, but is innocent, the Inquisitor lose his power.
+    </string>
+    <string name="role_stutterer_judge">Stutterer Judge</string>
+    <string name="role_stutterer_judge_description">
+        1st role to wake up, he can organize a new vote in the middle of the night.\n\n
+        He can only use his power once, and cannot do it for the first night.
+    </string>
+    <string name="role_small_girl">Small Girl</string>
+    <string name="role_small_girl_description">
+        She can discreetly look around during the Werewolves turn to identify them.\n\n
+        Above all, she will have to be extra vigilant, since they will kill her as soon as possible.
+    </string>
+    <string name="role_savior">Savior</string>
+    <string name="role_savior_description">
+        The Savior designate a player each night that will survive if the Werewolves (White Wolf and Big Bad Wolf included) decide to kill him.\n\n
+        On the other hand, any other death sentence (poisoned potion, killed by the village\'s vote…) will kill him despite his protection.\n\n
+        The Savior can protect himself, but he can protect the same person twice in a row.
+    </string>
+    <string name="role_witch">Witch</string>
+    <string name="role_witch_description">
+        She possesses two potions :\n\n
+        One for Healing, which can save a person freshly murdered by Werewolves (herself included) ;\n
+        One for Poisoning, which can kill any player.\n\n
+        They can only be used once, and only one potion per turn (if tempted she wants to use it : she may very well keep them for later).
+    </string>
+    <string name="role_soothsayer">Soothsayer</string>
+    <string name="role_soothsayer_description">
+        Each night, she can designate a player of which she\'ll discover the role.
+    </string>
+    <string name="role_abominable_sectarian">Abominable Sectarian</string>
+    <string name="role_abominable_sectarian_description">
+        At the start of the game, the GM separates the players into 2 distinct categories according to an obvious criterion (colors worn, girls / boys, wearing glasses, etc.).\n\n
+        The sectarian seeks to ensure dominance of his group, and will win by exterminating all members of the other group.\n\n
+        Ex: the criterion chosen is \"wearing glasses\".\n
+        If the Sectarian does not have glasses, he will seek to kill everyone who wears it.
+    </string>
+    <string name="role_flute_player">Flute Player</string>
+    <string name="role_flute_player_description">
+        Each night, he can charm 1 or 2 players (depending on the rule applied in the game).\n
+        Charmed players of this night recognize each other.\n\n
+        If at any time, the Flute Player is alive and all other living players have been charmed, he immediately wins the game.
+    </string>
+
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
