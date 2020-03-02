@@ -45,11 +45,13 @@ Afterwards, it will help the Game Master organise the game by keeping track of w
 
 ### Getting Started
 The programmation is fully completed !
-You may only only need to fulfill one task (AndroidStudio will automatically warn you of it, so don't worry) :
+You may only only need to fulfill one task :
 
 ```
 The location of the Android SDK is set according to my own path, with will obviously vary with yours.
-Worry not : Android Studio will automatically warn you of it, and propose you to change the path to the one you have.
+Worry not : Android Studio will automatically warn you of it,
+and propose you to change the path to the one you have.
+
 Now, it's all set and done ! you can use the app freely ! :D
 ```
 
