@@ -69,10 +69,14 @@ public class FragmentPartyNewPlayers extends Fragment
             @Override
             public void onClick(View v) {
                 // We get the name entered in the Edit Text
-                final String name = editText.getText().toString();
+                // we remove the double white spaces, and the spaces at the beginning
+                final String name = editText.getText().toString().replace("  ", " ").trim();
 
-                // If the name is valid (not empty && not taken already)
-                if( name.length() != 0 && !parentActivity.party.containsPlayer(name) )
+                // If the name is valid (some conditions are detailed below)
+                boolean notEmpty = (name.length() != 0);
+                boolean notAlreadyContained = (!parentActivity.party.containsPlayer(name));
+
+                if( notEmpty && notAlreadyContained )
                 {
                     // The order is important :
                     // FIRST - We add the Player to the Party

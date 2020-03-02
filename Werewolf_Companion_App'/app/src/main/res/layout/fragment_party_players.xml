@@ -4,43 +4,36 @@
     android:layout_height="match_parent"
     tools:context="com.mobiledevelopment.werewolf.fragments.FragmentPartyPlayers">
 
-    <!-- TODO: Update blank fragment layout -->
-    <ScrollView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:foregroundGravity="center">
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
-        <LinearLayout
-            android:layout_width="match_parent"
+        <androidx.cardview.widget.CardView
+            android:layout_width="187dp"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_gravity="center"
+            android:layout_margin="50dp"
+            android:padding="25dp">
 
-            <androidx.cardview.widget.CardView
-                android:layout_width="187dp"
+            <Switch
+                android:id="@+id/PartyPlayerSwitchHide"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_margin="50dp"
-                android:padding="25dp">
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="10dp"
+                android:switchPadding="25dp"
+                android:text="@string/PartyPlayerTextHide"
+                android:textColorLink="@color/colorPrimary" />
 
-                <Switch
-                    android:id="@+id/PartyPlayerSwitchHide"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:padding="10dp"
-                    android:switchPadding="25dp"
-                    android:text="@string/PartyPlayerTextHide"
-                    android:textColorLink="@color/colorPrimary" />
+        </androidx.cardview.widget.CardView>
 
-            </androidx.cardview.widget.CardView>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/PartyRvPlayer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/PartyRvPlayer"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
-
-        </LinearLayout>
-    </ScrollView>
+    </LinearLayout>
 </FrameLayout>
