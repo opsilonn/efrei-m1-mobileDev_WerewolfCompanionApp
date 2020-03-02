@@ -2,11 +2,9 @@
 
 Made as a project for the following :
 
-School : Efrei Paris - Semester 8 in Software Engineering
-
-Course : Mobile Development (Android)
-
-Goal : Design and build an Android Application.
+* School : Efrei Paris - Semester 8 in Software Engineering
+* Course : Mobile Development (Android)
+* Goal : Design and build an Android Application.
 
 
 
@@ -30,84 +28,53 @@ There a few things required to play the game efficiently : knowledge of the game
 An app’ would solve both issues, and greatly help the Game Master. All role’s data can be displayed at any time, and allows him to easily create games with any selection of character he wants, and keep track of which player plays which role.
 
 
+### How to use the app'
+IMPORTANT : the project is meant to HELP organize and follow a game, not to direct players likes heeps.
 
-## The structure of the project
-The project consists of 2 Versions of the same website : each uses a different set of technologies.
+When launching the App', you have 3 choices : 
+* Create a Party by entering the names of the players and choosing the roles available
+* See the rules, to familiarize yourself with the concept and the different roles
+* Change the language of the App' : English and French
 
-The website contains these pages :
-* Login - Connect to website (creates a session)
-* Logout - Delete the Session
-* Employees - The main page ; It displays all the employees.
-* Employee - The detail page ; All the data concerning a given Employee are displayed.
-
-Note that you can connect to the website whether as an ADMIN or an EMPLOYEE, the Admin having dedicated rights. Most notably, you can ADD, DELETE and MODIFY employees.
-
+If you create a party, the app' will automatically give each player role randomly (more on that on the API section).
+Afterwards, it will help the Game Master organise the game by keeping track of who play which role, and whose players turn it is to play.
 
 
-## Getting Started
-The programmation is fully completed, but we have a small requirement : creating the database.
-Don't worry ! We got you covered.
 
-For the V1 :
+## The Project
+
+### Getting Started
+The programmation is fully completed !
+You may only only need to fulfill one task (AndroidStudio will automatically warn you of it, so don't worry) :
+
 ```
-You'll need to create a JavaDB database.
-Here are the file to help you create & fill the database.
-Creating the Database : projetJEE\V1\JEE_PROJECT_V1\web\WEB-INF\SQL\codedb.sql
-Filling the Database : projetJEE\V1\JEE_PROJECT_V1\web\WEB-INF\SQL\remplissage.sql
-
-You'll need to create the database within the project, thanks to the service/database window.
+The location of the Android SDK is set according to my own path, with will obviously vary with yours.
+Worry not : Android Studio will automatically warn you of it, and propose you to change the path to the one you have.
+Now, it's all set and done ! you can use the app freely ! :D
 ```
 
 
-For the V2 :
-```
-You'll need to create an SQL database.
-Here are the file to help you create & fill the database.
-Creating the Database : projetJEE\V2\JEE_PROJECT_V2\web\WEB-INF\SQL\codedb.sql
-Filling the Database : projetJEE\V2\JEE_PROJECT_V2\web\WEB-INF\SQL\remplissage.sql
+### The Structure
+I won't get too technical, but the project works following two axess :
 
-You'll need to open phpMyAdmin (and, notably, also open Wamp / Wamp / whatever you use).
-Create a new database, and giving any name you want.
-Now, how to create the table with the sql code we provided you, then fill it.
-
-Next, in the project, you'll just have to link the database to the project with :
-services/Register my SQL server...
-```
+* organise data : I have a big, big BIG Enumeration containing all the Roles (that a player can incarnate). Each iteration points to the according Strings (name, description), Drawable (picture, icon)... Same, I have some classes to represent players and Party.
+* UI : I have a total of 5 Activities (one of them being dedicated to communicating to the API) and 6 Fragments. They implement a large array of Widgets (including Recycler Views : there's quite a lot of them).
 
 
-For the first attempt of our V2 :
-```
-In the branch V2_copy you'll find our first attempt on the V2.
-In this project, the dtabase had TWO tables - employee and adress - and a employee could have morethan one adress (theoricly, the V1 too).
+### The API
+lorem ipsum dolor amet...
 
-This version was almost completly finished, the two Entity EmployeeApi and AdressApi were link together on OneToMany in cascade and everyrthing was working just fine on the GET, the PUT and the DELETE methodes until we implement the POST method.
-The problem was that the new EmployeeApi didn't 'update' itself with the database to get the new adresses. We debug the program with our professor for more than an hour before we sitch to the current version our the V2.
-
-The original code of this attempt is still accesible in the branch 'V2_copy'. The V2 has is own codedb.sql for setting-up the database.
-```
-
-
-
-## Concerning the Servlets
-We are aware that the subject specifically said "Unique Servlet".
-Yet, we deployed many of them in each versions.
-
-We felt that it was more convenient and more secure to have several files doing the job, instead of a big one doing all at once.
-Hence, we have 6 servlets for our V1, and 3 for our V2 (we enhanced our handling of servlet, so we reduced their number).
-
-For instance, we have a dedicated servlet doing the transition from the Login.jsp to the Employees.jsp page,
-or a dedicated servlet doing the operations in the Logout.jsp page.
-
-
-It felt more natural, despite of the directive.
 
 
 
 ## Built With
 
-* [Netbeans 8.2](https://netbeans.org/downloads/8.2/) - The Java IDE we used
-* [PhpMyAdmin 4.8.5](https://https://www.phpmyadmin.net) - The SQL database we used for the V2
-  
+* [Android Studio 3.5.3]https://developer.android.com/studio/) - The IDE used to develop the app'
+* [Android SDK 26.1.1](https://developer.android.com/studio/) - The Android SDK used (same link)
+* Api level 29: Android 10.0 (Q) revision 4 - The development environment used
+* Pixel 2 API 29 - The Android Studio's emulator used for the tests
+
+
 
 
 ## Authors
@@ -122,6 +89,4 @@ Note : made in the 4th year of Software Engineering cursus (1st year of Master).
 
 
 ## Acknowledgments
-
-* :)
-* :) :)
+:)
