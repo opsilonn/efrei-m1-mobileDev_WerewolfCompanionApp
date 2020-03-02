@@ -9,12 +9,15 @@ import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-
 import com.mobiledevelopment.werewolf.R;
-
 import java.util.Locale;
 
 
+/**
+ * {@link AppCompatActivity} that constitute the root activity of the Application.
+ *
+ * The user can either launch a new {@link com.mobiledevelopment.werewolf.model.Party}, see the rules or change the language
+ */
 public class ActivityHome extends AppCompatActivity
 {
     @Override

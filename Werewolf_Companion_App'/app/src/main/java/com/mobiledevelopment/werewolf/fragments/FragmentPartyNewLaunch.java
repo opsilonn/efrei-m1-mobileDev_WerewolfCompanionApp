@@ -8,7 +8,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-
 import com.mobiledevelopment.werewolf.activities.ActivityLoading;
 import com.mobiledevelopment.werewolf.activities.ActivityPartyNew;
 import com.mobiledevelopment.werewolf.R;
@@ -20,7 +19,7 @@ import com.mobiledevelopment.werewolf.util.Util;
  */
 public class FragmentPartyNewLaunch extends Fragment
 {
-    ActivityPartyNew parentActivity;
+    private ActivityPartyNew parentActivity;
 
     /**
      * Constructor of the class

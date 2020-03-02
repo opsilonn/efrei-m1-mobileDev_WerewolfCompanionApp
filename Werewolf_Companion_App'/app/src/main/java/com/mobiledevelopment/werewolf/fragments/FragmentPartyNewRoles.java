@@ -1,6 +1,5 @@
 package com.mobiledevelopment.werewolf.fragments;
 
-
 import android.annotation.SuppressLint;
 import android.os.Bundle;
 import androidx.fragment.app.Fragment;
@@ -10,7 +9,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-
 import com.mobiledevelopment.werewolf.activities.ActivityPartyNew;
 import com.mobiledevelopment.werewolf.R;
 import com.mobiledevelopment.werewolf.util.AdapterRole;
@@ -23,6 +21,7 @@ public class FragmentPartyNewRoles extends Fragment
 {
     private ActivityPartyNew parentActivity;
     private TextView textNumberPlayersRoles;
+    private RecyclerView recyclerView;
 
     /**
      * Constructor of the class
@@ -51,15 +50,10 @@ public class FragmentPartyNewRoles extends Fragment
 
         // We get the widgets references
         textNumberPlayersRoles = parentActivity.findViewById(R.id.partyNewTextRoleNumber);
-        RecyclerView recyclerView = parentActivity.findViewById(R.id.RulesRecyclerView);
+        recyclerView = parentActivity.findViewById(R.id.RulesRecyclerView);
 
         setText();
-
-
-        // We instantiate a RecyclerView Adapter
-        AdapterRole adapter = new AdapterRole(parentActivity);
-        recyclerView.setAdapter(adapter);
-        recyclerView.setLayoutManager(new LinearLayoutManager(parentActivity));
+        setRecyclerView();
     }
 
 
@@ -77,5 +71,18 @@ public class FragmentPartyNewRoles extends Fragment
 
         // We set the message inside the Text View
         textNumberPlayersRoles.setText(message);
+    }
+
+
+
+    /**
+     * Sets the RecyclerView
+     */
+    private void setRecyclerView()
+    {
+        // We instantiate a RecyclerView Adapter
+        AdapterRole adapter = new AdapterRole(parentActivity);
+        recyclerView.setAdapter(adapter);
+        recyclerView.setLayoutManager(new LinearLayoutManager(parentActivity));
     }
 }

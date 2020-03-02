@@ -37,6 +37,9 @@ public class ActivityParty extends AppCompatActivity
         Bundle extras = getIntent().getExtras();
         party = (Party) extras.getSerializable(Util.EXTRA_PARTY);
 
+        // A Party begins with the data displayed
+        party.setDataHidden(false);
+
 
         // Initialize all the fragments
         fragmentPlayers = new FragmentPartyPlayers(this);

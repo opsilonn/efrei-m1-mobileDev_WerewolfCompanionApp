@@ -2,6 +2,7 @@ package com.mobiledevelopment.werewolf.model;
 
 import android.graphics.Color;
 
+
 /**
  * An Enumeration describing the different Teams to which a {@link Role} may belong to
  */

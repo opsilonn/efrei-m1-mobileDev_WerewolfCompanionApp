@@ -4,11 +4,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import android.os.Bundle;
-
 import com.mobiledevelopment.werewolf.R;
 import com.mobiledevelopment.werewolf.util.AdapterRole;
 
 
+/**
+ * {@link AppCompatActivity} that displays the rules of the game,
+ * and the various {@link com.mobiledevelopment.werewolf.model.Role} a {@link com.mobiledevelopment.werewolf.model.Player} can incarnate
+ */
 public class ActivityRules extends AppCompatActivity
 {
     @Override

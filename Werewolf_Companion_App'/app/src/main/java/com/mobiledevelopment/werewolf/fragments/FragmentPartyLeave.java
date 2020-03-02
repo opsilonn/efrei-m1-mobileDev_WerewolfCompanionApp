@@ -1,6 +1,5 @@
 package com.mobiledevelopment.werewolf.fragments;
 
-
 import android.content.Intent;
 import android.os.Bundle;
 import androidx.fragment.app.Fragment;
@@ -8,7 +7,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-
 import com.mobiledevelopment.werewolf.activities.ActivityParty;
 import com.mobiledevelopment.werewolf.activities.ActivityPartyNew;
 import com.mobiledevelopment.werewolf.R;
@@ -20,7 +18,7 @@ import com.mobiledevelopment.werewolf.util.Util;
  */
 public class FragmentPartyLeave extends Fragment
 {
-    ActivityParty parentActivity;
+    private ActivityParty parentActivity;
 
     /**
      * Constructor of the class

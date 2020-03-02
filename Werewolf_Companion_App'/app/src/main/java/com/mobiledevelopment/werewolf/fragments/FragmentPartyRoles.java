@@ -5,7 +5,6 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
 import com.mobiledevelopment.werewolf.activities.ActivityParty;
 import com.mobiledevelopment.werewolf.R;
 
@@ -15,7 +14,7 @@ import com.mobiledevelopment.werewolf.R;
  */
 public class FragmentPartyRoles extends Fragment
 {
-    ActivityParty parentActivity;
+    private ActivityParty parentActivity;
 
     /**
      * Constructor of the class

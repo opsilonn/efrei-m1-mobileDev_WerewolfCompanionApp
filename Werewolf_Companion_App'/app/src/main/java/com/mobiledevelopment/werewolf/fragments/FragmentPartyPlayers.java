@@ -9,7 +9,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CompoundButton;
 import android.widget.Switch;
-
 import com.mobiledevelopment.werewolf.activities.ActivityParty;
 import com.mobiledevelopment.werewolf.R;
 import com.mobiledevelopment.werewolf.model.Player;
@@ -21,8 +20,8 @@ import com.mobiledevelopment.werewolf.util.AdapterPlayer;
  */
 public class FragmentPartyPlayers extends Fragment
 {
-    ActivityParty parentActivity;
-    RecyclerView recyclerView;
+    private ActivityParty parentActivity;
+    private RecyclerView recyclerView;
 
 
     /**
@@ -64,8 +63,13 @@ public class FragmentPartyPlayers extends Fragment
      */
     private void setSwitch()
     {
+        // We get the widget reference
         Switch switchHide = parentActivity.findViewById(R.id.PartyPlayerSwitchHide);
 
+        // We set the Switch accordingly
+        switchHide.setChecked(parentActivity.party.isDataHidden());
+
+        // We add a listener
         switchHide.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener()
         {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked)

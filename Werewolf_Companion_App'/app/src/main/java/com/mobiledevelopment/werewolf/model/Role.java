@@ -287,15 +287,51 @@ public enum Role implements Serializable
 
 
     /**
+     * Returns whether a Role is never activated
+     * @return Whether a Role is never activated
+     */
+    public boolean isNeverActivated()
+    {
+        boolean afterBegin = ( getPowerActivationOrder().compareTo(PowerActivationOrder.BEGIN_NEVER_ACTIVATES) > 0);
+        boolean beforeEnd = ( getPowerActivationOrder().compareTo(PowerActivationOrder.END_NEVER_ACTIVATES) < 0);
+
+        return ( afterBegin && beforeEnd );
+    }
+
+    /**
+     * Returns whether a Role activates when it dies
+     * @return Whether a Role activates when it dies
+     */
+    public boolean isActivatedAtDeath()
+    {
+        boolean afterBegin = ( getPowerActivationOrder().compareTo(PowerActivationOrder.BEGIN_WHEN_ROLE_DIES) > 0);
+        boolean beforeEnd = ( getPowerActivationOrder().compareTo(PowerActivationOrder.END_WHEN_ROLE_DIES) < 0);
+
+        return ( afterBegin && beforeEnd );
+    }
+
+    /**
      * Returns whether a Role is activated at Night
      * @return Whether a Role is activated at Night
      */
     public boolean isActivatedAtNight()
     {
-        boolean condition1 = ( getPowerActivationOrder().compareTo(PowerActivationOrder.BEGIN_NIGHT) > 0);
-        boolean condition2 = ( getPowerActivationOrder().compareTo(PowerActivationOrder.END_NIGHT) < 0);
+        boolean afterBegin = ( getPowerActivationOrder().compareTo(PowerActivationOrder.BEGIN_NIGHT) > 0);
+        boolean beforeEnd = ( getPowerActivationOrder().compareTo(PowerActivationOrder.END_NIGHT) < 0);
 
-        return ( condition1 && condition2 );
+        return ( afterBegin && beforeEnd );
+    }
+
+    /**
+     * Returns whether a Role is activated at Day
+     * @return Whether a Role is activated at Day
+     */
+    public boolean isActivatedAtDay()
+    {
+        boolean afterBegin = ( getPowerActivationOrder().compareTo(PowerActivationOrder.BEGIN_DAY) > 0);
+        boolean beforeEnd = ( getPowerActivationOrder().compareTo(PowerActivationOrder.END_DAY) < 0);
+
+        return ( afterBegin && beforeEnd );
     }
 
     // GETTER SETTER
