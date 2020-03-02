@@ -3,6 +3,7 @@
     <!-- Major Data -->
     <string name="app_name">Werewolf</string>
     <string name="TextGoBack">X</string>
+    <string name="PlaceholderName">X</string>
     <string name="ButtonRemove">-</string>
     <string name="ButtonAdd">+</string>
 
@@ -48,11 +49,17 @@
     <string name="PartyButtonLeave">Leave the Party</string>
 
 
-    <!-- RecyclerViews - Row -->
+    <!-- RecyclerViews - Row Role -->
     <string name="RowRoleDefaultTitle">Lorem Ipsum</string>
-    <string name="RowRoleDefaultDescription">Dolor Amet</string>
     <string name="RowRoleImageDescription">I\'m an image !</string>
     <string name="RowRoleNumberOfRoles">123</string>
+
+
+    <!-- RecyclerViews - Row Player -->
+    <string name="RowPlayerDefaultName">Lorem Ipsum</string>
+    <string name="RowPlayerDefaultNameIsDying">X is dying !</string>
+    <string name="RowPlayerImageDescription">I\'m an image !</string>
+    <string name="RowPlayerButtonKill">I\'m a button !</string>
 
 
     <!-- Roles content -->
@@ -171,6 +178,14 @@
         Charmed players of this night recognize each other.\n\n
         If at any time, the Flute Player is alive and all other living players have been charmed, he immediately wins the game.
     </string>
+
+
+    <!-- Roles Triggers -->
+    <string name="trigger_role_cupid">Lover</string>
+    <string name="trigger_role_infect_father_of_wolves">Infected</string>
+    <string name="trigger_role_flute_player">Charmed</string>
+    <string name="trigger_role_crow">Vote + 1</string>
+    <string name="trigger_role_savior">Protected</string>
 
 
     <!-- TODO: Remove or change this placeholder text -->

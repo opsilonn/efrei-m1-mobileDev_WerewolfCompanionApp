@@ -11,6 +11,8 @@ import com.mobiledevelopment.werewolf.fragments.FragmentPartyPlayers;
 import com.mobiledevelopment.werewolf.fragments.FragmentPartyRoles;
 import com.mobiledevelopment.werewolf.R;
 import com.mobiledevelopment.werewolf.model.Party;
+import com.mobiledevelopment.werewolf.model.Player;
+import com.mobiledevelopment.werewolf.model.Role;
 import com.mobiledevelopment.werewolf.util.Util;
 
 
@@ -36,6 +38,11 @@ public class ActivityParty extends AppCompatActivity
         // Receive Data
         Bundle extras = getIntent().getExtras();
         party = (Party) extras.getSerializable(Util.EXTRA_PARTY);
+        for (Player p: party.getPlayers())
+        {
+            if(p.getRole() == Role.Villager)
+                p.setAlive(false);
+        }
 
         // A Party begins with the data displayed
         party.setDataHidden(false);

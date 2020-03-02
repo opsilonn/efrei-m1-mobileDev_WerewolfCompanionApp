@@ -12,6 +12,7 @@ public class Player implements Serializable
     private String name;
     private Role role;
     private boolean isAlive;
+    private boolean isDying;
 
 
     // CONSTRUCTORS
@@ -24,6 +25,7 @@ public class Player implements Serializable
         this.name = name;
         role = null;
         isAlive = true;
+        isDying= false;
     }
 
     /**
@@ -32,11 +34,12 @@ public class Player implements Serializable
      * @param role Role of the instance
      * @param isAlive Whether the instance is alive or not
      */
-    public Player(String name, Role role, boolean isAlive)
+    public Player(String name, Role role, boolean isAlive, boolean isDying)
     {
         this.name = name;
         this.role = role;
         this.isAlive = isAlive;
+        this.isDying = isDying;
     }
 
 
@@ -47,5 +50,7 @@ public class Player implements Serializable
     public Role getRole() { return role; }
     public void setRole(Role role) { this.role = role; }
     public boolean isAlive() { return isAlive; }
-    public void setAlive(boolean alive) { isAlive = alive; }
+    public void setAlive(boolean isAlive) { this.isAlive = isAlive; }
+    public boolean isDying() { return isDying; }
+    public void setDying(boolean isDying) { this.isDying = isDying; }
 }

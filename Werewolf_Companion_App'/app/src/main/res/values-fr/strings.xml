@@ -3,6 +3,7 @@
     <!-- Major Data -->
     <string name="app_name">Loup-Garou</string>
     <string name="TextGoBack">X</string>
+    <string name="PlaceholderName">X</string>
     <string name="ButtonRemove">-</string>
     <string name="ButtonAdd">+</string>
 
@@ -50,11 +51,17 @@
 
 
 
-    <!-- RecyclerViews - Row -->
+    <!-- RecyclerViews - Row Role -->
     <string name="RowRoleDefaultTitle">Lorem Ipsum</string>
-    <string name="RowRoleDefaultDescription">Dolor Amet</string>
     <string name="RowRoleImageDescription">Je suis une image !</string>
     <string name="RowRoleNumberOfRoles">123</string>
+
+
+    <!-- RecyclerViews - Row Player -->
+    <string name="RowPlayerDefaultName">Lorem Ipsum</string>
+    <string name="RowPlayerDefaultNameIsDying">X se meurt !</string>
+    <string name="RowPlayerImageDescription">I\'m an image !</string>
+    <string name="RowPlayerButtonKill">I\'m a button !</string>
 
 
     <!-- Roles content -->
@@ -173,6 +180,14 @@
         Les joueurs charmés cette nuit se reconnaissent entre eux.\n\n
         Si, à n\'importe quel moment, le Joueur de Flûte est en vie et que tous les autres joueurs vivants ont été charmés, il gagne immédiatement la partie.
     </string>
+
+
+    <!-- Roles Triggers -->
+    <string name="trigger_role_cupid">Amoureux</string>
+    <string name="trigger_role_infect_father_of_wolves">Infecté</string>
+    <string name="trigger_role_flute_player">Charmé</string>
+    <string name="trigger_role_crow">Vote + 1</string>
+    <string name="trigger_role_savior">Protégé</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

@@ -25,7 +25,7 @@
                 android:id="@+id/PlayerImageView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:contentDescription="@string/RowRoleImageDescription"
+                android:contentDescription="@string/RowPlayerImageDescription"
                 android:padding="20dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -39,13 +39,23 @@
                 android:foregroundGravity="left"
                 android:gravity="start"
                 android:padding="5dp"
-                android:text="@string/RowRoleDefaultTitle"
+                android:text="@string/RowPlayerDefaultName"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/PlayerButtonKill"
                 app:layout_constraintStart_toEndOf="@+id/PlayerImageView"
                 app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/PlayerButtonKill"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/RowPlayerButtonKill"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_skull" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
