@@ -10,7 +10,28 @@ Goal : Design and build an Android Application.
 
 
 
-### The structure of the project
+## Werewolf Game
+
+### What is it ?
+It is a boardgame meant to be played by (ideally) at least 8 people ; the more players, the better. It takes place in a small village where each player has a given role that only he knows (he and no one else !).
+
+But some werewolves are hidden amongst the civilians : these beasts take out a player each night. In response, each day, the village votes to kill one of its members. The game is won by the werewolves if all the civilians are killed, or by the civilians if all the werewolves are killed.
+
+In addition to that, some other roles can be played, which impact the game in
+different ways (to name a few : Cupidon, the Witch, the Soothsayer…)
+
+
+Here is the link to their website : https://www.loups-garous-en-ligne.com/
+
+
+### How a Mobile App' could help ?
+There a few things required to play the game efficiently : knowledge of the game, obviously, and some equipment (aka some cards with a role written on it), to give randomly to each player. The Game Master can also try to remember everyone’s role, but this is never a good idea.
+
+An app’ would solve both issues, and greatly help the Game Master. All role’s data can be displayed at any time, and allows him to easily create games with any selection of character he wants, and keep track of which player plays which role.
+
+
+
+## The structure of the project
 The project consists of 2 Versions of the same website : each uses a different set of technologies.
 
 The website contains these pages :
@@ -93,16 +114,14 @@ It felt more natural, despite of the directive.
 
 It was made by the following Efrei Paris students :
 * **BEGEOT Hugues** - [his Git repository](https://github.com/opsilonn)
-* **BONI François** - [his Git repository](https://github.com/scorpionsdu78)
-* **DULCHE Eddy** - [his Git repository](https://github.com/DulcheE)
 
-See also the list of [contributors](https://github.com/scorpionsdu78/projetJEE/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/opsilonn/mobileDev_WerewolfCompanionApp/contributors) who participated in this project.
 
-Note : we are currently in our 4th year, in a Software Engineering cursus.
+Note : made in the 4th year of Software Engineering cursus (1st year of Master).
 
 
 
 ## Acknowledgments
 
-* NetBeans isn't very compliant, at time --> choose a better IDE
-* There are some features of JavaDB that made the project way harder than it should be, hence we prefered to use SQL database
+* :)
+* :) :)
