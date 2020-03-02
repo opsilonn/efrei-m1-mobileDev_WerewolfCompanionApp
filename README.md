@@ -1,8 +1,11 @@
 # Werewolf Companion App'
 
 Made as a project for the following :
+
 School : Efrei Paris - Semester 8 in Software Engineering
+
 Course : Mobile Development (Android)
+
 Goal : Design and build an Android Application.
 
 
