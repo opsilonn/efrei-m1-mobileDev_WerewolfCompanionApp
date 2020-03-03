@@ -35,9 +35,11 @@ public class ActivityParty extends AppCompatActivity
 
         // Receive Data
         Bundle extras = getIntent().getExtras();
+        assert extras != null;
         party = (Party) extras.getSerializable(Util.EXTRA_PARTY);
 
         // A Party begins with the data displayed
+        assert party != null;
         party.setDataHidden(false);
 
 

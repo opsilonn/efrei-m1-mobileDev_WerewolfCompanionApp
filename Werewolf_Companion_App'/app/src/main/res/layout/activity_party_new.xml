@@ -7,10 +7,10 @@
     tools:context=".activities.ActivityPartyNew">
 
     <FrameLayout
+        android:id="@+id/party_new_frame"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/party_new_frame"
-        android:layout_above="@id/party_new_navbar"/>
+        android:layout_above="@id/party_new_navbar" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/party_new_navbar"

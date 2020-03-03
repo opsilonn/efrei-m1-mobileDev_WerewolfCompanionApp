@@ -202,7 +202,7 @@ public class AdapterRole extends RecyclerView.Adapter<AdapterRole.MyViewHolder>
             });
 
 
-            // We set the text displaying the current value
+            // By default, we set the text displaying the current value
             holder.textNumberOfRoles.setText( String.valueOf(roleNumbers[position]) );
         }
         // If we are NOT setting the roles :

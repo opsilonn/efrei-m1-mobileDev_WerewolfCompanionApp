@@ -16,12 +16,13 @@
 
         <TextView
             android:id="@+id/RoleTextGoBack"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
             android:layout_gravity="end"
             android:background="@drawable/style_circle_background"
             android:gravity="center"
             android:text="@string/TextGoBack"
+            android:textSize="18sp"
             android:textStyle="bold" />
 
         <ImageView

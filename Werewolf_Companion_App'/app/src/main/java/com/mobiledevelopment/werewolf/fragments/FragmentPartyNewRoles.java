@@ -71,6 +71,16 @@ public class FragmentPartyNewRoles extends Fragment
 
         // We set the message inside the Text View
         textNumberPlayersRoles.setText(message);
+
+        // We set the color accordingly
+        if(parentActivity.asManyPlayersAsRoles())
+        {
+            textNumberPlayersRoles.setTextColor(getResources().getColor(R.color.colorValid));
+        }
+        else
+        {
+            textNumberPlayersRoles.setTextColor(getResources().getColor(R.color.colorInvalid));
+        }
     }
 
 

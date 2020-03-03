@@ -21,6 +21,9 @@ import java.util.Random;
  */
 public class ActivityLoading extends AppCompatActivity
 {
+    private Party party;
+    private ArrayList<Role> roles;
+
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -30,13 +33,19 @@ public class ActivityLoading extends AppCompatActivity
 
         // Receive Data
         Bundle extras = getIntent().getExtras();
-        Party party = (Party) extras.getSerializable(Util.EXTRA_PARTY);
-        ArrayList<Role> roles = (ArrayList<Role>) extras.getSerializable(Util.EXTRA_ROLES);
+        party = (Party) extras.getSerializable(Util.EXTRA_PARTY);
+        roles = (ArrayList<Role>) extras.getSerializable(Util.EXTRA_ROLES);
 
 
 
+        // Treat Data - B - Reset the Players' data
+        for (Player player : party.getPlayers())
+        {
 
-        // Treat Data - A - Order by Names
+        }
+
+
+        // Treat Data - B - Order by Names
         // We get the List of Players, not organized
         ArrayList<Player> playersNotOrdered = party.getPlayers();
 
@@ -69,14 +78,38 @@ public class ActivityLoading extends AppCompatActivity
 
 
 
-        // Treat Data - B - Give each Player a Role
+        // Treat Data - C - Give each Player a Role
+
+        // If I have access to the Internet : use the API
+
+        // Otherwise : use the Local Random solution
+        setDataRandom();
+
+
+        // Send Data
+        Intent intent = new Intent(getBaseContext(), ActivityParty.class);
+        intent.putExtra(Util.EXTRA_PARTY, party);
+        startActivity(intent);
+    }
+
+
+    /**
+     * Set the data using random
+     */
+    private void setDataRandom()
+    {
+        // We set a Random variable
         Random rand = new Random();
+
+        // Foreach player
         for (Player player : party.getPlayers())
         {
+            // We get a random index, and set some variables
             int index = rand.nextInt(roles.size());
             int i = 0;
             Role roleToManage = null;
 
+            // We search for the role at the given index
             for (Role role : roles)
             {
                 if(i != index)
@@ -90,14 +123,20 @@ public class ActivityLoading extends AppCompatActivity
                 }
             }
 
+            // We set the Player's Role
             player.setRole(roleToManage);
+
+            // We remove the Role from the List
             roles.remove(roleToManage);
         }
+    }
 
 
-        // Send Data
-        Intent intent = new Intent(getBaseContext(), ActivityParty.class);
-        intent.putExtra(Util.EXTRA_PARTY, party);
-        startActivity(intent);
+    /**
+     * Set the data using the API
+     */
+    private void setDataAPI()
+    {
+
     }
 }
