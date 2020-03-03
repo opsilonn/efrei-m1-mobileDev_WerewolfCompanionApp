@@ -167,18 +167,16 @@ public class AdapterPlayer extends RecyclerView.Adapter<AdapterPlayer.MyViewHold
     {
         SpannableString message = new SpannableString(player.getName());
 
-
+        // If the player is dead : custom color
         if( !player.isAlive() )
         {
             holder.name.setTextColor(context.getResources().getColor(R.color.colorDead));
         }
 
-
         // If the data are Hidden :
         // Default Icon
         // Default color if alive
         // Display only the name
-
         // If it is not :
         if( !context.party.isDataHidden() )
         {

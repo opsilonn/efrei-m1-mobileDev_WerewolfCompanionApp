@@ -25,7 +25,7 @@ public class Party implements Serializable
         numberOfPlayers = 0;
         players = new ArrayList<>();
         partyID = null;
-        cptTurns = 0;
+        cptTurns = 1;
         dataHidden = false;
     }
 
@@ -106,6 +106,7 @@ public class Party implements Serializable
         }
     }
 
+    public void nextTurn() { this.cptTurns++; }
 
     // GETTER && SETTER
     public ArrayList<Player> getPlayers() { return players; }
@@ -116,5 +117,4 @@ public class Party implements Serializable
     public void setCptTurns(int cptTurns) { this.cptTurns = cptTurns; }
     public boolean isDataHidden() { return dataHidden; }
     public void setDataHidden(boolean dataHidden) { this.dataHidden = dataHidden; }
-
 }

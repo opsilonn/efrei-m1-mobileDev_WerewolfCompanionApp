@@ -46,6 +46,8 @@
     <string name="PartyNavBarRoles">Roles</string>
     <string name="PartyNavBarLeave">Leave</string>
     <string name="PartyPlayerTextHide">Hide the Data :</string>
+    <string name="PartyRoleTurnCounter">Turn n° X</string>
+    <string name="PartyRoleTurnButton">Next turn</string>
     <string name="PartyButtonLeave">Leave the Party</string>
 
 
@@ -186,8 +188,4 @@
     <string name="trigger_role_flute_player">Charmed</string>
     <string name="trigger_role_crow">Vote + 1</string>
     <string name="trigger_role_savior">Protected</string>
-
-
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
