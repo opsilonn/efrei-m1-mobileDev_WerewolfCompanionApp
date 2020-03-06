@@ -37,15 +37,7 @@ public class ActivityLoading extends AppCompatActivity
         roles = (ArrayList<Role>) extras.getSerializable(Util.EXTRA_ROLES);
 
 
-
-        // Treat Data - B - Reset the Players' data
-        for (Player player : party.getPlayers())
-        {
-
-        }
-
-
-        // Treat Data - B - Order by Names
+        // Treat Data - A - Order by Names
         // We get the List of Players, not organized
         ArrayList<Player> playersNotOrdered = party.getPlayers();
 
@@ -71,14 +63,14 @@ public class ActivityLoading extends AppCompatActivity
             }
 
             // We add the Player with the "lowest" name to the Party's list, and delete it from the disposable list
-            party.getPlayers().add( currentPlayer );
+            party.addPlayer( currentPlayer.getName() );
             playersNotOrdered.remove(currentPlayer);
         }
 
 
 
 
-        // Treat Data - C - Give each Player a Role
+        // Treat Data - B - Give each Player a Role
 
         // If I have access to the Internet : use the API
 

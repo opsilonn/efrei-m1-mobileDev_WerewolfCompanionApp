@@ -1,29 +1,33 @@
-package com.mobiledevelopment.werewolf.util;
+package com.mobiledevelopment.werewolf.adapters;
 
-import android.app.Dialog;
 import android.content.Context;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 import com.mobiledevelopment.werewolf.activities.ActivityPartyNew;
+import com.mobiledevelopment.werewolf.activities.ActivityParty;
 import com.mobiledevelopment.werewolf.R;
+import com.mobiledevelopment.werewolf.model.CustomIntent;
 import com.mobiledevelopment.werewolf.model.Role;
-import java.util.Objects;
+import com.mobiledevelopment.werewolf.dialogs.DialogRole;
 
 
 public class AdapterRole extends RecyclerView.Adapter<AdapterRole.MyViewHolder>
 {
+    // By Default
     private Context context;
-    private boolean setRoles;
+    private CustomIntent customIntent;
     private Role[] roles;
+
+    // If adding Roles
     private int[] roleNumbers;
     private int MAX;
 
@@ -31,27 +35,39 @@ public class AdapterRole extends RecyclerView.Adapter<AdapterRole.MyViewHolder>
     /**
      * Complete Constructor
      * @param context Context from where this RecyclerView is created
+     * @param customIntent Custom Intent for which we deploy the Recycler View
+     * @param roles Array of {@link Role} to display
      */
-    public AdapterRole(Context context)
+    public AdapterRole(Context context, CustomIntent customIntent, Role[] roles)
     {
         this.context = context;
-        setRoles = (context.getClass() == ActivityPartyNew.class);
-        roles = Role.values();
+        this.customIntent = customIntent;
+        this.roles = roles;
 
-        // We only keep trace of the roles if we want to manage some (otherwise, it's useless)
-        if(setRoles)
+        switch(customIntent)
         {
-            // We set the array accordingly
-            roleNumbers = new int[roles.length];
+            // Roles by default : display all the roles, with no additional interface
+            case RV_ROLES_DEFAULT:
+                break;
 
-            // We fill it with the number of roles selected
-            for(int i = 0; i < roles.length; i++)
-            {
-                roleNumbers[i] = ((ActivityPartyNew) context).numberOfRolesInstance(roles[i]);
-            }
+            // Roles to add : display the - and + buttons
+            case RV_ROLES_ADD:
+                    // We set the array accordingly
+                    roleNumbers = new int[roles.length];
 
-            // We set the MAXIMUM value
-            MAX = ((ActivityPartyNew) context).party.numberOfPlayers;
+                    // We fill it with the number of roles selected
+                    for(int i = 0; i < roles.length; i++)
+                    {
+                        roleNumbers[i] = ((ActivityPartyNew) context).numberOfRolesInstance(roles[i]);
+                    }
+
+                    // We set the MAXIMUM value
+                    MAX = ((ActivityPartyNew) context).party.numberOfPlayers;
+                break;
+
+            // Only get unique references of all the roles played and alive
+            case RV_ROLE_HAS_PLAYED:
+                break;
         }
     }
 
@@ -77,50 +93,20 @@ public class AdapterRole extends RecyclerView.Adapter<AdapterRole.MyViewHolder>
         holder.name.setText(role.getName());
         holder.image.setImageResource(role.getIcon());
 
+        // When clicking the holder : PopUp displaying the role
         holder.mainLayout.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view)
             {
-                // We create and set a dialog
-                final Dialog dialog = new Dialog(context);
-                dialog.setContentView(R.layout.popup_role);
-
-                // We get the widgets references
-                ImageView imageView = dialog.findViewById(R.id.RoleImage);
-                TextView textPlayer = dialog.findViewById(R.id.RoleTextPlayer);
-                TextView textName = dialog.findViewById(R.id.RoleTextName);
-                TextView textDescription = dialog.findViewById(R.id.RoleTextDescription);
-
-                // We set the widgets (the text Player will remain hidden for the moment)
-                imageView.setImageResource(role.getImageRes());
-                textPlayer.setVisibility(View.INVISIBLE);
-                textName.setText(role.getName());
-                textName.setTextColor(role.getTeam().getColor());
-                textDescription.setText(role.getDescription());
-
-
-                // We get the text that acts as a button, which when clicked, dismisses the PopUp
-                TextView textDismiss = dialog.findViewById(R.id.RoleTextGoBack);
-                textDismiss.setOnClickListener(new View.OnClickListener()
-                    {
-                       @Override
-                       public void onClick(View v)
-                       {
-                           dialog.dismiss();
-                       }
-                   }
-                );
-
-                // We resize the Dialog
-                Objects.requireNonNull(dialog.getWindow()).setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-                dialog.show();
+                final DialogRole dialogRole = new DialogRole(context, role);
+                dialogRole.show();
             }
         });
 
 
         // If we are setting the roles :
         // We add listeners to the buttons
-        if(setRoles)
+        if(customIntent == CustomIntent.RV_ROLES_ADD)
         {
             // First, we set the buttons enabled (or not) accordingly
             holder.buttonDelete.setEnabled(roleNumbers[position] != 0);
@@ -213,6 +199,23 @@ public class AdapterRole extends RecyclerView.Adapter<AdapterRole.MyViewHolder>
             holder.buttonAdd.setVisibility(View.INVISIBLE);
             holder.textNumberOfRoles.setVisibility(View.INVISIBLE);
         }
+
+        if(customIntent == CustomIntent.RV_ROLE_HAS_PLAYED)
+        {
+            holder.checkBox.setChecked( ((ActivityParty) context).roleHasPlayed[position] );
+            holder.checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener()
+            {
+               @Override
+               public void onCheckedChanged(CompoundButton buttonView,boolean isChecked)
+               {
+                   ((ActivityParty) context).roleHasPlayed[position] = !((ActivityParty) context).roleHasPlayed[position];
+               }
+            });
+        }
+        else
+        {
+            holder.checkBox.setVisibility(View.INVISIBLE);
+        }
     }
 
     @Override
@@ -238,6 +241,8 @@ public class AdapterRole extends RecyclerView.Adapter<AdapterRole.MyViewHolder>
         Button buttonAdd;
         Button buttonDelete;
 
+        // Fields for whether a role has played or not
+        CheckBox checkBox;
 
         public MyViewHolder(@NonNull View itemView)
         {
@@ -253,6 +258,9 @@ public class AdapterRole extends RecyclerView.Adapter<AdapterRole.MyViewHolder>
             textNumberOfRoles = itemView.findViewById(R.id.RoleTextNumberOfRoles);
             buttonAdd = itemView.findViewById(R.id.RoleButtonAdd);
             buttonDelete = itemView.findViewById(R.id.RoleButtonRemove);
+
+            // Fields for whether a role has played or not
+            checkBox = itemView.findViewById(R.id.RoleCheckBox);
         }
     }
 }

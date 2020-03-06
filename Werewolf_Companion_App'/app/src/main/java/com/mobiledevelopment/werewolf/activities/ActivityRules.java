@@ -5,7 +5,10 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import android.os.Bundle;
 import com.mobiledevelopment.werewolf.R;
-import com.mobiledevelopment.werewolf.util.AdapterRole;
+import com.mobiledevelopment.werewolf.model.CustomIntent;
+import com.mobiledevelopment.werewolf.model.Role;
+import com.mobiledevelopment.werewolf.adapters.AdapterRole;
+import com.mobiledevelopment.werewolf.util.Util;
 
 
 /**
@@ -24,8 +27,11 @@ public class ActivityRules extends AppCompatActivity
         // We get the Recycler View
         RecyclerView recyclerView = findViewById(R.id.RulesRecyclerView);
 
-        // We instantiate a RecyclerView Adapter
-        AdapterRole adapter = new AdapterRole(this);
+        // We get the Array of Roles to display
+        Role[] roles = Util.getRolesAllByDefault();
+
+        // We instantiate a RecyclerView Adapter (and only see the default RecyclerView)
+        AdapterRole adapter = new AdapterRole(this, CustomIntent.RV_ROLES_DEFAULT, roles);
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
     }

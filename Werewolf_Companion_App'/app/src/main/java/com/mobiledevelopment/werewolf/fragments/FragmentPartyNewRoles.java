@@ -11,7 +11,10 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import com.mobiledevelopment.werewolf.activities.ActivityPartyNew;
 import com.mobiledevelopment.werewolf.R;
-import com.mobiledevelopment.werewolf.util.AdapterRole;
+import com.mobiledevelopment.werewolf.model.CustomIntent;
+import com.mobiledevelopment.werewolf.model.Role;
+import com.mobiledevelopment.werewolf.adapters.AdapterRole;
+import com.mobiledevelopment.werewolf.util.Util;
 
 
 /**
@@ -90,8 +93,11 @@ public class FragmentPartyNewRoles extends Fragment
      */
     private void setRecyclerView()
     {
-        // We instantiate a RecyclerView Adapter
-        AdapterRole adapter = new AdapterRole(parentActivity);
+        // We get the Array of Roles to display
+        Role[] roles = Util.getRolesAllByDefault();
+
+        // We instantiate a RecyclerView Adapter (and we want to add or delete the Roles)
+        AdapterRole adapter = new AdapterRole(parentActivity, CustomIntent.RV_ROLES_ADD, roles);
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(parentActivity));
     }

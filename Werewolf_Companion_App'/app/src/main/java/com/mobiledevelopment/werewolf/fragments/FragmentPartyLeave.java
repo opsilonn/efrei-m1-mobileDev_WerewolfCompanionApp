@@ -54,7 +54,7 @@ public class FragmentPartyLeave extends Fragment
             public void onClick (View v)
             {
                 Intent intent = new Intent(parentActivity.getBaseContext(), ActivityPartyNew.class);
-                intent.putExtra(Util.EXTRA_PARTY, parentActivity.party);
+                intent.putExtra(Util.EXTRA_PLAYERS, parentActivity.party.getPlayers());
                 startActivity(intent);
             }
         });

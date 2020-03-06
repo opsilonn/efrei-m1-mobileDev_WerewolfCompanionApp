@@ -39,18 +39,3 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
 }
-
-//recreate layouts folder
-sourceSets {
-    main {
-        res.srcDirs =
-                [
-                    'src/main/res',
-                    'src/main/res/layouts',
-                    'src/main/res/layouts/activity',
-                    'src/main/res/layouts/fragment',
-                    'src/main/res/layouts/view',
-                    'src/main/res/layouts/adapter'
-                ]
-    }
-}

@@ -45,9 +45,9 @@ public class ActivityPartyNew extends AppCompatActivity
 
         // Receive Data : if not null, fill the previous structure with them
         Bundle extras = getIntent().getExtras();
-        if(extras != null && extras.containsKey(Util.EXTRA_PARTY))
+        if(extras != null && extras.containsKey(Util.EXTRA_PLAYERS))
         {
-            party = (Party) extras.getSerializable(Util.EXTRA_PARTY);
+            party.setPlayers((ArrayList<Player>) extras.getSerializable(Util.EXTRA_PLAYERS));
             for (Player player : party.getPlayers())
             {
                 roles.add(player.getRole());

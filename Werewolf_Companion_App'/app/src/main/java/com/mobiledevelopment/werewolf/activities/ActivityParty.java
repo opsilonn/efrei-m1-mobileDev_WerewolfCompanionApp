@@ -20,6 +20,7 @@ import com.mobiledevelopment.werewolf.util.Util;
 public class ActivityParty extends AppCompatActivity
 {
     public Party party;
+    public boolean[] roleHasPlayed;
 
     // We declare 3 Fragments
     private FragmentPartyPlayers fragmentPlayers;
@@ -37,16 +38,13 @@ public class ActivityParty extends AppCompatActivity
         Bundle extras = getIntent().getExtras();
         assert extras != null;
         party = (Party) extras.getSerializable(Util.EXTRA_PARTY);
-
-        // A Party begins with the data displayed
         assert party != null;
-        party.setDataHidden(false);
-
 
         // Initialize all the fragments
         fragmentPlayers = new FragmentPartyPlayers(this);
         fragmentRoles = new FragmentPartyRoles(this);
         fragmentLaunch = new FragmentPartyLeave(this);
+        fragmentRoles.setRoles();
 
 
         // Get the Navbar

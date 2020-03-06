@@ -6,6 +6,11 @@
     <string name="PlaceholderName">X</string>
     <string name="ButtonRemove">-</string>
     <string name="ButtonAdd">+</string>
+    <string name="LoremIpsum">Lorem Ipsum</string>
+    <string name="LoremIpsumLong">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n\n
+        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </string>
 
     <!-- Activity : Home -->
     <string name="HomeImageView">Logo of the app\' !</string>
@@ -22,14 +27,11 @@
     </string>
     <string name="RulesTextRoles">The Different Roles</string>
 
-    <!-- Activity : Role -->
+    <!-- PopUp : Role -->
     <string name="RoleImage">I\'m an image !</string>
-    <string name="RoleTextName">Role Name</string>
-    <string name="RoleTextPlayer">plays…</string>
-    <string name="RoleTextDescription">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n\n
-        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </string>
+    <string name="RoleTextPlayer">Xplays…</string>
+    <string name="RoleTextPlayed">X played…</string>
+    <string name="RolePlayerDead">X is dead !</string>
 
     <!-- Activity : Create Party -->
     <string name="PartyNewNavBarPlayers">Players</string>
@@ -46,19 +48,19 @@
     <string name="PartyNavBarRoles">Roles</string>
     <string name="PartyNavBarLeave">Leave</string>
     <string name="PartyPlayerTextHide">Hide the Data :</string>
-    <string name="PartyRoleTurnCounter">Turn n° X</string>
-    <string name="PartyRoleTurnButton">Next turn</string>
+    <string name="PartyRoleTextDay">Day n° X</string>
+    <string name="PartyRoleTextNight">Night n° X</string>
+    <string name="PartyRoleButtonDay">End Day</string>
+    <string name="PartyRoleButtonNight">End Night</string>
     <string name="PartyButtonLeave">Leave the Party</string>
 
 
     <!-- RecyclerViews - Row Role -->
-    <string name="RowRoleDefaultTitle">Lorem Ipsum</string>
     <string name="RowRoleImageDescription">I\'m an image !</string>
     <string name="RowRoleNumberOfRoles">123</string>
 
 
     <!-- RecyclerViews - Row Player -->
-    <string name="RowPlayerDefaultName">Lorem Ipsum</string>
     <string name="RowPlayerDefaultNameIsDying">X is dying !</string>
     <string name="RowPlayerImageDescription">I\'m an image !</string>
     <string name="RowPlayerButtonKill">I\'m a button !</string>

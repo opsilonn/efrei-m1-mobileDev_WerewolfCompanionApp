@@ -1,22 +1,24 @@
 package com.mobiledevelopment.werewolf.fragments;
 
-import android.content.Intent;
-import android.graphics.Typeface;
 import android.os.Bundle;
 import androidx.fragment.app.Fragment;
-
-import android.text.SpannableString;
-import android.text.style.StyleSpan;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
-import com.mobiledevelopment.werewolf.activities.ActivityLoading;
 import com.mobiledevelopment.werewolf.activities.ActivityParty;
 import com.mobiledevelopment.werewolf.R;
+import com.mobiledevelopment.werewolf.dialogs.DialogRole;
+import com.mobiledevelopment.werewolf.dialogs.DialogRoleDead;
+import com.mobiledevelopment.werewolf.model.CustomIntent;
+import com.mobiledevelopment.werewolf.model.Role;
 import com.mobiledevelopment.werewolf.model.Player;
+import com.mobiledevelopment.werewolf.adapters.AdapterRole;
 import com.mobiledevelopment.werewolf.util.Util;
+import java.util.List;
 
 
 /**
@@ -27,6 +29,9 @@ public class FragmentPartyRoles extends Fragment
     private ActivityParty parentActivity;
     private Button buttonTurn;
     private TextView textTurn;
+    private RecyclerView recyclerView;
+    private Role[] roles;
+
 
     /**
      * Constructor of the class
@@ -51,11 +56,15 @@ public class FragmentPartyRoles extends Fragment
     {
         super.onResume();
 
+        // We get the widgets references
         buttonTurn = parentActivity.findViewById(R.id.PartyRoleTurnButton);
         textTurn = parentActivity.findViewById(R.id.PartyRoleTurnCounter);
+        recyclerView = parentActivity.findViewById(R.id.PartyRvRoles);
 
+        // We set the Widgets
         setButtonTurn();
-        setTextTurn();
+        setWidgetsTexts();
+        setRecyclerView();
     }
 
 
@@ -70,43 +79,104 @@ public class FragmentPartyRoles extends Fragment
             @Override
             public void onClick (View v)
             {
-                // We add a turn
-                parentActivity.party.nextTurn();
-
-                // All dying Player... die.
+                // All dying Players... die.
                 for (Player player : parentActivity.party.getPlayers())
                 {
                     if( player.isDying() )
                     {
                         player.setAlive(false);
                         player.setDying(false);
+
+                        // Create a Dialog if a player with a role that activates at death died
+                        if(player.getRole().isActivatedAtDeath())
+                        {
+                            DialogRoleDead dialogRoleDead = new DialogRoleDead(parentActivity, player.getRole(), player.getName());
+                            dialogRoleDead.show();
+                        }
                     }
                 }
 
-                // We reset the text displaying the turn
-                setTextTurn();
+                // We change the time of day (may increment the turn, so that's cool !)
+                parentActivity.party.changeTime();
+
+                // AFTER the time change, we reset the widgets texts
+                setWidgetsTexts();
+
+                // THEN - we reset our data structure
+                setRoles();
+
+                // We reset the Recycler view
+                setRecyclerView();
             }
         });
     }
 
 
     /**
-     * Sets the text displaying the current Turn
+     * Set the TextView and the Button's texts
      */
-    private void setTextTurn()
+    private void setWidgetsTexts()
     {
-        // We get the placeholder
-        textTurn.setText(R.string.PlaceholderName);
-        String placeholder = (String) textTurn.getText();
+        // We get the placeholder and set some variables
+        String placeholder = getResources().getString(R.string.PlaceholderName);
+        String textText;
+        String textButton;
 
-        // We get the content
-        textTurn.setText(R.string.PartyRoleTurnCounter);
-        String content = (String) textTurn.getText();
-
-        // We modify the content
-        content = content.replace(placeholder, String.valueOf(parentActivity.party.getCptTurns()));
+        // We get the correct strings
+        if(parentActivity.party.isNight())
+        {
+            textText = getResources().getString(R.string.PartyRoleTextNight);
+            textButton = getResources().getString(R.string.PartyRoleButtonNight);
+        }
+        else
+        {
+            textText = getResources().getString(R.string.PartyRoleTextDay);
+            textButton = getResources().getString(R.string.PartyRoleButtonDay);
+        }
+        textText = textText.replace(placeholder, String.valueOf(parentActivity.party.getCptTurns()));
 
         // We set the text
-        textTurn.setText(content);
+        textTurn.setText(textText);
+        buttonTurn.setText(textButton);
+    }
+
+
+    /**
+     * Sets the {@link Role} array and their boolean counterpart
+     */
+    public void setRoles()
+    {
+        // We create a list of Roles
+        List<Role> r;
+
+        // We order the roles (Alive, with no double) in activation order
+        if(parentActivity.party.isNight())
+        {
+            r = parentActivity.party.getAllRolesNight();
+        }
+        else
+        {
+            r = parentActivity.party.getAllRolesDay();
+        }
+
+        // We get the Array of Roles to display
+        roles = Util.getRolesByOrderFromList(r);
+        parentActivity.roleHasPlayed = new boolean[roles.length];
+        for(int i =0; i < roles.length; i++)
+        {
+            parentActivity.roleHasPlayed[i] = false;
+        }
+    }
+
+
+    /**
+     * Sets the RecyclerView displaying the {@link Role} in order
+     */
+    private void setRecyclerView()
+    {
+        // We instantiate a RecyclerView Adapter
+        AdapterRole adapter = new AdapterRole(parentActivity, CustomIntent.RV_ROLE_HAS_PLAYED, roles);
+        recyclerView.setAdapter(adapter);
+        recyclerView.setLayoutManager(new LinearLayoutManager(parentActivity));
     }
 }

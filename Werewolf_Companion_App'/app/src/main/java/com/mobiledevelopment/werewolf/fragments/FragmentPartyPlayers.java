@@ -12,7 +12,7 @@ import android.widget.Switch;
 import com.mobiledevelopment.werewolf.activities.ActivityParty;
 import com.mobiledevelopment.werewolf.R;
 import com.mobiledevelopment.werewolf.model.Player;
-import com.mobiledevelopment.werewolf.util.AdapterPlayer;
+import com.mobiledevelopment.werewolf.adapters.AdapterPlayer;
 
 
 /**

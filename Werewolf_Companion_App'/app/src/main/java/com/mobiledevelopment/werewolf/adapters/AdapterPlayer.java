@@ -1,11 +1,8 @@
-package com.mobiledevelopment.werewolf.util;
+package com.mobiledevelopment.werewolf.adapters;
 
 import android.annotation.SuppressLint;
-import android.app.Dialog;
 import android.content.Context;
-import android.graphics.Color;
 import android.graphics.Typeface;
-import android.graphics.drawable.ColorDrawable;
 import android.text.SpannableString;
 import android.text.style.StyleSpan;
 import android.view.LayoutInflater;
@@ -17,10 +14,12 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
+
 import com.mobiledevelopment.werewolf.activities.ActivityParty;
 import com.mobiledevelopment.werewolf.R;
+import com.mobiledevelopment.werewolf.dialogs.DialogRolePlayer;
 import com.mobiledevelopment.werewolf.model.Player;
-import java.util.Objects;
+import com.mobiledevelopment.werewolf.dialogs.DialogRole;
 
 
 public class AdapterPlayer extends RecyclerView.Adapter<AdapterPlayer.MyViewHolder>
@@ -98,54 +97,15 @@ public class AdapterPlayer extends RecyclerView.Adapter<AdapterPlayer.MyViewHold
         }
 
 
-        // When clicking the row :
-        // Display a PopUp describing the Player / Role
+        // When clicking the holder : PopUp displaying the role
         holder.mainLayout.setOnClickListener(new View.OnClickListener()
         {
             @Override
             public void onClick(View view)
             {
                 // We create and set a dialog
-                final Dialog dialog = new Dialog(context);
-                dialog.setContentView(R.layout.popup_role);
-
-                // We get the widgets references
-                ImageView imageView = dialog.findViewById(R.id.RoleImage);
-                TextView textPlayer = dialog.findViewById(R.id.RoleTextPlayer);
-                TextView textName = dialog.findViewById(R.id.RoleTextName);
-                TextView textDescription = dialog.findViewById(R.id.RoleTextDescription);
-
-                // We set the widgets
-                // Image
-                imageView.setImageResource(player.getRole().getImageRes());
-
-                // Player
-                textPlayer.setVisibility(View.VISIBLE);
-                String playerName = player.getName() + " " + textPlayer.getText();
-                textPlayer.setText(playerName);
-
-                // Name of the Role
-                textName.setText(player.getRole().getName());
-                textName.setTextColor(player.getRole().getTeam().getColor());
-
-                // Description of the Role
-                textDescription.setText(player.getRole().getDescription());
-
-
-                // We get the text that acts as a button, which when clicked, dismisses the PopUp
-                TextView textDismiss = dialog.findViewById(R.id.RoleTextGoBack);
-                textDismiss.setOnClickListener(new View.OnClickListener()
-                                               {
-                                                   @Override
-                                                   public void onClick(View v)
-                                                   { dialog.dismiss();
-                                                   }
-                                               }
-                );
-
-                // We resize the Dialog
-                Objects.requireNonNull(dialog.getWindow()).setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-                dialog.show();
+                DialogRolePlayer dialogRolePlayer = new DialogRolePlayer(context, player.getRole(), player.getName());
+                dialogRolePlayer.show();
             }
         });
     }
@@ -192,12 +152,10 @@ public class AdapterPlayer extends RecyclerView.Adapter<AdapterPlayer.MyViewHold
             if(player.isDying())
             {
                 // We get the placeholder
-                holder.name.setText(R.string.PlaceholderName);
-                String placeholder = (String) holder.name.getText();
+                String placeholder = context.getResources().getString(R.string.PlaceholderName);
 
                 // We get the message
-                holder.name.setText(R.string.RowPlayerDefaultNameIsDying);
-                String content = (String) holder.name.getText();
+                String content = context.getResources().getString(R.string.RowPlayerDefaultNameIsDying);
 
                 // We modify the message
                 content = content.replace(placeholder, player.getName());
