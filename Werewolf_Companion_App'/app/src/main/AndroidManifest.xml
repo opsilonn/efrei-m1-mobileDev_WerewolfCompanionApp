@@ -4,6 +4,10 @@
     <!-- Allow the app to use Internet connection -->
     <uses-permission android:name="android.permission.INTERNET" />
 
+    <!-- allows to check if it's connected to the internet for ALL wi-fi -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"

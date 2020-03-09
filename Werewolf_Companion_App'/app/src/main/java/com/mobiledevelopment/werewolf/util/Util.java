@@ -1,9 +1,12 @@
 package com.mobiledevelopment.werewolf.util;
 
+import android.content.Context;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
+
 import androidx.annotation.StringRes;
 import com.mobiledevelopment.werewolf.R;
 import com.mobiledevelopment.werewolf.model.Role;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -23,6 +26,7 @@ public class Util
 
 
     public static final int MINIMUM_PLAYER = 4;
+
 
 
     /**
