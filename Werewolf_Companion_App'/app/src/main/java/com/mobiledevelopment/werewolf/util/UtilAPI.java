@@ -1,4 +1,4 @@
-package com.mobiledevelopment.werewolf.api;
+package com.mobiledevelopment.werewolf.util;
 
 import androidx.annotation.StringRes;
 
@@ -11,7 +11,7 @@ import java.io.InputStreamReader;
 import java.util.List;
 
 
-public class API_Util
+public class UtilAPI
 {
     public static String JSON_KEY_DECK_ID = "deck_id";
     public static String JSON_KEY_DECK_CARDS = "cards";
@@ -50,28 +50,5 @@ public class API_Util
 
 
         return urlPartialDeck.toString();
-    }
-
-
-
-
-
-
-    /**
-     * Reads a Stream ! I guess...
-     * @param is InputStream we want to read
-     * @return euuuh...
-     * @throws IOException attention !
-     */
-    public static String readStream(InputStream is) throws IOException
-    {
-        StringBuilder sb = new StringBuilder();
-        BufferedReader r = new BufferedReader(new InputStreamReader(is), 1000);
-        for (String line = r.readLine(); line != null; line =r.readLine())
-        {
-            sb.append(line);
-        }
-        is.close();
-        return sb.toString();
     }
 }

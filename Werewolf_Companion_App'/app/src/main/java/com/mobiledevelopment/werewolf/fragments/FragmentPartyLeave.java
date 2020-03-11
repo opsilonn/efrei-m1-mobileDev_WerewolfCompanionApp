@@ -48,15 +48,10 @@ public class FragmentPartyLeave extends Fragment
 
 
         // When clicked : launches the Activity a describing a game
-        button.setOnClickListener(new View.OnClickListener()
-        {
-            @Override
-            public void onClick (View v)
-            {
-                Intent intent = new Intent(parentActivity.getBaseContext(), ActivityPartyNew.class);
-                intent.putExtra(Util.EXTRA_PLAYERS, parentActivity.party.getPlayers());
-                startActivity(intent);
-            }
+        button.setOnClickListener(v -> {
+            Intent intent = new Intent(parentActivity.getBaseContext(), ActivityPartyNew.class);
+            intent.putExtra(Util.EXTRA_PLAYERS, parentActivity.party.getPlayers());
+            startActivity(intent);
         });
     }
 }

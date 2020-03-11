@@ -1,10 +1,8 @@
 package com.mobiledevelopment.werewolf.activities;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import android.os.Bundle;
-import android.view.MenuItem;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.mobiledevelopment.werewolf.fragments.FragmentPartyNewLaunch;
 import com.mobiledevelopment.werewolf.fragments.FragmentPartyNewPlayers;
@@ -69,35 +67,30 @@ public class ActivityPartyNew extends AppCompatActivity
         getSupportFragmentManager().beginTransaction().replace(R.id.party_new_frame, fragmentPlayers).commit();
 
         // Adds the listener
-        navbar.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener()
-        {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem)
+        navbar.setOnNavigationItemSelectedListener(menuItem -> {
+            // We set a default fragment (here, the fragment about Players)
+            Fragment selectedFragment = fragmentPlayers;
+
+            // We get the selected item
+            switch (menuItem.getItemId())
             {
-                // We set a default fragment (here, the fragment about Players)
-                Fragment selectedFragment = fragmentPlayers;
+                // Adds Players
+                case R.id.party_new_nav_players:
+                    selectedFragment = fragmentPlayers;
+                    break;
 
-                // We get the selected item
-                switch (menuItem.getItemId())
-                {
-                    // Adds Players
-                    case R.id.party_new_nav_players:
-                        selectedFragment = fragmentPlayers;
-                        break;
+                // Adds Roles
+                case R.id.party_new_nav_roles:
+                    selectedFragment = fragmentRoles;
+                    break;
 
-                    // Adds Roles
-                    case R.id.party_new_nav_roles:
-                        selectedFragment = fragmentRoles;
-                        break;
-
-                    case R.id.party_new_nav_launch:
-                        selectedFragment = fragmentLaunch;
-                        break;
-                }
-
-                getSupportFragmentManager().beginTransaction().replace(R.id.party_new_frame, selectedFragment).commit();
-                return true;
+                case R.id.party_new_nav_launch:
+                    selectedFragment = fragmentLaunch;
+                    break;
             }
+
+            getSupportFragmentManager().beginTransaction().replace(R.id.party_new_frame, selectedFragment).commit();
+            return true;
         });
     }
 
@@ -137,14 +130,5 @@ public class ActivityPartyNew extends AppCompatActivity
 
         // We return the counter
         return cpt;
-    }
-
-    public static class ActivityParty extends AppCompatActivity
-    {
-        @Override
-        protected void onCreate(Bundle savedInstanceState) {
-            super.onCreate(savedInstanceState);
-            setContentView(R.layout.activity_party);
-        }
     }
 }

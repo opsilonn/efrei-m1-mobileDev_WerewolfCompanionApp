@@ -2,6 +2,8 @@
 <resources>
     <!-- Major Data -->
     <string name="app_name">Loup-Garou</string>
+    <string name="TextCancel">Annuler</string>
+    <string name="TextApply">Valider</string>
     <string name="TextGoBack">X</string>
     <string name="PlaceholderName">X</string>
     <string name="ButtonRemove">-</string>
@@ -25,14 +27,19 @@
         Lorsque ceux-ci se décident à exterminer la population, à raison d’un membre par soir, le village décide d’éradiquer la menace en votant chaque matin la mise à mort de l’un de ses membres.\n\n
         Notons que se cache dans la communauté un certain nombre d’individus aux pouvoirs atypiques, disposant parfois d’un but qui leur est propre…\n\n
     </string>
+    <string name="RulesTextTeams">Les Différents Equipes</string>
     <string name="RulesTextRoles">Les Différents Rôles</string>
 
 
-    <!-- PopUp : Role -->
+    <!-- Dialog : Role -->
     <string name="RoleImage">Je suis une image !</string>
     <string name="RoleTextPlayer">X joue…</string>
     <string name="RoleTextPlayed">X jouait…</string>
     <string name="RolePlayerDead">X est mort !</string>
+
+    <!-- Dialog : Trigger -->
+    <string name="TriggerTitle">Sélectionner les valeurs :</string>
+
 
     <!-- Activity : Create Party -->
     <string name="PartyNewNavBarPlayers">Joueurs</string>
@@ -66,6 +73,12 @@
     <string name="RowPlayerDefaultNameIsDying">X se meurt !</string>
     <string name="RowPlayerImageDescription">I\'m an image !</string>
     <string name="RowPlayerButtonKill">I\'m a button !</string>
+
+
+    <!-- Teams content -->
+    <string name="team_villager">Village</string>
+    <string name="team_werewolf">Loup-Garou</string>
+    <string name="team_other">Non-Affilié</string>
 
 
     <!-- Roles content -->

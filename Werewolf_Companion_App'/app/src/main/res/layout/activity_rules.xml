@@ -6,12 +6,10 @@
     android:layout_height="wrap_content"
     tools:context=".activities.ActivityRules">
 
-    <ScrollView
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_height="match_parent"
+        android:fillViewport="true">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -46,6 +44,23 @@
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal|center_vertical"
                 android:padding="25dp"
+                android:text="@string/RulesTextTeams"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                android:textStyle="bold|italic" />
+
+            <LinearLayout
+                android:id="@+id/RulesLayoutTeams"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"/>
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal|center_vertical"
+                android:padding="25dp"
                 android:text="@string/RulesTextRoles"
                 android:textAlignment="center"
                 android:textSize="18sp"
@@ -55,10 +70,10 @@
                 android:id="@+id/RulesRecyclerView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="50dp" />
-        </LinearLayout>
-    </ScrollView>
+                android:nestedScrollingEnabled="false" />
 
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

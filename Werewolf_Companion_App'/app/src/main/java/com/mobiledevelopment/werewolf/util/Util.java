@@ -1,8 +1,5 @@
 package com.mobiledevelopment.werewolf.util;
 
-import android.content.Context;
-import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
 
 import androidx.annotation.StringRes;
 import com.mobiledevelopment.werewolf.R;

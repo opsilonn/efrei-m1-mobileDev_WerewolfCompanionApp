@@ -11,7 +11,6 @@ import android.widget.Button;
 import android.widget.TextView;
 import com.mobiledevelopment.werewolf.activities.ActivityParty;
 import com.mobiledevelopment.werewolf.R;
-import com.mobiledevelopment.werewolf.dialogs.DialogRole;
 import com.mobiledevelopment.werewolf.dialogs.DialogRoleDead;
 import com.mobiledevelopment.werewolf.model.CustomIntent;
 import com.mobiledevelopment.werewolf.model.Role;
@@ -74,40 +73,35 @@ public class FragmentPartyRoles extends Fragment
     private void setButtonTurn()
     {
         // When clicked : launches the Activity a describing a game
-        buttonTurn.setOnClickListener(new View.OnClickListener()
-        {
-            @Override
-            public void onClick (View v)
+        buttonTurn.setOnClickListener(v -> {
+            // All dying Players... die.
+            for (Player player : parentActivity.party.getPlayers())
             {
-                // All dying Players... die.
-                for (Player player : parentActivity.party.getPlayers())
+                if( player.isDying() )
                 {
-                    if( player.isDying() )
-                    {
-                        player.setAlive(false);
-                        player.setDying(false);
+                    player.setAlive(false);
+                    player.setDying(false);
 
-                        // Create a Dialog if a player with a role that activates at death died
-                        if(player.getRole().isActivatedAtDeath())
-                        {
-                            DialogRoleDead dialogRoleDead = new DialogRoleDead(parentActivity, player.getRole(), player.getName());
-                            dialogRoleDead.show();
-                        }
+                    // Create a Dialog if a player with a role that activates at death died
+                    if(player.getRole().isActivatedAtDeath())
+                    {
+                        DialogRoleDead dialogRoleDead = new DialogRoleDead(parentActivity, player.getRole(), player.getName());
+                        dialogRoleDead.show();
                     }
                 }
-
-                // We change the time of day (may increment the turn, so that's cool !)
-                parentActivity.party.changeTime();
-
-                // AFTER the time change, we reset the widgets texts
-                setWidgetsTexts();
-
-                // THEN - we reset our data structure
-                setRoles();
-
-                // We reset the Recycler view
-                setRecyclerView();
             }
+
+            // We change the time of day (may increment the turn, so that's cool !)
+            parentActivity.party.changeTime();
+
+            // AFTER the time change, we reset the widgets texts
+            setWidgetsTexts();
+
+            // THEN - we reset our data structure
+            setRoles();
+
+            // We reset the Recycler view
+            setRecyclerView();
         });
     }
 

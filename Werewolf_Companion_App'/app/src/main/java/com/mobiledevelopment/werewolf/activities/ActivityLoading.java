@@ -6,7 +6,7 @@ import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
-import android.util.Log;
+
 import com.android.volley.Cache;
 import com.android.volley.Network;
 import com.android.volley.Request;
@@ -18,7 +18,7 @@ import com.android.volley.toolbox.DiskBasedCache;
 import com.android.volley.toolbox.HurlStack;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.mobiledevelopment.werewolf.R;
-import com.mobiledevelopment.werewolf.api.API_Util;
+import com.mobiledevelopment.werewolf.util.UtilAPI;
 import com.mobiledevelopment.werewolf.model.Party;
 import com.mobiledevelopment.werewolf.model.Player;
 import com.mobiledevelopment.werewolf.model.Role;
@@ -46,7 +46,7 @@ public class ActivityLoading extends AppCompatActivity
 
     // About the API
     private Map<String, Role> map;
-    private boolean lock;
+    private RequestQueue requestQueue;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -119,7 +119,7 @@ public class ActivityLoading extends AppCompatActivity
     {
         Intent intent = new Intent(getBaseContext(), ActivityParty.class);
         intent.putExtra(Util.EXTRA_PARTY, party);
-        //startActivity(intent);
+        startActivity(intent);
     }
 
 
@@ -183,86 +183,25 @@ public class ActivityLoading extends AppCompatActivity
         // Set up the network to use HttpURLConnection as the HTTP client.
         Network network = new BasicNetwork(new HurlStack());
         // Instantiate the RequestQueue with the cache and network.
-        RequestQueue requestQueue = new RequestQueue(cache, network);
+        requestQueue = new RequestQueue(cache, network);
         // Start the queue
         requestQueue.start();
 
         // We initialize the map containing the cards codes && Roles
         map = new HashMap<>();
-        lock = true;
 
 
-        System.out.println("Set 1");
-        // 1 - request to get a new Deck
-        // We create the request
+        // This method will do it's job (1).
+        // When completed, it will call the next method (2) which,
+        // When completed, will call the last method (3)
+        // 1 - request to get a set of Cards
+        // 2 - request to create a new Deck
+        // 3 - request to draw each card from that deck
         JsonObjectRequest requestInitialize = API_initializeCards();
 
         // We add the request to the Queue
         requestQueue.add(requestInitialize);
-
-
-        System.out.println("Set 2");
-        // 2 - request to create the Deck
-        // We create the request
-        JsonObjectRequest requestCreateDeck = API_createDeck();
-
-        // We add the request to the Queue
-        requestQueue.add(requestCreateDeck);
-
-        /*
-        for(Map.Entry<String, Role> entry : map.entrySet())
-            Log.i("hugues", entry.getKey() + " - " + getResources().getString( entry.getValue().getName()));
-        */
-
-
-        System.out.println("Set 3");
-        // 3 - request to assign a role to each player
-        // We create the request
-        JsonObjectRequest requestAssignRoles = API_assignRoles();
-
-        // We add the request to the Queue
-        requestQueue.add(requestAssignRoles);
-
-
-        // We set a boolean
-        boolean allowedToFinish = true;
-
-        // We wait for the last request to end
-        // If it takes too much time, we use the Random Method
-        while(!lock)
-        {
-            int waitTime = 100;
-            int totalWaitTime = 0;
-            int threshold =  5000;
-
-            try
-            {
-                Thread.sleep(waitTime);
-
-                totalWaitTime += waitTime;
-
-                if(totalWaitTime > threshold)
-                {
-                    setDataRandom();
-                    allowedToFinish = false;
-                    lock = false;
-                }
-            }
-            catch(InterruptedException e)
-            {
-                System.out.println(e);
-            }
-        }
-
-
-        // We go to the next activity
-        if(allowedToFinish)
-        {
-            goToNextActivity();
-        }
     }
-
-
 
 
     /**
@@ -274,19 +213,13 @@ public class ActivityLoading extends AppCompatActivity
         String ID = "new";
         int cardCount = roles.size();
 
-        return new JsonObjectRequest(Request.Method.GET, API_Util.urlDrawCards(ID, cardCount), null,
+        return new JsonObjectRequest(Request.Method.GET, UtilAPI.urlDrawCards(ID, cardCount), null,
             // SUCCESS !
-            new Response.Listener<JSONObject>()
-            {
-                @Override
-                public void onResponse(JSONObject response)
-                {
+                response -> {
                     try
                     {
-                        System.out.println("BEGIN - 1");
                         // We create a JSON array
-                        JSONArray jsonArray = response.getJSONArray(API_Util.JSON_KEY_DECK_CARDS);
-                        System.out.println(jsonArray);
+                        JSONArray jsonArray = response.getJSONArray(UtilAPI.JSON_KEY_DECK_CARDS);
 
                         // We iterate through that array
                         for(int i = 0; i < jsonArray.length(); i++)
@@ -295,14 +228,18 @@ public class ActivityLoading extends AppCompatActivity
                             JSONObject card = jsonArray.getJSONObject(i);
 
                             // We extract a specific String, and get the Role at index 0
-                            String key = card.getString(API_Util.JSON_KEY_DECK_CARDS_CODE);
+                            String key = card.getString(UtilAPI.JSON_KEY_DECK_CARDS_CODE);
                             Role value = roles.get(i);
 
                             // We put the key and value into the map
                             map.put(key, value);
-                            System.out.println(key + " " + value + " - " + map.size());
                         }
-                        System.out.println("END - 1");
+
+                        // We create the request
+                        JsonObjectRequest requestCreateDeck = API_createDeck();
+
+                        // We add the request to the Queue
+                        requestQueue.add(requestCreateDeck);
                     }
                     catch (JSONException e)
                     {
@@ -312,21 +249,15 @@ public class ActivityLoading extends AppCompatActivity
                         // We call the default method
                         setDataRandom();
                     }
-                }
-            },
+                },
             // FAILURE ...
-            new Response.ErrorListener()
-            {
-                @Override
-                public void onErrorResponse(VolleyError error)
-                {
+                error -> {
                     // We display the error
                     error.printStackTrace();
 
                     // We call the default method
                     setDataRandom();
                 }
-            }
         );
     }
 
@@ -338,22 +269,23 @@ public class ActivityLoading extends AppCompatActivity
      */
     private JsonObjectRequest API_createDeck()
     {
-        System.out.println("BEGIN - 2");
         // We create a list containing all the cards codes
         List<String> cardsCodes = new ArrayList<>(map.keySet());
 
 
-        return new JsonObjectRequest(Request.Method.GET, API_Util.urlPartialDeck(cardsCodes), null,
+        return new JsonObjectRequest(Request.Method.GET, UtilAPI.urlPartialDeck(cardsCodes), null,
             // SUCCESS !
-            new Response.Listener<JSONObject>()
-            {
-                @Override
-                public void onResponse(JSONObject response)
-                {
+                response -> {
                     try
                     {
                         // We save the deck's ID
-                        party.setPartyID(response.getString(API_Util.JSON_KEY_DECK_ID));
+                        party.setPartyID(response.getString(UtilAPI.JSON_KEY_DECK_ID));
+
+                        // We create the request
+                        JsonObjectRequest requestAssignRoles = API_assignRoles();
+
+                        // We add the request to the Queue
+                        requestQueue.add(requestAssignRoles);
                     }
                     catch (JSONException e)
                     {
@@ -363,21 +295,15 @@ public class ActivityLoading extends AppCompatActivity
                         // We call the default method
                         setDataRandom();
                     }
-                }
-            },
+                },
             // FAILURE ...
-            new Response.ErrorListener()
-            {
-                @Override
-                public void onErrorResponse(VolleyError error)
-                {
+                error -> {
                     // We display the error
                     error.printStackTrace();
 
                     // We call the default method
                     setDataRandom();
                 }
-            }
         );
     }
 
@@ -390,63 +316,51 @@ public class ActivityLoading extends AppCompatActivity
      */
     private JsonObjectRequest API_assignRoles()
     {
-        System.out.println("Begin 3");
         String ID = party.getPartyID();
         int cardCount = party.numberOfPlayers;
 
-        return new JsonObjectRequest(Request.Method.GET, API_Util.urlDrawCards(ID, cardCount), null,
+        return new JsonObjectRequest(Request.Method.GET, UtilAPI.urlDrawCards(ID, cardCount), null,
                 // SUCCESS !
-                new Response.Listener<JSONObject>()
-                {
-                    @Override
-                    public void onResponse(JSONObject response)
+                response -> {
+                    try
                     {
-                        try
+                        // We create a JSON array
+                        JSONArray jsonArray = response.getJSONArray(UtilAPI.JSON_KEY_DECK_CARDS);
+                        int index = 0;
+
+                        for (Player player : party.getPlayers())
                         {
-                            // We create a JSON array
-                            JSONArray jsonArray = response.getJSONArray(API_Util.JSON_KEY_DECK_CARDS);
-                            int index = 0;
+                            // We create a JSON object
+                            JSONObject card = jsonArray.getJSONObject(index++);
 
-                            for (Player player : party.getPlayers())
-                            {
-                                // We create a JSON object
-                                JSONObject card = jsonArray.getJSONObject(index++);
+                            // We extract the current code
+                            String code = card.getString(UtilAPI.JSON_KEY_DECK_CARDS_CODE);
 
-                                // We extract the current code
-                                String code = card.getString(API_Util.JSON_KEY_DECK_CARDS_CODE);
+                            // We get the role assigned to that code
+                            Role roleToAssign = map.get(code);
 
-                                // We get the role assigned to that code
-                                Role roleToAssign = map.get(code);
-
-                                // We set the role to the player
-                                player.setRole(roleToAssign);
-                            }
-                            System.out.println("End 3");
-                            Log.i("hugues", "Success !");
-                            lock = true;
+                            // We set the role to the player
+                            player.setRole(roleToAssign);
                         }
-                        catch (JSONException e)
-                        {
-                            // We display the error
-                            e.printStackTrace();
 
-                            // We call the default method
-                            setDataRandom();
-                        }
+                        goToNextActivity();
                     }
-                },
-                // FAILURE ...
-                new Response.ErrorListener()
-                {
-                    @Override
-                    public void onErrorResponse(VolleyError error)
+                    catch (JSONException e)
                     {
                         // We display the error
-                        error.printStackTrace();
+                        e.printStackTrace();
 
                         // We call the default method
                         setDataRandom();
                     }
+                },
+                // FAILURE ...
+                error -> {
+                    // We display the error
+                    error.printStackTrace();
+
+                    // We call the default method
+                    setDataRandom();
                 }
         );
     }

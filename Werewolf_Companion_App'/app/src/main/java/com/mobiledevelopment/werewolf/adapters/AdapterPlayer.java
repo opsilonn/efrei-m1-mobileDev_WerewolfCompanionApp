@@ -14,17 +14,17 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
-
-import com.mobiledevelopment.werewolf.activities.ActivityParty;
 import com.mobiledevelopment.werewolf.R;
 import com.mobiledevelopment.werewolf.dialogs.DialogRolePlayer;
+import com.mobiledevelopment.werewolf.dialogs.DialogTrigger;
+import com.mobiledevelopment.werewolf.model.Party;
 import com.mobiledevelopment.werewolf.model.Player;
-import com.mobiledevelopment.werewolf.dialogs.DialogRole;
 
 
 public class AdapterPlayer extends RecyclerView.Adapter<AdapterPlayer.MyViewHolder>
 {
-    private ActivityParty context;
+    private Context context;
+    private Party party;
     private Player[] players;
 
 
@@ -32,16 +32,15 @@ public class AdapterPlayer extends RecyclerView.Adapter<AdapterPlayer.MyViewHold
      * Complete Constructor
      * @param context Context from where this RecyclerView is created
      */
-    public AdapterPlayer(Context context)
+    public AdapterPlayer(Context context, Party party)
     {
-        this.context = (ActivityParty) context;
+        this.context = context;
+        this.party = party;
 
-        players = new Player[this.context.party.numberOfPlayers];
-
-        int i = 0;
-        for (Player player : this.context.party.getPlayers())
+        players = new Player[party.numberOfPlayers];
+        for (int i = 0; i < party.numberOfPlayers; i++)
         {
-            players[i++] = player;
+            players[i] = party.getPlayers().get(i);
         }
     }
 
@@ -70,43 +69,52 @@ public class AdapterPlayer extends RecyclerView.Adapter<AdapterPlayer.MyViewHold
 
 
         // If the player is alive and we're allowed to show his data
-        if(player.isAlive() && !context.party.isDataHidden())
+        if(player.isAlive() && !party.isDataHidden())
         {
+            // Display the button to PopUp
+            holder.buttonPopUp.setVisibility(View.VISIBLE);
+
+            // When clicking the Kill button :
+            // Change the text
+            holder.buttonPopUp.setOnClickListener(v ->
+            {
+                // We create the Dialog
+                DialogTrigger dialogTrigger = new DialogTrigger(context, party, player);
+
+                // We display it
+                dialogTrigger.show();
+            });
+
+
+
+
             // Display the button to Kill
             holder.buttonKill.setVisibility(View.VISIBLE);
 
             // When clicking the Kill button :
             // Change the text
-            holder.buttonKill.setOnClickListener(new View.OnClickListener()
-            {
-                @Override
-                public void onClick(View v)
-                {
-                    // We set the player as dying (or not)
-                    player.setDying( !player.isDying() );
+            holder.buttonKill.setOnClickListener(v -> {
+                // We set the player as dying (or not)
+                player.setDying( !player.isDying() );
 
-                    // We set the text
-                    setTextName(holder, player);
-                }
+                // We set the text
+                setTextName(holder, player);
             });
         }
         else
         {
+            // Hide the button to PopUp
+            holder.buttonPopUp.setVisibility(View.INVISIBLE);
             // Hide the button to Kill
             holder.buttonKill.setVisibility(View.INVISIBLE);
         }
 
 
         // When clicking the holder : PopUp displaying the role
-        holder.mainLayout.setOnClickListener(new View.OnClickListener()
-        {
-            @Override
-            public void onClick(View view)
-            {
-                // We create and set a dialog
-                DialogRolePlayer dialogRolePlayer = new DialogRolePlayer(context, player.getRole(), player.getName());
-                dialogRolePlayer.show();
-            }
+        holder.mainLayout.setOnClickListener(view -> {
+            // We create and set a dialog
+            DialogRolePlayer dialogRolePlayer = new DialogRolePlayer(context, player.getRole(), player.getName());
+            dialogRolePlayer.show();
         });
     }
 
@@ -126,10 +134,12 @@ public class AdapterPlayer extends RecyclerView.Adapter<AdapterPlayer.MyViewHold
     {
         SpannableString message = new SpannableString(player.getName());
 
-        // If the player is dead : custom color
+        // If the player is dead : custom color + we can see the icon
         if( !player.isAlive() )
         {
             holder.name.setTextColor(context.getResources().getColor(R.color.colorDead));
+            // Custom Icon
+            holder.image.setImageResource(player.getRole().getIcon());
         }
 
         // If the data are Hidden :
@@ -137,7 +147,7 @@ public class AdapterPlayer extends RecyclerView.Adapter<AdapterPlayer.MyViewHold
         // Default color if alive
         // Display only the name
         // If it is not :
-        if( !context.party.isDataHidden() )
+        if( !party.isDataHidden() )
         {
             // Custom Icon
             holder.image.setImageResource(player.getRole().getIcon());
@@ -177,14 +187,15 @@ public class AdapterPlayer extends RecyclerView.Adapter<AdapterPlayer.MyViewHold
     /**
      * Sub-class
      */
-    public class MyViewHolder extends RecyclerView.ViewHolder
+    class MyViewHolder extends RecyclerView.ViewHolder
     {
         ImageView image;
         TextView name;
+        ImageButton buttonPopUp;
         ImageButton buttonKill;
         ConstraintLayout mainLayout;
 
-        public MyViewHolder(@NonNull View itemView)
+        MyViewHolder(@NonNull View itemView)
         {
             // Calling the constructor
             super(itemView);
@@ -192,6 +203,7 @@ public class AdapterPlayer extends RecyclerView.Adapter<AdapterPlayer.MyViewHold
             // Getting the fields
             image = itemView.findViewById(R.id.PlayerImageView);
             name = itemView.findViewById(R.id.PlayerTextName);
+            buttonPopUp = itemView.findViewById(R.id.PlayerButtonPopUp);
             buttonKill = itemView.findViewById(R.id.PlayerButtonKill);
             mainLayout = itemView.findViewById(R.id.rowPlayer);
         }

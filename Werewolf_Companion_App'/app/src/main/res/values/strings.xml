@@ -2,6 +2,8 @@
 <resources>
     <!-- Major Data -->
     <string name="app_name">Werewolf</string>
+    <string name="TextCancel">Cancel</string>
+    <string name="TextApply">Apply</string>
     <string name="TextGoBack">X</string>
     <string name="PlaceholderName">X</string>
     <string name="ButtonRemove">-</string>
@@ -25,13 +27,18 @@
         When they go on their quest to wipe-out the population, one member per night, the village decides to eliminate the threat by voting each morning a death sentence for one of its member.\n\n
         Watch out, for some people within the community have unnatural powers, following goals that may be diverging from yours…\n\n
     </string>
+    <string name="RulesTextTeams">The Different Teams</string>
     <string name="RulesTextRoles">The Different Roles</string>
 
-    <!-- PopUp : Role -->
+    <!-- Dialog : Role -->
     <string name="RoleImage">I\'m an image !</string>
-    <string name="RoleTextPlayer">Xplays…</string>
+    <string name="RoleTextPlayer">X plays…</string>
     <string name="RoleTextPlayed">X played…</string>
     <string name="RolePlayerDead">X is dead !</string>
+
+    <!-- Dialog : Trigger -->
+    <string name="TriggerTitle">Select the values :</string>
+
 
     <!-- Activity : Create Party -->
     <string name="PartyNewNavBarPlayers">Players</string>
@@ -64,6 +71,12 @@
     <string name="RowPlayerDefaultNameIsDying">X is dying !</string>
     <string name="RowPlayerImageDescription">I\'m an image !</string>
     <string name="RowPlayerButtonKill">I\'m a button !</string>
+
+
+    <!-- Teams content -->
+    <string name="team_villager">Village</string>
+    <string name="team_werewolf">Werewolf</string>
+    <string name="team_other">Non-Affiliated</string>
 
 
     <!-- Roles content -->

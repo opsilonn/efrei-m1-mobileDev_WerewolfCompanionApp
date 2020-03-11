@@ -15,7 +15,7 @@ import java.util.Objects;
 
 public class DialogRole extends Dialog
 {
-    private ImageView imageView;
+    protected ImageView imageView;
     protected TextView textPlayer;
     protected TextView textName;
     protected TextView textDescription;
@@ -44,15 +44,7 @@ public class DialogRole extends Dialog
 
         // We get the text that acts as a button, which when clicked, dismisses the PopUp
         TextView textDismiss = findViewById(R.id.RoleTextGoBack);
-        textDismiss.setOnClickListener(new View.OnClickListener()
-           {
-               @Override
-               public void onClick(View v)
-               {
-                   dismiss();
-               }
-           }
-        );
+        textDismiss.setOnClickListener( v -> dismiss() );
 
         // We resize the Dialog
         Objects.requireNonNull(getWindow()).setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));

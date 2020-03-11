@@ -48,6 +48,19 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageButton
+                android:id="@+id/PlayerButtonPopUp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_5sdp"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/RowPlayerButtonKill"
+                android:padding="@dimen/_5sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/PlayerTextName"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_menu" />
+
+            <ImageButton
                 android:id="@+id/PlayerButtonKill"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

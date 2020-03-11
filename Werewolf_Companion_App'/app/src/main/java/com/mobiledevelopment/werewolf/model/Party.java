@@ -1,5 +1,7 @@
 package com.mobiledevelopment.werewolf.model;
 
+import android.content.Context;
+
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
@@ -17,6 +19,8 @@ public class Party implements Serializable
     private int cptTurns;
     private boolean dataHidden;
     private boolean isNight;
+    private String[] triggers;
+    private Boolean[] isTriggerPermanent;
 
 
     /**
@@ -30,6 +34,8 @@ public class Party implements Serializable
         cptTurns = 1;
         dataHidden = false;
         isNight = true;
+        triggers = new String[0];
+        isTriggerPermanent = new Boolean[0];
     }
 
 
@@ -40,8 +46,10 @@ public class Party implements Serializable
      * @param cptTurns Number of Turns spent in the party
      * @param dataHidden Whether we display or not the crucial data of the {@link Player}
      * @param isNight Whether it is the night or not
+     * @param triggers Array of triggers of the instance
+     * @param isTriggerPermanent Whether the trigger is Permanent or not
      */
-    public Party(ArrayList<Player> players, String partyID, int cptTurns, boolean dataHidden, boolean isNight)
+    public Party(ArrayList<Player> players, String partyID, int cptTurns, boolean dataHidden, boolean isNight, String[] triggers, Boolean[] isTriggerPermanent)
     {
         this.players = players;
         this.partyID = partyID;
@@ -49,6 +57,8 @@ public class Party implements Serializable
         this.cptTurns = cptTurns;
         this.dataHidden = dataHidden;
         this.isNight = isNight;
+        this.triggers = triggers;
+        this.isTriggerPermanent = isTriggerPermanent;
     }
 
 
@@ -110,54 +120,6 @@ public class Party implements Serializable
             numberOfPlayers--;
         }
     }
-
-
-    /**
-     * Get all the {@link Role} from the {@link Party}
-     * @return all the {@link Role} from the {@link Party}
-     */
-    public List<Role> getAllRoles()
-    {
-        // We create a list of Roles
-        List<Role> roles = new ArrayList<>();
-
-        // Foreach Player, we add its role
-        for (Player player : getPlayers())
-        {
-            roles.add(player.getRole());
-        }
-
-        // We return the List
-        return roles;
-    }
-
-
-    /**
-     * Get all the {@link Role} from the {@link Party}, with no double
-     * @return all the {@link Role} from the {@link Party}, with no double
-     */
-    public List<Role> getAllRolesUnique()
-    {
-        System.out.println("Entered the methode de tri");
-        // We create a list of Roles
-        List<Role> roles = new ArrayList<>();
-
-        // Foreach Player, we add its role if it's not in the list already
-        for (Player player : getPlayers())
-        {
-            Role currentRole = player.getRole();
-
-            if(!roles.contains(currentRole))
-            {
-                roles.add(currentRole);
-            }
-        }
-
-        // We return the List
-        return roles;
-    }
-
-
 
 
     /**
@@ -223,7 +185,7 @@ public class Party implements Serializable
 
     /**
      * We change the time of day of the party.
-     * If we transition from day to night, we increment the turn counter
+     * If we transition from day to night, we increment the turn counter AND verify the triggers
      */
     public void changeTime()
     {
@@ -231,6 +193,71 @@ public class Party implements Serializable
         if(isNight)
         {
             this.cptTurns++;
+            verifyTrigger();
+        }
+    }
+
+
+    /**
+     * Initializes all the trigger (for this instance and its players)
+     * @param context Context from where we initialize
+     */
+    public void initializeTriggers(Context context)
+    {
+        List<String> triggerList = new ArrayList<>();
+        List<Boolean> triggerPermanent = new ArrayList<>();
+
+        // We create the trigger List
+        for (Player player : players)
+        {
+            Role role = player.getRole();
+
+            if(role.hasTriggerMessage())
+            {
+                triggerList.add( context.getResources().getString(role.triggerRes));
+                triggerPermanent.add( role.isTriggerPermanent );
+            }
+        }
+
+        // We convert it into an array
+        this.triggers = triggerList.toArray(new String[0]);
+        this.isTriggerPermanent = triggerPermanent.toArray(new Boolean[0]);
+
+
+        // We set the trigger Array for each player
+        for (Player player : getPlayers())
+        {
+            boolean[] triggersPlayer = new boolean[triggers.length];
+
+            // Default value : false
+            for(int i = 0; i < triggersPlayer.length; i++)
+            {
+                triggersPlayer[i] = false;
+            }
+
+            player.setTriggers(triggersPlayer);
+        }
+    }
+
+
+    /**
+     * Verify and change if needed the triggers of the players
+     */
+    private void verifyTrigger()
+    {
+        // For each Player
+        for (Player player : getPlayers())
+        {
+            // For each Trigger
+            for (int i = 0; i < getIsTriggerPermanent().length; i++)
+            {
+                // If it isn't permanent and set to true for the player :
+                // Reset it to false
+                if(!getIsTriggerPermanent()[i] && player.getTriggers()[i])
+                {
+                    player.getTriggers()[i] = false;
+                }
+            }
         }
     }
 
@@ -245,4 +272,7 @@ public class Party implements Serializable
     public void setDataHidden(boolean dataHidden) { this.dataHidden = dataHidden; }
     public boolean isNight() { return isNight; }
     public void setNight(boolean isNight) { this.isNight = isNight; }
+    public String[] getTriggers() { return triggers; }
+    public void setTriggers(String[] triggers) { this.triggers =triggers; }
+    public Boolean[] getIsTriggerPermanent() { return isTriggerPermanent; }
 }

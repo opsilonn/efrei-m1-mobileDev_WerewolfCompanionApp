@@ -70,16 +70,12 @@ public class FragmentPartyPlayers extends Fragment
         switchHide.setChecked(parentActivity.party.isDataHidden());
 
         // We add a listener
-        switchHide.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener()
-        {
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked)
-            {
-                // We change the value
-                parentActivity.party.setDataHidden(isChecked);
+        switchHide.setOnCheckedChangeListener((buttonView, isChecked) -> {
+            // We change the value
+            parentActivity.party.setDataHidden(isChecked);
 
-                // We set the RecyclerView accordingly
-                setRecyclerView();
-            }
+            // We set the RecyclerView accordingly
+            setRecyclerView();
         });
     }
 
@@ -90,7 +86,7 @@ public class FragmentPartyPlayers extends Fragment
     private void setRecyclerView()
     {
         // We instantiate a RecyclerView Adapter
-        AdapterPlayer adapter = new AdapterPlayer(parentActivity);
+        AdapterPlayer adapter = new AdapterPlayer(parentActivity, parentActivity.party);
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(parentActivity));
     }

@@ -1,10 +1,8 @@
 package com.mobiledevelopment.werewolf.activities;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import android.os.Bundle;
-import android.view.MenuItem;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.mobiledevelopment.werewolf.fragments.FragmentPartyLeave;
 import com.mobiledevelopment.werewolf.fragments.FragmentPartyPlayers;
@@ -39,6 +37,7 @@ public class ActivityParty extends AppCompatActivity
         assert extras != null;
         party = (Party) extras.getSerializable(Util.EXTRA_PARTY);
         assert party != null;
+        party.initializeTriggers(this);
 
         // Initialize all the fragments
         fragmentPlayers = new FragmentPartyPlayers(this);
@@ -56,35 +55,30 @@ public class ActivityParty extends AppCompatActivity
 
 
         // Adds the listener
-        navbar.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener()
-        {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem)
+        navbar.setOnNavigationItemSelectedListener(menuItem -> {
+            // We set a default fragment (here, the fragment about Players)
+            Fragment selectedFragment = fragmentPlayers;
+
+            // We get the selected item
+            switch (menuItem.getItemId())
             {
-                // We set a default fragment (here, the fragment about Players)
-                Fragment selectedFragment = fragmentPlayers;
+                // Adds Players
+                case R.id.party_nav_players:
+                    selectedFragment = fragmentPlayers;
+                    break;
 
-                // We get the selected item
-                switch (menuItem.getItemId())
-                {
-                    // Adds Players
-                    case R.id.party_nav_players:
-                        selectedFragment = fragmentPlayers;
-                        break;
+                // Adds Roles
+                case R.id.party_nav_roles:
+                    selectedFragment = fragmentRoles;
+                    break;
 
-                    // Adds Roles
-                    case R.id.party_nav_roles:
-                        selectedFragment = fragmentRoles;
-                        break;
-
-                    case R.id.party_nav_leave:
-                        selectedFragment = fragmentLaunch;
-                        break;
-                }
-
-                getSupportFragmentManager().beginTransaction().replace(R.id.party_frame, selectedFragment).commit();
-                return true;
+                case R.id.party_nav_leave:
+                    selectedFragment = fragmentLaunch;
+                    break;
             }
+
+            getSupportFragmentManager().beginTransaction().replace(R.id.party_frame, selectedFragment).commit();
+            return true;
         });
     }
 }

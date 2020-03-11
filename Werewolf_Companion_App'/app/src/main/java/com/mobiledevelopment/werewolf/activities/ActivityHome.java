@@ -10,6 +10,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import com.mobiledevelopment.werewolf.R;
+import com.mobiledevelopment.werewolf.model.Party;
+import com.mobiledevelopment.werewolf.model.Player;
+import com.mobiledevelopment.werewolf.model.Role;
+import com.mobiledevelopment.werewolf.util.Util;
+
 import java.util.Locale;
 
 
@@ -44,14 +49,7 @@ public class ActivityHome extends AppCompatActivity
         Button button = findViewById(R.id.HomeButtonParty);
 
         // When clicked : launches the Activity creating a Party
-        button.setOnClickListener(new View.OnClickListener()
-        {
-            @Override
-            public void onClick (View v)
-            {
-                startActivity(new Intent(getApplicationContext(), ActivityPartyNew.class));
-            }
-        });
+        button.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), ActivityPartyNew.class)));
     }
 
 
@@ -64,14 +62,7 @@ public class ActivityHome extends AppCompatActivity
         Button button = findViewById(R.id.HomeButtonSeeRules);
 
         // When clicked : launches the Activity displaying the rules
-        button.setOnClickListener(new View.OnClickListener()
-        {
-            @Override
-            public void onClick (View v)
-            {
-                startActivity(new Intent(getApplicationContext(), ActivityRules.class));
-            }
-        });
+        button.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), ActivityRules.class)));
     }
 
 
@@ -84,14 +75,9 @@ public class ActivityHome extends AppCompatActivity
         Button button = findViewById(R.id.HomeButtonLanguage);
 
         // We give a Listener to the button
-        button.setOnClickListener(new View.OnClickListener()
-        {
-            @Override
-            public void onClick (View v)
-            {
-                // call the method to create the Dialog Option
-                showChangeLanguageDialog();
-            }
+        button.setOnClickListener(v -> {
+            // call the method to create the Dialog Option
+            showChangeLanguageDialog();
         });
     }
 
@@ -109,26 +95,21 @@ public class ActivityHome extends AppCompatActivity
 
         // Setting the choices
         mBuilder.setTitle("Choose a language :");
-        mBuilder.setSingleChoiceItems(listLanguages, -1, new DialogInterface.OnClickListener()
-        {
-            @Override
-            public void onClick(DialogInterface dialogInterface, int i)
+        mBuilder.setSingleChoiceItems(listLanguages, -1, (dialogInterface, i) -> {
+            // If the choice corresponds to one of the following
+            // Set the language and recreate the UI
+            if(listLanguages[i].equals("English"))
             {
-                // If the choice corresponds to one of the following
-                // Set the language and recreate the UI
-                if(listLanguages[i].equals("English"))
-                {
-                    setLocale("en");
-                    recreate();
-                }
-                if(listLanguages[i].equals("Français"))
-                {
-                    setLocale("fr");
-                    recreate();
-                }
-
-                dialogInterface.dismiss();
+                setLocale("en");
+                recreate();
             }
+            if(listLanguages[i].equals("Français"))
+            {
+                setLocale("fr");
+                recreate();
+            }
+
+            dialogInterface.dismiss();
         });
 
         // Display the Dialog

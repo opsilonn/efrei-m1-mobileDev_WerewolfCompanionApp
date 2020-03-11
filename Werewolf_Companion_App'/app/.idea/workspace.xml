@@ -11,15 +11,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6605e09d-f7d0-43f3-9115-3fe4941b569c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_volley_volley_1_1_1_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/caches/gradle_models.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/gradle_models.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/activities/ActivityHome.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/activities/ActivityHome.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/activities/ActivityLoading.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/activities/ActivityLoading.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/model/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/model/Role.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/activities/ActivityParty.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/activities/ActivityParty.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/activities/ActivityPartyNew.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/activities/ActivityPartyNew.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/activities/ActivityRules.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/activities/ActivityRules.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/adapters/AdapterPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/adapters/AdapterPlayer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/adapters/AdapterRole.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/adapters/AdapterRole.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/api/API_Util.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/util/UtilAPI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/dialogs/DialogRole.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/dialogs/DialogRole.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/fragments/FragmentPartyLeave.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/fragments/FragmentPartyLeave.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/fragments/FragmentPartyPlayers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/fragments/FragmentPartyPlayers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/fragments/FragmentPartyRoles.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/fragments/FragmentPartyRoles.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/model/Party.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/model/Party.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/model/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/model/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/model/Team.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/model/Team.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/util/Util.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/util/Util.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/activity_rules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/activity_rules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/fragment_party_players.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/fragment_party_players.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/rv_row_player.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/rv_row_player.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/rv_row_role.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/rv_row_role.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/values-fr/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/values-fr/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/values/strings.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -41,50 +60,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/activities/ActivityLoading.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/adapters/AdapterPlayer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="273">
-              <caret line="235" column="34" lean-forward="true" selection-start-line="235" selection-start-column="34" selection-end-line="235" selection-end-column="34" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#onCreate#0;class#ActivityLoading#0" />
-                <element signature="method#goToNextActivity#0;class#ActivityLoading#0" />
-                <element signature="method#setDataRandom#0;class#ActivityLoading#0" />
-                <element signature="method#API_createDeck#0;class#ActivityLoading#0" />
-                <element signature="e#7270#8867#0" expanded="true" />
-                <element signature="e#8866#8867#0" expanded="true" />
-                <element signature="e#8908#9266#0" expanded="true" />
-                <element signature="e#9265#9266#0" expanded="true" />
-                <element signature="e#9856#10524#0" expanded="true" />
-                <element signature="e#10523#10524#0" expanded="true" />
-                <element signature="e#11442#13054#0" expanded="true" />
-                <element signature="e#13053#13054#0" expanded="true" />
-                <element signature="e#13103#13501#0" expanded="true" />
-                <element signature="e#13500#13501#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/util/Util.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1112#1113#0" expanded="true" />
-                <element signature="method#getRolesByOrderFromList#0;class#Util#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/api/API_Util.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-119">
-              <caret line="26" column="35" selection-start-line="26" selection-start-column="35" selection-end-line="26" selection-end-column="35" />
+            <state relative-caret-position="-34">
+              <caret line="136" column="69" selection-start-line="136" selection-start-column="69" selection-end-line="136" selection-end-column="69" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -98,6 +77,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -119,41 +99,50 @@
         <option value="$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/DialogRole.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/util/DialogRole.java" />
         <option value="$PROJECT_DIR$/src/main/res/layout/fragment_party_roles.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/activities/ActivityRules.java" />
-        <option value="$PROJECT_DIR$/src/main/res/layout/rv_row_role.xml" />
-        <option value="$PROJECT_DIR$/src/main/res/layout/rv_row_player.xml" />
         <option value="$PROJECT_DIR$/src/main/res/layout/popup_role.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/util/AdapterPlayer.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/util/AdapterRole.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/Adapters/AdapterRole.java" />
-        <option value="$PROJECT_DIR$/src/main/res/values-fr/strings.xml" />
-        <option value="$PROJECT_DIR$/src/main/res/values/strings.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/fragments/FragmentPartyRoles.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/dialogs/DialogRole.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/dialogs/DialogRolePlayer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/adapters/AdapterRole.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/adapters/AdapterPlayer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/fragments/FragmentPartyLeave.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/fragments/FragmentPartyNewPlayers.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/fragments/FragmentPartyNewRoles.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/activities/ActivityPartyNew.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/model/Party.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/fragments/FragmentPartyNewLaunch.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/activities/ActivityParty.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/dialogs/DialogRoleDead.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/model/Role.java" />
         <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/api/API_Util.java" />
         <option value="$PROJECT_DIR$/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/util/UtilAPI.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/util/Util.java" />
+        <option value="$PROJECT_DIR$/src/main/res/layout/fragment_party_players.xml" />
+        <option value="$PROJECT_DIR$/src/main/res/layout/rv_row_role.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/fragments/FragmentPartyRoles.java" />
+        <option value="$PROJECT_DIR$/src/main/res/layout/rv_row_player.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/activities/ActivityLoading.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/fragments/FragmentPartyPlayers.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/fragments/FragmentPartyLeave.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/model/Player.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/dialogs/DialogTrigger.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/activities/ActivityHome.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/activities/ActivityPartyNew.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/activities/ActivityParty.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/adapters/AdapterRole.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/model/Party.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/model/Team.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/dialogs/DialogRole.java" />
+        <option value="$PROJECT_DIR$/src/main/res/values-fr/strings.xml" />
+        <option value="$PROJECT_DIR$/src/main/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/activities/ActivityRules.java" />
+        <option value="$PROJECT_DIR$/src/main/res/layout/activity_rules.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/adapters/AdapterPlayer.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="-5" />
-    <option name="width" value="1938" />
-    <option name="height" value="1022" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="12" />
+    <option name="y" value="-23" />
+    <option name="width" value="1939" />
+    <option name="height" value="1025" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -161,17 +150,31 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane">
+      <pane id="PackagesPane" />
+      <pane id="AndroidView">
         <subPane>
           <expand>
             <path>
-              <item name="Werewolf" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Werewolf_Companion_App'" type="462c0819:PsiDirectoryNode" />
+              <item name="Werewolf" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
             </path>
             <path>
-              <item name="Werewolf" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Werewolf_Companion_App'" type="462c0819:PsiDirectoryNode" />
-              <item name="gradle" type="462c0819:PsiDirectoryNode" />
+              <item name="Werewolf" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+            </path>
+            <path>
+              <item name="Werewolf" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="werewolf" type="cbb59c9e:AndroidPsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Werewolf" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="werewolf" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="adapters" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -188,22 +191,17 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="AndroidView">
+      <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="Werewolf" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="Werewolf" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Werewolf_Companion_App'" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Werewolf" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="manifests" type="f94875db:AndroidManifestsGroupNode" />
-            </path>
-            <path>
-              <item name="Werewolf" type="1abcf292:AndroidViewProjectNode" />
-              <item name="Gradle Scripts" type="ae0cef3a:AndroidBuildScriptsGroupNode" />
+              <item name="Werewolf" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Werewolf_Companion_App'" type="462c0819:PsiDirectoryNode" />
+              <item name="gradle" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -315,11 +313,11 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-4" y="0" width="1550" height="817" extended-state="0" />
+    <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.12483221" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.14563759" />
       <window_info id="Structure" order="2" side_tool="true" />
       <window_info id="Build Variants" order="3" side_tool="true" />
       <window_info id="Image Layers" order="4" />
@@ -327,16 +325,16 @@
       <window_info id="Resources Explorer" order="6" />
       <window_info id="Capture Tool" order="7" />
       <window_info id="Favorites" order="8" side_tool="true" />
-      <window_info anchor="bottom" id="Find" />
       <window_info anchor="bottom" id="Logcat" order="0" weight="0.46514747" />
       <window_info anchor="bottom" id="TODO" order="1" weight="0.3297587" />
       <window_info anchor="bottom" id="Android Profiler" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" />
       <window_info anchor="bottom" id="Terminal" order="4" />
-      <window_info anchor="bottom" id="Event Log" order="5" sideWeight="0.50067115" side_tool="true" weight="0.46514747" />
+      <window_info anchor="bottom" id="Event Log" order="5" sideWeight="0.51409394" side_tool="true" weight="0.28820375" />
       <window_info anchor="bottom" id="Version Control" order="6" />
-      <window_info anchor="bottom" id="Build" order="7" weight="0.53061223" />
-      <window_info anchor="bottom" id="Run" order="8" sideWeight="0.49932885" weight="0.29051095" />
+      <window_info anchor="bottom" id="Build" order="7" sideWeight="0.49731544" visible="true" weight="0.2077748" />
+      <window_info anchor="bottom" id="Run" order="8" sideWeight="0.48590603" weight="0.28820375" />
+      <window_info anchor="bottom" id="Find" order="9" />
       <window_info anchor="right" id="Device File Explorer" order="0" side_tool="true" />
       <window_info anchor="right" id="Capture Analysis" order="1" />
       <window_info anchor="right" id="Gradle" order="2" />
@@ -347,12 +345,214 @@
       <window_info anchor="right" id="Flutter Performance" order="7" />
       <window_info anchor="right" id="Preview" order="8" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.14563759" />
+      <window_info id="Structure" order="2" side_tool="true" />
+      <window_info id="Build Variants" order="3" side_tool="true" />
+      <window_info id="Image Layers" order="4" />
+      <window_info id="Designer" order="5" />
+      <window_info id="Resources Explorer" order="6" />
+      <window_info id="Capture Tool" order="7" />
+      <window_info id="Favorites" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Logcat" order="0" weight="0.46514747" />
+      <window_info anchor="bottom" id="TODO" order="1" weight="0.3297587" />
+      <window_info anchor="bottom" id="Android Profiler" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" />
+      <window_info anchor="bottom" id="Terminal" order="4" />
+      <window_info anchor="bottom" id="Event Log" order="5" sideWeight="0.51409394" side_tool="true" weight="0.28820375" />
+      <window_info anchor="bottom" id="Version Control" order="6" />
+      <window_info anchor="bottom" id="Build" order="7" sideWeight="0.49731544" visible="true" weight="0.2077748" />
+      <window_info anchor="bottom" id="Run" order="8" sideWeight="0.48590603" weight="0.28820375" />
+      <window_info anchor="bottom" id="Find" order="9" />
+      <window_info anchor="right" id="Device File Explorer" order="0" side_tool="true" />
+      <window_info anchor="right" id="Capture Analysis" order="1" />
+      <window_info anchor="right" id="Gradle" order="2" />
+      <window_info anchor="right" id="Theme Preview" order="3" />
+      <window_info anchor="right" id="Flutter Inspector" order="4" />
+      <window_info anchor="right" id="Flutter Outline" order="5" weight="0.3295302" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info anchor="right" id="Flutter Performance" order="7" />
+      <window_info anchor="right" id="Preview" order="8" />
+    </layout-to-restore>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/activities/ActivityHome.java">
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout/fragment_party_roles.xml">
+      <provider selected="true" editor-type-id="android-designer2" />
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="680">
+          <caret line="40" selection-start-line="40" selection-end-line="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout/popup_role.xml">
+      <provider selected="true" editor-type-id="android-designer2" />
+      <provider editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+        <state relative-caret-position="246">
+          <caret line="21" column="14" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/AndroidManifest.xml">
+      <provider editor-type-id="android-manifest" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/util/MyCallback.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/util/UtilAPI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="407">
+          <caret line="52" column="5" selection-start-line="52" selection-start-column="5" selection-end-line="52" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout/fragment_party_players.xml">
+      <provider selected="true" editor-type-id="android-designer2" />
+      <provider editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout/rv_row_role.xml">
+      <provider selected="true" editor-type-id="android-designer2" />
+      <provider editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout/rv_row_player.xml">
+      <provider selected="true" editor-type-id="android-designer2" />
+      <provider editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/activities/ActivityPartyNew.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/activities/ActivityParty.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/activities/ActivityLoading.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="664">
+          <caret line="178" column="4" selection-start-line="178" selection-start-column="4" selection-end-line="178" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#setDataRandom#0;class#ActivityLoading#0" />
+            <element signature="method#setDataAPI#0;class#ActivityLoading#0" />
+            <element signature="method#API_initializeCards#0;class#ActivityLoading#0" />
+            <element signature="method#API_createDeck#0;class#ActivityLoading#0" />
+            <element signature="method#API_assignRoles#0;class#ActivityLoading#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/adapters/AdapterRole.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="215" lean-forward="true" selection-start-line="215" selection-end-line="215" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/dialogs/DialogRolePlayer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="37" lean-forward="true" selection-start-line="20" selection-start-column="37" selection-end-line="20" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/dialogs/DialogTrigger.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="64" selection-start-line="21" selection-start-column="64" selection-end-line="21" selection-end-column="64" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/fragments/FragmentPartyRoles.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#setButtonTurn#0;class#FragmentPartyRoles#0" />
+            <element signature="method#setWidgetsTexts#0;class#FragmentPartyRoles#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/fragments/FragmentPartyPlayers.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="38" column="81" lean-forward="true" selection-start-line="38" selection-start-column="81" selection-end-line="38" selection-end-column="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/fragments/FragmentPartyNewLaunch.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="477">
+          <caret line="58" column="13" selection-start-line="58" selection-start-column="13" selection-end-line="58" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/fragments/FragmentPartyLeave.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="51" column="8" selection-start-line="51" selection-start-column="8" selection-end-line="51" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/fragments/FragmentPartyNewPlayers.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="664">
+          <caret line="76" column="68" selection-start-line="76" selection-start-column="63" selection-end-line="76" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/fragments/FragmentPartyNewRoles.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="61" selection-start-line="61" selection-end-line="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/util/Util.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="28" column="7" lean-forward="true" selection-start-line="28" selection-start-column="7" selection-end-line="28" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/model/PowerActivationOrder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="12" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
         </state>
       </provider>
     </entry>
@@ -363,89 +563,103 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/layout/fragment_party_players.xml">
-      <provider editor-type-id="text-editor" />
-      <provider selected="true" editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/fragments/FragmentPartyPlayers.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/model/Party.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="50" selection-start-line="50" selection-end-line="52" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/layout/fragment_party_roles.xml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="40" selection-start-line="40" selection-end-line="44" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/layout/rv_row_role.xml">
-      <provider editor-type-id="text-editor" />
-      <provider selected="true" editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/layout/rv_row_player.xml">
-      <provider editor-type-id="text-editor" />
-      <provider selected="true" editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/values-fr/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="32" column="36" selection-start-line="32" selection-start-column="36" selection-end-line="32" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="32" column="42" selection-start-line="32" selection-start-column="42" selection-end-line="32" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/layout/popup_role.xml">
-      <provider editor-type-id="text-editor" />
-      <provider selected="true" editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/dialogs/DialogRolePlayer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="37" lean-forward="true" selection-start-line="20" selection-start-column="37" selection-end-line="20" selection-end-column="37" />
+        <state relative-caret-position="137">
+          <caret line="250" column="32" selection-start-line="250" selection-start-column="32" selection-end-line="250" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#546#604#0" expanded="true" />
-            <element signature="e#632#689#0" expanded="true" />
+            <element signature="method#getAllRolesDay#0;class#Party#0" />
+            <element signature="method#getAllRolesNight#0;class#Party#0" />
+            <element signature="method#changeTime#0;class#Party#0" />
+            <element signature="method#initializeTriggers#0;class#Party#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/activities/ActivityRules.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/model/Player.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="307">
-          <caret line="20" column="54" lean-forward="true" selection-start-line="20" selection-start-column="54" selection-end-line="20" selection-end-column="54" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/adapters/AdapterRole.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1486">
-          <caret line="100" column="74" selection-start-line="100" selection-start-column="74" selection-end-line="100" selection-end-column="74" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#8013#8014#0" expanded="true" />
-            <element signature="e#8048#8049#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="221">
+          <caret line="19" column="7" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="7" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/dialogs/DialogRole.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/dialogs/DialogRoleDead.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="8" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/model/Team.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
-          <caret line="22" column="57" selection-start-line="22" selection-start-column="57" selection-end-line="22" selection-end-column="57" />
+          <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#287#309#0" expanded="true" />
+            <element signature="e#355#377#0" expanded="true" />
+            <element signature="e#418#437#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="28" column="13" lean-forward="true" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/model/Role.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="251" column="12" selection-start-line="251" selection-start-column="12" selection-end-line="251" selection-end-column="12" />
+          <folding>
+            <element signature="e#7387#7421#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/values-fr/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="28" column="13" lean-forward="true" selection-start-line="28" selection-start-column="13" selection-end-line="29" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/activities/ActivityHome.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="48" column="23" selection-start-line="48" selection-start-column="23" selection-end-line="48" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout/activity_rules.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="48" column="39" lean-forward="true" selection-start-line="48" selection-start-column="39" selection-end-line="48" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/activities/ActivityRules.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="271">
+          <caret line="53" column="73" selection-start-line="53" selection-start-column="73" selection-end-line="53" selection-end-column="73" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -454,148 +668,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/adapters/AdapterPlayer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="62" column="34" lean-forward="true" selection-start-line="62" selection-start-column="34" selection-end-line="62" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/fragments/FragmentPartyRoles.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="349">
-          <caret line="91" column="25" lean-forward="true" selection-start-line="91" selection-start-column="25" selection-end-line="91" selection-end-column="25" />
+        <state relative-caret-position="-34">
+          <caret line="136" column="69" selection-start-line="136" selection-start-column="69" selection-end-line="136" selection-end-column="69" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/fragments/FragmentPartyNewPlayers.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1020">
-          <caret line="76" column="68" selection-start-line="76" selection-start-column="63" selection-end-line="76" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/fragments/FragmentPartyNewRoles.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="61" lean-forward="true" selection-start-line="61" selection-end-line="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/activities/ActivityPartyNew.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="35" column="13" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/activities/ActivityParty.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="40" column="29" selection-start-line="40" selection-start-column="29" selection-end-line="40" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/model/Party.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="123" column="33" selection-start-line="123" selection-start-column="30" selection-end-line="123" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/fragments/FragmentPartyLeave.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="56" column="85" selection-start-line="56" selection-start-column="85" selection-end-line="56" selection-end-column="85" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/fragments/FragmentPartyNewLaunch.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="58" column="13" selection-start-line="58" selection-start-column="13" selection-end-line="58" selection-end-column="13" />
-          <folding>
-            <element signature="e#1588#2010#0" expanded="true" />
-            <element signature="e#2009#2010#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/model/Role.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="396" column="20" selection-start-line="396" selection-start-column="20" selection-end-line="396" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="21" column="14" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/dialogs/DialogRoleDead.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/api/API_Util.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-119">
-          <caret line="26" column="35" selection-start-line="26" selection-start-column="35" selection-end-line="26" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-manifest" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/util/Util.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1112#1113#0" expanded="true" />
-            <element signature="method#getRolesByOrderFromList#0;class#Util#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/activities/ActivityLoading.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="235" column="34" lean-forward="true" selection-start-line="235" selection-start-column="34" selection-end-line="235" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#onCreate#0;class#ActivityLoading#0" />
-            <element signature="method#goToNextActivity#0;class#ActivityLoading#0" />
-            <element signature="method#setDataRandom#0;class#ActivityLoading#0" />
-            <element signature="method#API_createDeck#0;class#ActivityLoading#0" />
-            <element signature="e#7270#8867#0" expanded="true" />
-            <element signature="e#8866#8867#0" expanded="true" />
-            <element signature="e#8908#9266#0" expanded="true" />
-            <element signature="e#9265#9266#0" expanded="true" />
-            <element signature="e#9856#10524#0" expanded="true" />
-            <element signature="e#10523#10524#0" expanded="true" />
-            <element signature="e#11442#13054#0" expanded="true" />
-            <element signature="e#13053#13054#0" expanded="true" />
-            <element signature="e#13103#13501#0" expanded="true" />
-            <element signature="e#13500#13501#0" expanded="true" />
           </folding>
         </state>
       </provider>

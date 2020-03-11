@@ -13,6 +13,7 @@ public class Player implements Serializable
     private Role role;
     private boolean isAlive;
     private boolean isDying;
+    private boolean[] triggers;
 
 
     // CONSTRUCTORS
@@ -26,6 +27,7 @@ public class Player implements Serializable
         role = null;
         isAlive = true;
         isDying= false;
+        triggers = new boolean[0];
     }
 
     /**
@@ -33,13 +35,16 @@ public class Player implements Serializable
      * @param name Name of the instance
      * @param role Role of the instance
      * @param isAlive Whether the instance is alive or not
+     * @param isDying Whether the instance is dying or not
+     * @param triggers Array of triggers of the instance
      */
-    public Player(String name, Role role, boolean isAlive, boolean isDying)
+    public Player(String name, Role role, boolean isAlive, boolean isDying, boolean[] triggers)
     {
         this.name = name;
         this.role = role;
         this.isAlive = isAlive;
         this.isDying = isDying;
+        this.triggers = triggers;
     }
 
 
@@ -53,4 +58,6 @@ public class Player implements Serializable
     public void setAlive(boolean isAlive) { this.isAlive = isAlive; }
     public boolean isDying() { return isDying; }
     public void setDying(boolean isDying) { this.isDying = isDying; }
+    public boolean[] getTriggers() { return triggers; }
+    public void setTriggers(boolean[] triggers) { this.triggers = triggers; }
 }

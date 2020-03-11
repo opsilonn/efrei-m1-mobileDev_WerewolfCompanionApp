@@ -6,7 +6,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.CheckBox;
-import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
@@ -94,13 +93,9 @@ public class AdapterRole extends RecyclerView.Adapter<AdapterRole.MyViewHolder>
         holder.image.setImageResource(role.getIcon());
 
         // When clicking the holder : PopUp displaying the role
-        holder.mainLayout.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View view)
-            {
-                final DialogRole dialogRole = new DialogRole(context, role);
-                dialogRole.show();
-            }
+        holder.mainLayout.setOnClickListener(view -> {
+            final DialogRole dialogRole = new DialogRole(context, role);
+            dialogRole.show();
         });
 
 
@@ -110,80 +105,80 @@ public class AdapterRole extends RecyclerView.Adapter<AdapterRole.MyViewHolder>
         {
             // First, we set the buttons enabled (or not) accordingly
             holder.buttonDelete.setEnabled(roleNumbers[position] != 0);
-            holder.buttonAdd.setEnabled(roleNumbers[position] < MAX);
+
+            // If the role is unique, we can only add 1 role (active if value is 0)
+            if(role.isUnique())
+            {
+                holder.buttonAdd.setEnabled(roleNumbers[position] == 0);
+            }
+            // Otherwise : active until the MAXIMUM is reached
+            else
+            {
+                holder.buttonAdd.setEnabled(roleNumbers[position] < MAX);
+            }
 
 
             // Second, we give a Listeners
 
             // We give a Listener to the DELETE button
-            holder.buttonDelete.setOnClickListener(new View.OnClickListener()
-            {
-                @Override
-                public void onClick (View v)
+            holder.buttonDelete.setOnClickListener(v -> {
+                // We remove a Role from the list
+                ((ActivityPartyNew) context).roles.remove(role);
+
+                // We decrement the current counter
+                roleNumbers[position]--;
+
+                // We set the text displaying the current value
+                holder.textNumberOfRoles.setText( String.valueOf(roleNumbers[position]) );
+
+                // We set the text displaying the TOTAL number of Roles
+                ((ActivityPartyNew) context).fragmentRoles.setText();
+
+                // If we reached the minimum value :
+                if(roleNumbers[position] == 0)
                 {
-                    // We remove a Role from the list
-                    ((ActivityPartyNew) context).roles.remove(role);
+                    holder.buttonDelete.setEnabled(false);
+                }
 
-                    // We decrement the current counter
-                    roleNumbers[position]--;
-
-                    // We set the text displaying the current value
-                    holder.textNumberOfRoles.setText( String.valueOf(roleNumbers[position]) );
-
-                    // We set the text displaying the TOTAL number of Roles
-                    ((ActivityPartyNew) context).fragmentRoles.setText();
-
-                    // If we reached the minimum value :
-                    if(roleNumbers[position] == 0)
-                    {
-                        holder.buttonDelete.setEnabled(false);
-                    }
-
-                    // If the role is unique and is now equal to O
-                    // OR
-                    // If the value reaches the (MAXIMUM value - 1)
-                    if((roles[position].isUnique() && roleNumbers[position] == 0) || roleNumbers[position] == MAX - 1)
-                    {
-                        holder.buttonAdd.setEnabled(true);
-                    }
+                // If the role is unique and is now equal to O
+                // OR
+                // If the value reaches the (MAXIMUM value - 1)
+                if((roles[position].isUnique() && roleNumbers[position] == 0) || roleNumbers[position] == MAX - 1)
+                {
+                    holder.buttonAdd.setEnabled(true);
                 }
             });
 
 
             // We give a Listener to the ADD button
-            holder.buttonAdd.setOnClickListener(new View.OnClickListener()
-            {
-                @Override
-                public void onClick (View v)
+            holder.buttonAdd.setOnClickListener(v -> {
+                // We remove a Role from the list
+                ((ActivityPartyNew) context).roles.add(role);
+
+                // We increment the current counter
+                roleNumbers[position]++;
+
+                // We set the text displaying the current value
+                holder.textNumberOfRoles.setText( String.valueOf(roleNumbers[position]) );
+
+                // We set the text displaying the TOTAL number of Roles
+                ((ActivityPartyNew) context).fragmentRoles.setText();
+
+
+                // Setting the Buttons enabled (or not) accordingly
+
+                // If I have more than 1 Role
+                if(roleNumbers[position] != 0)
                 {
-                    // We remove a Role from the list
-                    ((ActivityPartyNew) context).roles.add(role);
+                    holder.buttonDelete.setEnabled(true);
+                }
 
-                    // We increment the current counter
-                    roleNumbers[position]++;
-
-                    // We set the text displaying the current value
-                    holder.textNumberOfRoles.setText( String.valueOf(roleNumbers[position]) );
-
-                    // We set the text displaying the TOTAL number of Roles
-                    ((ActivityPartyNew) context).fragmentRoles.setText();
-
-
-                    // Setting the Buttons enabled (or not) accordingly
-
-                    // If I have more than 1 Role
-                    if(roleNumbers[position] != 0)
-                    {
-                        holder.buttonDelete.setEnabled(true);
-                    }
-
-                    // If the current Role is unique and already taken
-                    // OR
-                    // If I reach the maximum
-                    if((roles[position].isUnique() && roleNumbers[position] == 1) || roleNumbers[position] == MAX)
-                    {
-                        holder.buttonAdd.setEnabled(false);
-                    }
+                // If the current Role is unique and already taken
+                // OR
+                // If I reach the maximum
+                if((roles[position].isUnique() && roleNumbers[position] == 1) || roleNumbers[position] == MAX)
+                {
+                    holder.buttonAdd.setEnabled(false);
                 }
             });
 
@@ -203,14 +198,7 @@ public class AdapterRole extends RecyclerView.Adapter<AdapterRole.MyViewHolder>
         if(customIntent == CustomIntent.RV_ROLE_HAS_PLAYED)
         {
             holder.checkBox.setChecked( ((ActivityParty) context).roleHasPlayed[position] );
-            holder.checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener()
-            {
-               @Override
-               public void onCheckedChanged(CompoundButton buttonView,boolean isChecked)
-               {
-                   ((ActivityParty) context).roleHasPlayed[position] = !((ActivityParty) context).roleHasPlayed[position];
-               }
-            });
+            holder.checkBox.setOnCheckedChangeListener((buttonView, isChecked) -> ((ActivityParty) context).roleHasPlayed[position] = !((ActivityParty) context).roleHasPlayed[position]);
         }
         else
         {
@@ -230,7 +218,7 @@ public class AdapterRole extends RecyclerView.Adapter<AdapterRole.MyViewHolder>
     /**
      * Sub-class
      */
-    public class MyViewHolder extends RecyclerView.ViewHolder
+    class MyViewHolder extends RecyclerView.ViewHolder
     {
         ImageView image;
         TextView name;
@@ -244,7 +232,7 @@ public class AdapterRole extends RecyclerView.Adapter<AdapterRole.MyViewHolder>
         // Fields for whether a role has played or not
         CheckBox checkBox;
 
-        public MyViewHolder(@NonNull View itemView)
+        MyViewHolder(@NonNull View itemView)
         {
             // Calling the constructor
             super(itemView);
