@@ -2,8 +2,10 @@ package com.mobiledevelopment.werewolf.util;
 
 
 import androidx.annotation.StringRes;
+
 import com.mobiledevelopment.werewolf.R;
 import com.mobiledevelopment.werewolf.model.Role;
+
 import java.util.ArrayList;
 import java.util.List;
 

@@ -1,19 +1,15 @@
 package com.mobiledevelopment.werewolf.activities;
 
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
+
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.mobiledevelopment.werewolf.R;
-import com.mobiledevelopment.werewolf.model.Party;
-import com.mobiledevelopment.werewolf.model.Player;
-import com.mobiledevelopment.werewolf.model.Role;
-import com.mobiledevelopment.werewolf.util.Util;
 
 import java.util.Locale;
 

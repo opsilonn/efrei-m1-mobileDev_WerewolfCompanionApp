@@ -2,18 +2,20 @@ package com.mobiledevelopment.werewolf.fragments;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
-import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import com.mobiledevelopment.werewolf.activities.ActivityPartyNew;
+
+import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.mobiledevelopment.werewolf.R;
+import com.mobiledevelopment.werewolf.activities.ActivityPartyNew;
+import com.mobiledevelopment.werewolf.adapters.AdapterRole;
 import com.mobiledevelopment.werewolf.model.CustomIntent;
 import com.mobiledevelopment.werewolf.model.Role;
-import com.mobiledevelopment.werewolf.adapters.AdapterRole;
 import com.mobiledevelopment.werewolf.util.Util;
 
 

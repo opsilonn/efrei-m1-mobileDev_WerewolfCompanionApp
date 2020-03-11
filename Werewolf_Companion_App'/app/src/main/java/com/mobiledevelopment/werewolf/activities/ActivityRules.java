@@ -1,18 +1,19 @@
 package com.mobiledevelopment.werewolf.activities;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.mobiledevelopment.werewolf.R;
+import com.mobiledevelopment.werewolf.adapters.AdapterRole;
 import com.mobiledevelopment.werewolf.model.CustomIntent;
 import com.mobiledevelopment.werewolf.model.Role;
-import com.mobiledevelopment.werewolf.adapters.AdapterRole;
 import com.mobiledevelopment.werewolf.model.Team;
 import com.mobiledevelopment.werewolf.util.Util;
 

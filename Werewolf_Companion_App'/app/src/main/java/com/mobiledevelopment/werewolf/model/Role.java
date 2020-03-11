@@ -1,10 +1,10 @@
 package com.mobiledevelopment.werewolf.model;
 
-import android.content.res.Resources;
-
 import androidx.annotation.StringRes;
+
 import com.mobiledevelopment.werewolf.R;
 import com.mobiledevelopment.werewolf.util.Util;
+
 import java.io.Serializable;
 
 

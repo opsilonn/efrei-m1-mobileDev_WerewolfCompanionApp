@@ -7,9 +7,12 @@ import android.graphics.drawable.ColorDrawable;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+
 import androidx.annotation.NonNull;
+
 import com.mobiledevelopment.werewolf.R;
 import com.mobiledevelopment.werewolf.model.Role;
+
 import java.util.Objects;
 
 
@@ -23,7 +26,7 @@ public class DialogRole extends Dialog
     public DialogRole(@NonNull Context context, Role role)
     {
         super(context);
-        setContentView(R.layout.popup_role);
+        setContentView(R.layout.dialog_role);
 
         // We get the widgets references
         imageView = findViewById(R.id.RoleImage);

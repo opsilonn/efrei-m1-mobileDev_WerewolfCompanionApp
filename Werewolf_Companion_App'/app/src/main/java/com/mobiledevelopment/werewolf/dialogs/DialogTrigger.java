@@ -2,7 +2,9 @@ package com.mobiledevelopment.werewolf.dialogs;
 
 import android.app.AlertDialog;
 import android.content.Context;
+
 import androidx.annotation.NonNull;
+
 import com.mobiledevelopment.werewolf.R;
 import com.mobiledevelopment.werewolf.model.Party;
 import com.mobiledevelopment.werewolf.model.Player;

@@ -3,6 +3,7 @@ package com.mobiledevelopment.werewolf.model;
 import android.graphics.Color;
 
 import androidx.annotation.StringRes;
+
 import com.mobiledevelopment.werewolf.R;
 
 

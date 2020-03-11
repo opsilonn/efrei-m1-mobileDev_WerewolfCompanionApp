@@ -1,18 +1,19 @@
 package com.mobiledevelopment.werewolf.fragments;
 
 import android.os.Bundle;
-import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.CompoundButton;
 import android.widget.Switch;
-import com.mobiledevelopment.werewolf.activities.ActivityParty;
+
+import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.mobiledevelopment.werewolf.R;
-import com.mobiledevelopment.werewolf.model.Player;
+import com.mobiledevelopment.werewolf.activities.ActivityParty;
 import com.mobiledevelopment.werewolf.adapters.AdapterPlayer;
+import com.mobiledevelopment.werewolf.model.Player;
 
 
 /**

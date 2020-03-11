@@ -2,10 +2,12 @@ package com.mobiledevelopment.werewolf.dialogs;
 
 import android.content.Context;
 import android.view.View;
+
 import androidx.annotation.NonNull;
+
 import com.mobiledevelopment.werewolf.R;
-import com.mobiledevelopment.werewolf.model.Role;
 import com.mobiledevelopment.werewolf.model.Player;
+import com.mobiledevelopment.werewolf.model.Role;
 
 
 /**

@@ -8,15 +8,17 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.TextView;
+
 import androidx.annotation.NonNull;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
-import com.mobiledevelopment.werewolf.activities.ActivityPartyNew;
-import com.mobiledevelopment.werewolf.activities.ActivityParty;
+
 import com.mobiledevelopment.werewolf.R;
+import com.mobiledevelopment.werewolf.activities.ActivityParty;
+import com.mobiledevelopment.werewolf.activities.ActivityPartyNew;
+import com.mobiledevelopment.werewolf.dialogs.DialogRole;
 import com.mobiledevelopment.werewolf.model.CustomIntent;
 import com.mobiledevelopment.werewolf.model.Role;
-import com.mobiledevelopment.werewolf.dialogs.DialogRole;
 
 
 public class AdapterRole extends RecyclerView.Adapter<AdapterRole.MyViewHolder>
@@ -104,18 +106,7 @@ public class AdapterRole extends RecyclerView.Adapter<AdapterRole.MyViewHolder>
         if(customIntent == CustomIntent.RV_ROLES_ADD)
         {
             // First, we set the buttons enabled (or not) accordingly
-            holder.buttonDelete.setEnabled(roleNumbers[position] != 0);
-
-            // If the role is unique, we can only add 1 role (active if value is 0)
-            if(role.isUnique())
-            {
-                holder.buttonAdd.setEnabled(roleNumbers[position] == 0);
-            }
-            // Otherwise : active until the MAXIMUM is reached
-            else
-            {
-                holder.buttonAdd.setEnabled(roleNumbers[position] < MAX);
-            }
+            setButtons(holder, role, roleNumbers[position]);
 
 
             // Second, we give a Listeners
@@ -134,19 +125,9 @@ public class AdapterRole extends RecyclerView.Adapter<AdapterRole.MyViewHolder>
                 // We set the text displaying the TOTAL number of Roles
                 ((ActivityPartyNew) context).fragmentRoles.setText();
 
-                // If we reached the minimum value :
-                if(roleNumbers[position] == 0)
-                {
-                    holder.buttonDelete.setEnabled(false);
-                }
 
-                // If the role is unique and is now equal to O
-                // OR
-                // If the value reaches the (MAXIMUM value - 1)
-                if((roles[position].isUnique() && roleNumbers[position] == 0) || roleNumbers[position] == MAX - 1)
-                {
-                    holder.buttonAdd.setEnabled(true);
-                }
+                // we set the buttons enabled (or not) accordingly
+                setButtons(holder, role, roleNumbers[position]);
             });
 
 
@@ -167,19 +148,9 @@ public class AdapterRole extends RecyclerView.Adapter<AdapterRole.MyViewHolder>
 
                 // Setting the Buttons enabled (or not) accordingly
 
-                // If I have more than 1 Role
-                if(roleNumbers[position] != 0)
-                {
-                    holder.buttonDelete.setEnabled(true);
-                }
 
-                // If the current Role is unique and already taken
-                // OR
-                // If I reach the maximum
-                if((roles[position].isUnique() && roleNumbers[position] == 1) || roleNumbers[position] == MAX)
-                {
-                    holder.buttonAdd.setEnabled(false);
-                }
+                // we set the buttons enabled (or not) accordingly
+                setButtons(holder, role, roleNumbers[position]);
             });
 
 
@@ -205,6 +176,31 @@ public class AdapterRole extends RecyclerView.Adapter<AdapterRole.MyViewHolder>
             holder.checkBox.setVisibility(View.INVISIBLE);
         }
     }
+
+
+    /**
+     *
+     * @param holder Holder of the current role
+     * @param role Role we are treating
+     * @param roleCount Count of the current role
+     */
+    private void setButtons(final @NonNull MyViewHolder holder, Role role, int roleCount)
+    {
+        // Button Delete
+        holder.buttonDelete.setEnabled( roleCount > 0 );
+
+        // Button Add
+        if(role.isUnique())
+        {
+            holder.buttonAdd.setEnabled( roleCount < 1 );
+        }
+        else
+        {
+            holder.buttonAdd.setEnabled( roleCount < MAX );
+        }
+    }
+
+
 
     @Override
     public int getItemCount()

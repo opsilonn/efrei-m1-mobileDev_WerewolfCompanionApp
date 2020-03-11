@@ -1,18 +1,20 @@
 package com.mobiledevelopment.werewolf.fragments;
 
 import android.os.Bundle;
-import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+
+import androidx.fragment.app.Fragment;
+
 import com.google.android.material.chip.Chip;
 import com.google.android.material.chip.ChipDrawable;
 import com.google.android.material.chip.ChipGroup;
-import com.mobiledevelopment.werewolf.activities.ActivityPartyNew;
 import com.mobiledevelopment.werewolf.R;
+import com.mobiledevelopment.werewolf.activities.ActivityPartyNew;
 import com.mobiledevelopment.werewolf.model.Player;
 import com.mobiledevelopment.werewolf.util.Util;
 

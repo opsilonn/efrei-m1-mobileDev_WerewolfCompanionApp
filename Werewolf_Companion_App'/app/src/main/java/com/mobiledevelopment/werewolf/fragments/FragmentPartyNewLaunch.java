@@ -3,14 +3,16 @@ package com.mobiledevelopment.werewolf.fragments;
 
 import android.content.Intent;
 import android.os.Bundle;
-import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+
+import androidx.fragment.app.Fragment;
+
+import com.mobiledevelopment.werewolf.R;
 import com.mobiledevelopment.werewolf.activities.ActivityLoading;
 import com.mobiledevelopment.werewolf.activities.ActivityPartyNew;
-import com.mobiledevelopment.werewolf.R;
 import com.mobiledevelopment.werewolf.util.Util;
 
 
@@ -52,16 +54,11 @@ public class FragmentPartyNewLaunch extends Fragment
 
 
         // When clicked : launches the Activity a describing a game
-        button.setOnClickListener(new View.OnClickListener()
-        {
-            @Override
-            public void onClick (View v)
-            {
-                Intent intent = new Intent(parentActivity.getBaseContext(), ActivityLoading.class);
-                intent.putExtra(Util.EXTRA_PARTY, parentActivity.party);
-                intent.putExtra(Util.EXTRA_ROLES, parentActivity.roles);
-                startActivity(intent);
-            }
+        button.setOnClickListener(v -> {
+            Intent intent = new Intent(parentActivity.getBaseContext(), ActivityLoading.class);
+            intent.putExtra(Util.EXTRA_PARTY, parentActivity.party);
+            intent.putExtra(Util.EXTRA_ROLES, parentActivity.roles);
+            startActivity(intent);
         });
     }
 }

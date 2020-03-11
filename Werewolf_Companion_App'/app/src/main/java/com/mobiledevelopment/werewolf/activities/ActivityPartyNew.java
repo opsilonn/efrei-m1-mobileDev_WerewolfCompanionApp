@@ -1,17 +1,20 @@
 package com.mobiledevelopment.werewolf.activities;
 
+import android.os.Bundle;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
-import android.os.Bundle;
+
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.mobiledevelopment.werewolf.R;
 import com.mobiledevelopment.werewolf.fragments.FragmentPartyNewLaunch;
 import com.mobiledevelopment.werewolf.fragments.FragmentPartyNewPlayers;
 import com.mobiledevelopment.werewolf.fragments.FragmentPartyNewRoles;
-import com.mobiledevelopment.werewolf.R;
 import com.mobiledevelopment.werewolf.model.Party;
 import com.mobiledevelopment.werewolf.model.Player;
 import com.mobiledevelopment.werewolf.model.Role;
 import com.mobiledevelopment.werewolf.util.Util;
+
 import java.util.ArrayList;
 
 
