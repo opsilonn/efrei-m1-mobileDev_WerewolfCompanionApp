@@ -29,7 +29,7 @@ An app’ would solve both issues, and greatly help the Game Master. All role’
 
 
 ### How to use the app'
-IMPORTANT : the project is meant to HELP organize and follow a game, not to direct players likes heeps.
+IMPORTANT : the project is meant to HELP organize and follow a game, not to direct players likes sheeps.
 
 When launching the App', you have 3 choices : 
 * Create a Party by entering the names of the players and choosing the roles available
@@ -57,17 +57,33 @@ Now, it's all set and done ! you can use the app freely ! :D
 
 
 ### The Structure
-I won't get too technical, but the project works following two axess :
+I won't get too technical, but the project works following two axes :
 
-* organise data : I have a big, big BIG Enumeration containing all the Roles (that a player can incarnate). Each iteration points to the according Strings (name, description), Drawable (picture, icon)... Same, I have some classes to represent players and Party.
+* organise data : I have a big, big BIG Enumeration containing all the Roles (that a player can incarnate). Each iteration points to the according Strings (name, description), Drawable (picture, icon)... Same, I have some classes to represent Players and Party.
 * UI : I have a total of 5 Activities (one of them being dedicated to communicating to the API) and 6 Fragments. They implement a large array of Widgets (including Recycler Views : there's quite a lot of them).
 
 
 ### The API
-lorem ipsum dolor amet...
+The project is done using the [Deck of Cards API](https://www.deckofcardsapi.com/).
 
 
+#### What does it do ?
+It allows to create deck (one, or a given number of deck), which will remain accessible for 2 weeks.
+From theses decks, we can draw cards, create hands, shuffle... all that you could hope for with a card API.
 
+
+#### How do I use it ?
+Let's say you create a party with X players.
+At this point in the App', you'd have entered X players and selected X roles, but you won't assign them manually ;
+it is the API which will randomly assign a Role to each Player.
+
+I use it in 3 steps :
+- I draw X cards from a newly generated deck ; I assign each card with a Role.
+- I create aspecific deck with these X cards.
+- Foreach player, I draw one card from the deck, and assign the role corresponding role to the Player.
+
+
+And it's done !!
 
 ## Built With
 
