@@ -71,7 +71,7 @@ lorem ipsum dolor amet...
 
 ## Built With
 
-* [Android Studio 3.5.3]https://developer.android.com/studio/) - The IDE used to develop the app'
+* [Android Studio 3.5.3](https://developer.android.com/studio/) - The IDE used to develop the app'
 * [Android SDK 26.1.1](https://developer.android.com/studio/) - The Android SDK used (same link)
 * Api level 29: Android 10.0 (Q) revision 4 - The development environment used
 * Pixel 2 API 29 - The Android Studio's emulator used for the tests
