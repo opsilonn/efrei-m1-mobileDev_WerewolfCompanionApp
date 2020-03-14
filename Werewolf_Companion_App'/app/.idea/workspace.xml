@@ -12,33 +12,6 @@
   <component name="ChangeListManager">
     <list default="true" id="6605e09d-f7d0-43f3-9115-3fe4941b569c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/androidTest/java/com/mobiledevelopment/werewolf/ExampleInstrumentedTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/androidTest/java/com/mobiledevelopment/werewolf/ExampleInstrumentedTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/activities/ActivityHome.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/activities/ActivityHome.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/activities/ActivityLoading.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/activities/ActivityLoading.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/activities/ActivityParty.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/activities/ActivityParty.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/activities/ActivityPartyNew.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/activities/ActivityPartyNew.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/activities/ActivityRules.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/activities/ActivityRules.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/adapters/AdapterPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/adapters/AdapterPlayer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/adapters/AdapterRole.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/adapters/AdapterRole.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/dialogs/DialogRole.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/dialogs/DialogRole.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/dialogs/DialogRoleDead.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/dialogs/DialogRoleDead.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/dialogs/DialogTrigger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/dialogs/DialogTrigger.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/fragments/FragmentPartyLeave.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/fragments/FragmentPartyLeave.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/fragments/FragmentPartyNewLaunch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/fragments/FragmentPartyNewLaunch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/fragments/FragmentPartyNewPlayers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/fragments/FragmentPartyNewPlayers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/fragments/FragmentPartyNewRoles.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/fragments/FragmentPartyNewRoles.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/fragments/FragmentPartyPlayers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/fragments/FragmentPartyPlayers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/fragments/FragmentPartyRoles.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/fragments/FragmentPartyRoles.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/model/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/model/Role.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/model/Team.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/model/Team.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/util/Util.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/util/Util.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/util/UtilAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/util/UtilAPI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/layout/activity_rules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/activity_rules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/layout/fragment_party_roles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/fragment_party_roles.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/layout/popup_role.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/dialog_role.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/layout/rv_row_player.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/rv_row_player.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/layout/rv_row_role.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/rv_row_role.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/mobiledevelopment/werewolf/ExampleUnitTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/mobiledevelopment/werewolf/ExampleUnitTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -58,7 +31,7 @@
     </system>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -77,6 +50,12 @@
       <find>TextName</find>
       <find>Spann</find>
     </findStrings>
+  </component>
+  <component name="GenerateSignedApkSettings">
+    <option name="KEY_STORE_PATH" value="C:\Users\Hugues\Desktop\WerewolfKey.jks" />
+    <option name="KEY_ALIAS" value="WerewolfKey" />
+    <option name="REMEMBER_PASSWORDS" value="true" />
+    <option name="BUILD_TARGET_KEY" value="apk" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
@@ -128,17 +107,19 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="11" />
-    <option name="y" value="-24" />
+    <option name="x" value="10" />
+    <option name="y" value="-25" />
     <option name="width" value="1940" />
     <option name="height" value="1025" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
-    <navigator proportions="" version="1">
+    <navigator currentView="ProjectPane" proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="AndroidView" />
+      <pane id="ProjectPane" />
       <pane id="PackagesPane" />
       <pane id="Scope">
         <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
@@ -151,28 +132,14 @@
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="Werewolf" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Werewolf_Companion_App'" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Werewolf" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Werewolf_Companion_App'" type="462c0819:PsiDirectoryNode" />
-              <item name="gradle" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="1115fb83c42b1505" />
     <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2020-03-11T09:55:24.910Z" />
+    <property name="ExportApk.ApkPath" value="C:\Users\Hugues\Desktop\mobileDev_WerewolfCompanionApp\Werewolf_Companion_App'\app" />
+    <property name="ExportApk.BuildVariants" value="release" />
+    <property name="ExportApk.SignV2" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="android.sdk.path" value="C:/AndroidSdk" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -299,9 +266,9 @@
       <window_info anchor="bottom" id="Android Profiler" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" />
       <window_info anchor="bottom" id="Terminal" order="4" />
-      <window_info anchor="bottom" id="Event Log" order="5" sideWeight="0.50067115" side_tool="true" visible="true" weight="0.28820375" />
+      <window_info anchor="bottom" id="Event Log" order="5" sideWeight="0.50939596" side_tool="true" visible="true" weight="0.20911528" />
       <window_info anchor="bottom" id="Version Control" order="6" />
-      <window_info anchor="bottom" id="Build" order="7" sideWeight="0.49127516" weight="0.20911528" />
+      <window_info anchor="bottom" id="Build" order="7" sideWeight="0.490604" visible="true" weight="0.20911528" />
       <window_info anchor="bottom" id="Run" order="8" sideWeight="0.48456377" weight="0.28820375" />
       <window_info anchor="bottom" id="Find" order="9" sideWeight="0.49932885" weight="0.3297587" />
       <window_info anchor="right" id="Device File Explorer" order="0" side_tool="true" />
@@ -373,12 +340,12 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/res/layout/fragment_party_players.xml">
-      <provider selected="true" editor-type-id="android-designer2" />
       <provider editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/res/layout/rv_row_role.xml">
-      <provider selected="true" editor-type-id="android-designer2" />
       <provider editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/activities/ActivityPartyNew.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -582,20 +549,20 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/res/layout/dialog_role.xml">
-      <provider selected="true" editor-type-id="android-designer2" />
       <provider editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="24" column="32" selection-start-line="24" selection-start-column="32" selection-end-line="24" selection-end-column="32" />
         </state>
       </provider>
+      <provider selected="true" editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/res/layout/fragment_party_roles.xml">
-      <provider selected="true" editor-type-id="android-designer2" />
       <provider editor-type-id="text-editor">
         <state relative-caret-position="680">
           <caret line="40" selection-start-line="40" selection-end-line="44" />
         </state>
       </provider>
+      <provider selected="true" editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/adapters/AdapterRole.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -609,12 +576,12 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/res/layout/activity_rules.xml">
-      <provider selected="true" editor-type-id="android-designer2" />
       <provider editor-type-id="text-editor">
         <state relative-caret-position="816">
           <caret line="52" column="39" lean-forward="true" selection-start-line="52" selection-start-column="39" selection-end-line="52" selection-end-column="39" />
         </state>
       </provider>
+      <provider selected="true" editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/activities/ActivityRules.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -627,7 +594,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/res/layout/rv_row_player.xml">
-      <provider selected="true" editor-type-id="android-designer2" />
       <provider editor-type-id="text-editor">
         <state relative-caret-position="415">
           <caret line="43" column="40" lean-forward="true" selection-start-line="43" selection-start-column="40" selection-end-line="43" selection-end-column="40" />
@@ -641,6 +607,7 @@
           </folding>
         </state>
       </provider>
+      <provider selected="true" editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/mobiledevelopment/werewolf/dialogs/DialogTrigger.java">
       <provider selected="true" editor-type-id="text-editor">
