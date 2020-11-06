@@ -6,6 +6,37 @@ Made as a project for the following :
 * Course : Mobile Development (Android)
 * Goal : Design and build an Android Application.
 
+![Loup-Garou's icon](https://github.com/opsilonn/mobileDev_WerewolfCompanionApp/blob/master/Werewolf_Companion_App'/app/src/main/res/drawable/im_werewolf.png)
+
+
+## Summary
+**[Werewolf Game](https://github.com/opsilonn/mobileDev_WerewolfCompanionApp#werewolf-game)**
+
+[What is it ?](https://github.com/opsilonn/mobileDev_WerewolfCompanionApp#what-is-it-)
+
+[How a Mobile App' could help ?](https://github.com/opsilonn/mobileDev_WerewolfCompanionApp#how-a-mobile-app-could-help-)
+
+[How to use the App'](https://github.com/opsilonn/mobileDev_WerewolfCompanionApp#how-to-use-the-app)
+
+
+**[The Project](https://github.com/opsilonn/mobileDev_WerewolfCompanionApp#the-project)**
+
+[Getting Started](https://github.com/opsilonn/mobileDev_WerewolfCompanionApp#getting-started)
+
+[The Structure](https://github.com/opsilonn/mobileDev_WerewolfCompanionApp#the-structure)
+
+[The API](https://github.com/opsilonn/mobileDev_WerewolfCompanionApp#the-api)
+
+
+**[Technical round-up](https://github.com/opsilonn/mobileDev_WerewolfCompanionApp#technical-round-up)**
+
+
+**[Authors](https://github.com/opsilonn/mobileDev_WerewolfCompanionApp#authors)**
+
+
+**[Acknowledgments](https://github.com/opsilonn/mobileDev_WerewolfCompanionApp#acknowledgments)**
+
+
 
 
 ## Werewolf Game
@@ -41,6 +72,7 @@ Afterwards, it will help the Game Master organise the game by keeping track of w
 
 
 
+
 ## The Project
 
 ### Getting Started
@@ -48,7 +80,7 @@ The programmation is fully completed !
 You may only only need to fulfill one task :
 
 ```
-The location of the Android SDK is set according to my own path, with will obviously vary with yours.
+The location of the Android SDK is set according to my own path, which will obviously vary with yours.
 Worry not : Android Studio will automatically warn you of it,
 and propose you to change the path to the one you have.
 
@@ -59,12 +91,12 @@ Now, it's all set and done ! you can use the app freely ! :D
 ### The Structure
 I won't get too technical, but the project works following two axes :
 
-* organise data : I have a big, big BIG Enumeration containing all the Roles (that a player can incarnate). Each iteration points to the according Strings (name, description), Drawable (picture, icon)... Same, I have some classes to represent Players and Party.
-* UI : I have a total of 5 Activities (one of them being dedicated to communicating to the API) and 6 Fragments. They implement a large array of Widgets (including Recycler Views : there's quite a lot of them).
+* organise data : I have a big, big, BIG Enumeration containing all the Roles (that a player can incarnate). Each iteration points to the according Strings (name, description), Drawable (picture, icon)... In the same way, I have some classes to represent Players and Party.
+* UI : I have a total of 5 Activities (one of them being dedicated to communicating with the API) and 6 Fragments. They implement a large array of Widgets (including Recycler Views : there's quite a lot of them).
 
 
 ### The API
-The project is done using the [Deck of Cards API](https://www.deckofcardsapi.com/).
+The project is done using the [Deck of Cards API](https://www.deckofcardsapi.com).
 
 
 #### What does it do ?
@@ -85,7 +117,10 @@ I use it in 3 steps :
 
 And it's done !!
 
-## Built With
+
+
+
+## Technical round-up
 
 * [Android Studio 3.5.3](https://developer.android.com/studio/) - The IDE used to develop the app'
 * [Android SDK 26.1.1](https://developer.android.com/studio/) - The Android SDK used (same link)
