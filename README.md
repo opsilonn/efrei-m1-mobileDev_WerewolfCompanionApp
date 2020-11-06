@@ -50,7 +50,7 @@ In addition to that, some other roles can be played, which impact the game in
 different ways (to name a few : Cupidon, the Witch, the Soothsayer…)
 
 
-Here is the link to their website : https://www.loups-garous-en-ligne.com/
+Here is the link to [the official website](https://www.loups-garous-en-ligne.com)
 
 
 ### How a Mobile App' could help ?
