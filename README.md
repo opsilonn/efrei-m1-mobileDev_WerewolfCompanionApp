@@ -6,35 +6,35 @@ Made as a project for the following :
 * Course : Mobile Development (Android)
 * Goal : Design and build an Android Application.
 
-![Loup-Garou's icon](https://github.com/opsilonn/mobileDev_WerewolfCompanionApp/blob/master/Werewolf_Companion_App'/app/src/main/res/drawable/im_werewolf.png)
+![Loup-Garou's icon](https://github.com/opsilonn/efrei-m1-mobileDev_WerewolfCompanionApp/blob/master/Werewolf_Companion_App'/app/src/main/res/drawable/im_werewolf.png)
 
 
 ## Summary
-**[Werewolf Game](https://github.com/opsilonn/mobileDev_WerewolfCompanionApp#werewolf-game)**
+**[Werewolf Game](https://github.com/opsilonn/efrei-m1-mobileDev_WerewolfCompanionApp#werewolf-game)**
 
-[What is it ?](https://github.com/opsilonn/mobileDev_WerewolfCompanionApp#what-is-it-)
+[What is it ?](https://github.com/opsilonn/efrei-m1-mobileDev_WerewolfCompanionApp#what-is-it-)
 
-[How a Mobile App' could help ?](https://github.com/opsilonn/mobileDev_WerewolfCompanionApp#how-a-mobile-app-could-help-)
+[How a Mobile App' could help ?](https://github.com/opsilonn/efrei-m1-mobileDev_WerewolfCompanionApp#how-a-mobile-app-could-help-)
 
-[How to use the App'](https://github.com/opsilonn/mobileDev_WerewolfCompanionApp#how-to-use-the-app)
-
-
-**[The Project](https://github.com/opsilonn/mobileDev_WerewolfCompanionApp#the-project)**
-
-[Getting Started](https://github.com/opsilonn/mobileDev_WerewolfCompanionApp#getting-started)
-
-[The Structure](https://github.com/opsilonn/mobileDev_WerewolfCompanionApp#the-structure)
-
-[The API](https://github.com/opsilonn/mobileDev_WerewolfCompanionApp#the-api)
+[How to use the App'](https://github.com/opsilonn/efrei-m1-mobileDev_WerewolfCompanionApp#how-to-use-the-app)
 
 
-**[Technical round-up](https://github.com/opsilonn/mobileDev_WerewolfCompanionApp#technical-round-up)**
+**[The Project](https://github.com/opsilonn/efrei-m1-mobileDev_WerewolfCompanionApp#the-project)**
+
+[Getting Started](https://github.com/opsilonn/efrei-m1-mobileDev_WerewolfCompanionApp#getting-started)
+
+[The Structure](https://github.com/opsilonn/efrei-m1-mobileDev_WerewolfCompanionApp#the-structure)
+
+[The API](https://github.com/opsilonn/efrei-m1-mobileDev_WerewolfCompanionApp#the-api)
 
 
-**[Authors](https://github.com/opsilonn/mobileDev_WerewolfCompanionApp#authors)**
+**[Technical round-up](https://github.com/opsilonn/efrei-m1-mobileDev_WerewolfCompanionApp#technical-round-up)**
 
 
-**[Acknowledgments](https://github.com/opsilonn/mobileDev_WerewolfCompanionApp#acknowledgments)**
+**[Authors](https://github.com/opsilonn/efrei-m1-mobileDev_WerewolfCompanionApp#authors)**
+
+
+**[Acknowledgments](https://github.com/opsilonn/efrei-m1-mobileDev_WerewolfCompanionApp#acknowledgments)**
 
 
 
@@ -135,7 +135,7 @@ And it's done !!
 It was made by the following Efrei Paris students :
 * **BEGEOT Hugues** - [his Git repository](https://github.com/opsilonn)
 
-See also the list of [contributors](https://github.com/opsilonn/mobileDev_WerewolfCompanionApp/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/opsilonn/efrei-m1-mobileDev_WerewolfCompanionApp/contributors) who participated in this project.
 
 Note : made in the 4th year of Software Engineering cursus (1st year of Master).
 
